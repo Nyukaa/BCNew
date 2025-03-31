@@ -23,7 +23,7 @@ Tulosta multiLine-muuttuja käyttäen console.log().
 const one = "Learn HTML ";
 const two = "Learn CSS";
 const three = "Learn JavaScript";
-console.log(`${one} \n ` + `${two} \n ` + `${three} \n `);
+console.log(` ${one}\n ` + `${two}\n ` + `${three} \n `);
 /* Määritä muuttuja nimeltä text ja anna sille arvoksi "Hello, World!".
 Käytä .length-ominaisuutta selvittääksesi merkkijonon pituuden ja tallenna se muuttujaan nimeltä textLength.
 Tulosta viesti, kuten: "The length of the text is 13."
