@@ -65,7 +65,7 @@ function convertNumberToString(number) {
 }
 
 function convertStringToNumber(string) {
-  return Number(string);
+  return Number.parseInt(string);
 }
 console.log(convertNumberToString(42));
 console.log(convertStringToNumber("42"));
