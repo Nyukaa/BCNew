@@ -6,10 +6,10 @@ Tulosta tulos käyttäen console.log().
 
 Bonus: Kutsu funktiota useita kertoja eri argumenteilla ja tulosta kaikki tulokset.
 */
-const add = (a, b) => a + b;
-console.log("Summa: ", add(10, 5));
-console.log(add(11, -5));
-console.log(add(0, 0.5));
+const add = (a, b) => console.log(`Summa ${a} and ${b} is ${a + b}`);
+add(10, 5);
+add(11, -5);
+add(0, 0.5);
 /* Luo funktio nimeltä isEven, joka:
 Ottaa yhden parametrin, num.
 Palauttaa true, jos num on parillinen, muuten palauttaa false.
@@ -18,13 +18,15 @@ Tulosta tulokset käyttäen console.log().
 
 Bonus: Muokkaa funktiota käyttämään implisiittistä palautusta.
 */
-const isEven = (num) => {
+/*const isEven = (num) => {
   let a = false;
   if (num % 2 === 0) {
     a = true;
   }
   return console.log("num is parillinen: ", a);
 };
+*/
+const isEven = (num) => console.log("num is parillinen: ", num % 2 === 0);
 isEven(4);
 isEven(7);
 /* Luo funktio nimeltä getLength, joka:
@@ -125,3 +127,8 @@ cleanAndTransform = (str) =>
     str.trim().toLowerCase().replace("powerful", "amazing")
   );
 cleanAndTransform(" JavaScript is powerful! ");
+
+function greet(name = "Anna") {
+  return `Hello, ${name}`;
+}
+console.log(greet("Maria"));

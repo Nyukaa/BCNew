@@ -1,0 +1,33 @@
+body {
+  background-color: azure;
+}
+h1 {
+  font-style: normal;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+p {
+  font-style: italic;
+}
+ul {
+  font-weight: 200;
+  background-color: bisque;
+}
+ol {
+  font-weight: 200;
+  background-color: beige;
+}
+
+img {
+  border-style: dotted;
+}
+#oma_id {
+  color: blue;
+  text-align: left;
+}
+.oma_class:link {
+  color: red;
+}
+.oma_class:hover {
+  color: hotpink;
+}
