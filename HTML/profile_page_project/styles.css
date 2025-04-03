@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+header {
+  margin: 0;
+  padding: 0;
+  background-color: #cbcbdb;
+}
+main {
+  margin: 0;
+  padding: 0;
+}
+#esi {
+  width: 25%;
+  background-color: #ebebf6;
+}
+#harrastus {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  background-color: #9191d4;
+}
+.my_span {
+  width: 25%;
+  background-color: #ebebf6;
+}
+footer {
+  margin: auto;
+  padding: 0;
+  background-color: #cbcbdb;
+}
+.oma_class:hover {
+  color: hotpink;
+}
+img {
+  width: 100px;
+}
+#profil {
+  border-style: dotted;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.image img {
+  width: 100px;
+  height: auto;
+}
+ol {
+  list-style: none; /* Removes numbers */
+  padding: 0;
+  margin: 0;
+}
