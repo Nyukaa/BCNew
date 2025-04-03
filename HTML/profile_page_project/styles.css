@@ -5,53 +5,65 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: aliceblue;
 }
 header {
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 10px;
   background-color: #cbcbdb;
+  border-bottom: solid 2px;
+  /*
+  background: linear-gradient(
+    to bottom,
+    #bcc0c5,
+    #8887c8
+  ); /* Gradient colors */
 }
 main {
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 20px;
 }
 #esi {
-  width: 25%;
+  width: 75%;
   background-color: #ebebf6;
 }
-#harrastus {
-  margin: 0;
+.harrastus {
+  margin: 10px;
   padding: 0;
   width: 500px;
-  background-color: #9191d4;
+  background-color: #aaaac5;
 }
-.my_span {
+/*.my_span {
   width: 25%;
   background-color: #ebebf6;
-}
+}*/
 footer {
-  margin: auto;
-  padding: 0;
+  margin: 20px;
+  padding: 10px;
   background-color: #cbcbdb;
 }
 .oma_class:hover {
   color: hotpink;
 }
 img {
+  margin: 10px;
   width: 100px;
 }
-#profil {
-  border-style: dotted;
-}
+
 .container {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: center;
   width: 100%;
+  background-color: #9090b7;
+  border: 2px solid;
 }
 
 .text {
   font-size: 18px;
+}
+.otsikko {
+  font-weight: bold;
 }
 
 .image img {
@@ -59,6 +71,11 @@ img {
   height: auto;
 }
 ol {
+  list-style: none; /* Removes numbers */
+  padding: 0;
+  margin: 0;
+}
+ul {
   list-style: none; /* Removes numbers */
   padding: 0;
   margin: 0;
