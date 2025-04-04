@@ -76,3 +76,58 @@ if (canVote(18)) {
 } else {
   console.log("Et saa vielä äänestää");
 }
+/* 
+Kirjoita funktio nimeltä checkAnimal:
+Ota parametri animalType.
+
+Käytä ternary operatoria palauttamaan:
+- "Sinulla on fiksu seuralainen!" jos animalType on "fox".
+- "Ei kettu, mutta silti kiva!" muussa tapauksessa.
+
+Kutsu funktiota arvoilla kuten "fox" ja "cat".
+*/
+checkAnimal = (animalType) =>
+  animalType === "fox"
+    ? "Sinulla on fiksu seuralainen!"
+    : "Ei kettu, mutta silti kiva!";
+console.log(checkAnimal("fox"));
+console.log(checkAnimal("cat"));
+/* 
+Kirjoita funktio nimeltä isEven:
+Ota parametrina luku.
+Palauta true, jos luku on parillinen, tai false, jos se on pariton.
+Kutsu funktiota luvuilla kuten 4 ja 7, ja tulosta "Numero on pariton!" tai "Numero on parillinen!" tuloksen perusteella.
+*/
+isEven = (luku) =>
+  luku % 2 === 0 ? "Numero on parillinen!" : "Numero on pariton!";
+
+console.log(isEven(4));
+console.log(isEven(7));
+/* 
+Kirjoita funktio nimeltä getAnimalDescription:
+Ota parametri favoriteAnimal.
+
+Käytä switch-rakennetta seuraavasti:
+- Jos "fox", palauta "Ketut ovat viekkaita ja fiksuja!"
+- Jos "dog", palauta "Koirat ovat uskollisia ystäviä."
+- Jos "cat", palauta "Kissat ovat kiinnostuneita ja itsenäisiä."
+
+Minkä tahansa muun eläimen kohdalla palauta "Kaikki eläimet ovat mahtavia!"
+Kutsu funktiota eri eläinnimillä.
+*/
+getAnimalDescription = (favoriteAnimal) => {
+  switch (favoriteAnimal) {
+    case "fox":
+      return "Ketut ovat viekkaita ja fiksuja!";
+
+    case "dog":
+      return "Koirat ovat uskollisia ystäviä.";
+
+    case "cat":
+      return "Kissat ovat kiinnostuneita ja itsenäisiä.";
+    default:
+      return "Kaikki eläimet ovat mahtavia!";
+  }
+};
+console.log(getAnimalDescription("fox"));
+console.log(getAnimalDescription("eläin"));
