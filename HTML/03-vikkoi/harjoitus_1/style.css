@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Luxurious+Roman&family=Underdog&display=swap");
+body {
+  background-color: rgb(194, 190, 194);
+}
+h1 {
+  font-family: "Dancing Script", cursive;
+  color: rgb(50, 101, 44);
+}
+p {
+  font-family: "Underdog", system-ui;
+  color: rgb(63, 53, 131);
+}
+.gradient-box {
+  background: linear-gradient(to right, #d5bcd2, #5c245c);
+}
