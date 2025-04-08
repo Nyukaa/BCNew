@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Luxurious+Roman&family=Underdog&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Underdog&display=swap");
 body {
   background-color: rgb(194, 190, 194);
 }
-h1 {
+.hederH {
   font-family: "Dancing Script", cursive;
   color: rgb(50, 101, 44);
 }
