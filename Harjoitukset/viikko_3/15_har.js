@@ -5,7 +5,8 @@ Tulosta lopuksi konsoliin kaikki annetut sanat.
  */
 const viisiSanat = () => {
   let sana = "!";
-  for (let index = 0; index < 5; ) {
+  let index = 0;
+  while (index < 5) {
     sana = prompt("kirjoita sana");
     if (sana !== null && sana.trim() !== "") {
       index++;
