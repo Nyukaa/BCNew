@@ -14,3 +14,13 @@ p {
 .gradient-box {
   background: linear-gradient(to right, #d5bcd2, #5c245c);
 }
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline;
+  margin: 20px;
+  /* border: solid; */
+}

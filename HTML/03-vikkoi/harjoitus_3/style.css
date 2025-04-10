@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Underdog&display=swap");
+* {
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.headBlock {
+  background-color: #69013b;
+  color: #fce0d1;
+  display: flex;
+  /* to do fixed header*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  img {
+    width: 50%;
+    align-items: right;
+  }
+
+  a {
+    color: #fce0d1;
+  }
+}
+header > *:not(img) {
+  text-align: left;
+}
+main {
+  margin: 20px;
+  margin-top: 120px;
+  h1,
+  h3 {
+    color: #69013b;
+  }
+  div {
+    display: flex;
+  }
+}
+main h3 {
+  font-size: 2.7rem;
+}
+main h1 {
+  font-size: 2.9rem;
+}
+
+main h1::after {
+  content: "***";
+}
+main p {
+  color: black;
+}
+main p::first-letter {
+  font-weight: bold;
+}
+footer {
+  background-color: #69013b;
+  display: flex;
+  align-items: center;
+  /* to do horizontal  */
+  justify-content: center;
+  color: #fce0d1;
+
+  /* to do fixed footer 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 100; */
+}
+
+.headBlock:hover {
+  background-color: #fce0d1;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+.svg_insta {
+  color: #fce0d1;
+  width: 10%;
+}
+.img_BC {
+  border-radius: 50%;
+  width: 5%;
+  float: left;
+  margin: 20px;
+  border-right: 3px solid #dee2e6;
+}
