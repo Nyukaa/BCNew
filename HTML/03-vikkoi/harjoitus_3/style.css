@@ -39,6 +39,12 @@ main {
     display: flex;
   }
 }
+.bc_style {
+  font-size: 1rem;
+  line-height: 65px;
+  border-left: 3px solid #dee2e6;
+  padding: 10px;
+}
 main h3 {
   font-size: 2.7rem;
 }
@@ -62,6 +68,7 @@ footer {
   /* to do horizontal  */
   justify-content: center;
   color: #fce0d1;
+  height: 100px;
 
   /* to do fixed footer 
   position: fixed;
@@ -86,5 +93,4 @@ footer {
   width: 5%;
   float: left;
   margin: 20px;
-  border-right: 3px solid #dee2e6;
 }

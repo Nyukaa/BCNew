@@ -24,3 +24,9 @@ nav li {
   margin: 20px;
   /* border: solid; */
 }
+div p:nth-child(even) {
+  color: blue;
+}
+div p::first-letter {
+  font-style: italic;
+}
