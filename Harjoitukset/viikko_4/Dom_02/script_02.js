@@ -21,3 +21,11 @@ function showAddFruct() {
   document.getElementById("fruitInput").value = "";
 }
 document.getElementById("addFruitBtn").addEventListener("click", showAddFruct);
+
+document
+  .getElementById("fruitInput")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      showAddFruct();
+    }
+  });

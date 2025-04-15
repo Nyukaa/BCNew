@@ -10,8 +10,12 @@ const inputEmail = document.getElementById("email");
 const myForm = document.getElementById("myForm");
 const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
+document.getElementById(
+  "output"
+).textContent = `Your name is ${inputName.value} and email is ${inputEmail.value}`;
 
 myForm.addEventListener("submit", function (event) {
+  event.preventDefault();
   let valid = true;
 
   nameError.textContent = "";
@@ -21,15 +25,16 @@ myForm.addEventListener("submit", function (event) {
     valid = false;
   }
   if (inputEmail.value.trim() === "") {
-    nameError.textContent = "Write email";
+    emailError.textContent = "Write email";
     valid = false;
   }
   if (!valid) {
     event.preventDefault();
   }
   if (valid) {
+    document.getElementById(
+      "output"
+    ).textContent = `Your name is ${inputName.value} and email is ${inputEmail.value}`;
     alert("Submitted");
-    inputName.value = "";
-    inputEmail.value = "";
   }
 });
