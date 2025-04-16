@@ -7,40 +7,45 @@
 body {
   font: sans-serif;
   color: rgb(48, 43, 43);
-  background-color: #1f883d;
-  height: 100vh; /* нужно для вертикального центрирования */
+  background-color: #1b6956;
+  /* height: 100vh; /* нужно для вертикального центрирования 
   display: flex;
-  justify-content: center; /* по горизонтали */
-  align-items: center; /* по вертикали */
+  justify-content: center;  по горизонтали 
+  align-items: center; по вертикали 
+   For center for all devices */
+  margin: auto;
+  max-width: 400px;
 }
 .form-wrapper {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 50%;
+  align-items: center; */
+  /* For center for all devices */
+  margin: auto;
+  max-width: 400px;
 }
 form {
   background-color: white;
-
+  border-radius: 20px;
   margin: 20px;
 }
 form h1,
 form p {
   text-align: center;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
-form :nth-child(even) {
-  /* display: flex;
-  margin: 20px; */
-  align-items: center;
+.textAfter {
+  margin: 20px;
+  text-align: center;
 }
+
 button {
   background-color: orange;
   cursor: pointer;
   border-radius: 50px;
   font-family: inherit;
-  text-align: center; /* Центрирует текст */
+  /* text-align: center; */
 
   padding: 10px 20px;
   display: block;
@@ -50,13 +55,8 @@ button {
 a {
   color: orange;
   text-decoration: none;
-  display: inline important!;
-  margin: 0;
-  padding: 0;
 }
-/* .divA {
-  display: inline;
-} */
+
 input {
   width: 90%;
   box-sizing: border-box;
@@ -71,12 +71,10 @@ label {
     flex-direction: column;
     align-items: center;
   }
-  form,
-  body,
-  .form-wrapper {
-    width: 100%;
-  }
 }
+/* input:has(+ .error) {
+  border-color: red;
+} */
 .error {
   font: bold;
   color: blue;

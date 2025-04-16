@@ -29,9 +29,12 @@ myForm.addEventListener("submit", function (event) {
 
   if (inputName.value.trim() === "") {
     nameError.textContent = "Write name";
+    inputName.style.border = "2px solid red";
     valid = false;
+  } else {
+    inputEmail.style.border = "";
   }
-  if (inputName.value.trim() === "") {
+  if (inputlName.value.trim() === "") {
     lnameError.textContent = "Write last name";
     valid = false;
   }
@@ -39,16 +42,16 @@ myForm.addEventListener("submit", function (event) {
     emailError.textContent = "Write email";
     valid = false;
   }
-  if (inputEmail.value.trim() === "") {
+  if (password.value.trim() === "") {
     passError.textContent = "Write pass";
     valid = false;
   }
-  if (inputEmail.value.trim() === "") {
+  if (confPassword.value.trim() === "") {
     confPassError.textContent = "Write 2 pass";
     valid = false;
   }
   if (confPassword.value.trim() !== password.value.trim()) {
-    wrongPass.textContent = "Passowords is not the same";
+    wrongPass.textContent = "Passowords are not the same";
     valid = false;
   }
 
