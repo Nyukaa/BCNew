@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background: hsl(225, 100%, 94%) url("images/pattern-background-desktop.svg")
+    no-repeat top right;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  /* font: sans-serif; */
+
+  margin: auto;
+  max-width: 400px;
+  /* background-color: rgb(106, 128, 179); */
+}
+main {
+  margin: 50px auto;
+  width: 400px;
+}
+section p {
+  color: hsl(224, 23%, 55%);
+}
+.card {
+  background: white;
+  border-radius: 20px;
+}
+header {
+  height: 150px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: url(images/illustration-hero.svg) no-repeat center;
+  background-size: cover;
+}
+section {
+  text-align: center;
+  padding: 30px;
+}
+.plan {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  padding-left: 20px;
+  background: hsl(225, 100%, 98%);
+  border-radius: 10px;
+}
+a {
+  margin: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* .plan-change {
+  align-items: center;
+  justify-content: center;
+} */
+/* .plan-icon {
+  font-size: 0.75rem;
+} */
+.link-button {
+  display: inline-block;
+  background-color: rgb(36, 46, 152);
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  width: 90%;
+  box-shadow: 0 14px 18px rgba(0, 0, 0, 0.3);
+}
+#plan-cange {
+  flex-grow: 3;
+  margin: 20px 20px 0 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+#plan-price {
+  flex-grow: 3;
+  padding: 0;
+  color: hsl(224, 23%, 55%);
+
+  margin: 0 20px 20px 20px;
+}

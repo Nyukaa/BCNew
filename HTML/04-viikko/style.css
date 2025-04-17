@@ -29,10 +29,17 @@ form {
   border-radius: 20px;
   margin: 20px;
 }
-form h1,
-form p {
+form h1 {
   text-align: center;
   margin: 10px;
+  /* font-size: 0.75rem; */
+  /* margin-bottom: 15px; */
+}
+form p {
+  text-align: center;
+  padding: 15px;
+  /* font-size: 0.75rem; */
+  /* margin-bottom: 15px; */
 }
 
 .textAfter {
@@ -43,13 +50,13 @@ form p {
 button {
   background-color: orange;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 20px;
   font-family: inherit;
   /* text-align: center; */
 
   padding: 10px 20px;
   display: block;
-  width: 50%;
+  width: 70%;
   margin: 30px auto;
 }
 a {
