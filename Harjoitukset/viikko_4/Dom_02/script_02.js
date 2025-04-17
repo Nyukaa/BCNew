@@ -22,10 +22,10 @@ function showAddFruct() {
 }
 document.getElementById("addFruitBtn").addEventListener("click", showAddFruct);
 
-document
-  .getElementById("fruitInput")
-  .addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      showAddFruct();
-    }
-  });
+// document
+//   .getElementById("fruitInput")
+//   .addEventListener("keydown", function (event) {
+//     if (event.key === "Enter") {
+//       showAddFruct();
+//     }
+//   });
