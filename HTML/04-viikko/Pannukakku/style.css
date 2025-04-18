@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Libre Franklin", sans-serif;
+  /* background-color: #ffffff; */
+  background-color: hsl(195, 17%, 90%);
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+h2 {
+  margin-bottom: 40px;
+}
+h2,
+h3,
+#valitse {
+  color: #d17b49;
+}
+#valitse {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+}
+
+.image-container {
+  position: relative;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.form-container {
+  flex: 1;
+  padding: 50px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.price-banner {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #d17b49;
+  color: white;
+  border-radius: 50%;
+  border: 5px solid white; /* Белая обводка */
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+  margin-left: 40px;
+  color: hsl(190, 16%, 29%);
+  cursor: pointer;
+  accent-color: #d17b49;
+  width: 18px;
+  height: 18px;
+}
+
+select,
+label {
+  display: block;
+  margin-top: 10px;
+}
+select {
+  padding: 10px;
+  margin-left: 40px;
+  border-radius: 8px;
+  border: 2px solid #d17b49;
+  background-color: #fff;
+  font-size: 16px;
+  outline-color: #d17b49;
+  color: #3d5054;
+  cursor: pointer;
+  /* appearance: none; /* Removes default arrow in some browsers */
+  /* background-image: url("your-custom-arrow.svg"); optional */
+  /* background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px; */
+}
+
+option {
+  background-color: #fef6f0;
+  color: #3d5054;
+  font-weight: bold;
+}
+
+i {
+  margin-right: 8px;
+  color: #d17b49;
+  font-size: 1.2em;
+  /* vertical-align: middle; */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.price-banner {
+  transition: background-color 0.3s ease;
+}
+
+.price-banner.updated {
+  animation: pulse 0.4s ease;
+}
