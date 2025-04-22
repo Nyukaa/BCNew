@@ -17,7 +17,7 @@ h2 {
 h2,
 h3,
 #valitse {
-  color: #d17b49;
+  color: #ab590a;
 }
 #valitse {
   font-size: 1.2rem;
@@ -52,9 +52,9 @@ h3,
 
 .price-banner {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #d17b49;
+  top: 40px;
+  right: 40px;
+  background-color: #ab590a;
   color: white;
   border-radius: 50%;
   border: 5px solid white; /* Белая обводка */
@@ -75,7 +75,7 @@ input[type="checkbox"] {
   margin-left: 40px;
   color: hsl(190, 16%, 29%);
   cursor: pointer;
-  accent-color: #d17b49;
+  accent-color: #ab590a;
   width: 18px;
   height: 18px;
 }
@@ -89,10 +89,10 @@ select {
   padding: 10px;
   margin-left: 40px;
   border-radius: 8px;
-  border: 2px solid #d17b49;
+  border: 2px solid #ab590a;
   background-color: #fff;
   font-size: 16px;
-  outline-color: #d17b49;
+  outline-color: #ab590a;
   color: #3d5054;
   cursor: pointer;
   /* appearance: none; /* Removes default arrow in some browsers */
@@ -101,7 +101,13 @@ select {
   background-position: right 10px center;
   background-size: 12px; */
 }
-
+.PriceDisplay {
+  background-color: hsl(3, 52%, 80%);
+  display: inline-block;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 0 20px;
+}
 option {
   background-color: #fef6f0;
   color: #3d5054;
@@ -110,7 +116,7 @@ option {
 
 i {
   margin-right: 8px;
-  color: #d17b49;
+  color: #ab590a;
   font-size: 1.2em;
   /* vertical-align: middle; */
 }
@@ -136,4 +142,54 @@ i {
 
 .price-banner.updated {
   animation: pulse 0.4s ease;
+}
+@media screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .image-container,
+  .form-container {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .image-container img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .price-banner {
+    width: 80px;
+    height: 80px;
+    font-size: 18px;
+    top: 20px;
+    right: 20px;
+  }
+
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  label,
+  h3 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .PriceDisplay h3 {
+    font-size: 18px;
+  }
 }
