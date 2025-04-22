@@ -6,7 +6,9 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Arial, sans-serif;
+  font: sans-serif;
+  color: rgb(48, 43, 43);
+
   background-color: aliceblue;
 }
 header {
@@ -48,18 +50,29 @@ main {
 footer {
   margin: 12px;
   padding: 10px;
-  display: flex;
-  justify-content: space-around;
+
   background-color: #cbcbdb;
   width: 90%;
 }
-.oma_class:hover {
-  color: hotpink;
+.formSubmit {
+  max-width: 400px;
+  margin: auto;
+  font-size: 0.7rem;
+  justify-content: center;
 }
-img {
+
+.formSubmit label {
   margin: 10px;
   width: 100px;
 }
+input,
+textarea {
+  width: 90%;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 15px;
+}
+
 ul li {
   margin-left: 30px;
   padding: 3px;
@@ -72,9 +85,10 @@ ul li {
   margin-left: 20px;
 }
 
-.image img {
+img {
   width: 100px;
   height: auto;
+  margin: 20px;
 }
 ol {
   list-style: none;
@@ -85,9 +99,24 @@ ul {
   list-style: none;
   margin: 0;
 }
-.oma_class {
+.linkit {
+  display: flex;
+  justify-content: space-around;
   text-decoration: none;
+  color: rgb(94, 89, 136);
 }
+
 .oma_class:hover {
   color: aqua;
+}
+button {
+  background-color: rgb(94, 89, 136);
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: inherit;
+  /* text-align: center; */
+  padding: 10px 20px;
+  display: block;
+  width: 70%;
+  margin: 10px;
 }

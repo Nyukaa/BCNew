@@ -9,23 +9,22 @@
   <body>
     <header>
       <h1>Anna Shitikova</h1>
-    
     </header>
     <div class="kuva">
       <div>
-          <img src="./img/20240120_201235.jpg" alt="my photo" />
+        <img src="./img/20240120_201235.jpg" alt="my photo" />
       </div>
-       
-        <div class="text">
-          <ol>
-            <li>Katuosoite Jousenkaari, 5, 30</li>
-            <li>Postinumero ja toimipaikka – 02120 Espoo</li>
-            <li>Puhelinnumero +358 465 542 732</li>
-            <li>Sähköpostiosoite annashitikova@gmail.com</li>
-          </ol>
-        </div>
-      
-    </div>   
+
+      <div class="text">
+        <ol>
+          <li>Katuosoite Jousenkaari, 5, 30</li>
+          <li>Postinumero ja toimipaikka – 02120 Espoo</li>
+          <li>Puhelinnumero +358 465 542 732</li>
+          <li>Sähköpostiosoite annashitikova@gmail.com</li>
+        </ol>
+      </div>
+    </div>
+    <main>
       <p id="esi">
         Minulla on kokemusta SEO-asiantuntijana, Internet-markkinoijana ja
         musiikkikoulun apulaisjohtajana. Olen kiinnostunut alan vaihdosta ja
@@ -35,37 +34,52 @@
       <p class="otsikko">Taidot</p>
       <ul>
         <li class="otsikko">Tietotekniset taidot</li>
-        
-          <li>Ms-office, excel, C++, SQL, Python</li>
-          <li class="otsikko">Web-development (Aalto-yliopiston kurssi)</li>
-          <li>JavaScript</li>
-          <li>Svelte</li>
-          <li>Node.Js, Deno</li>
-          <li>Docker</li>
-          <li>Html, Css</li>
-        
+        <li>Ms-office, excel, C++, SQL, Python</li>
+        <li class="otsikko">Web-development (Aalto-yliopiston kurssi)</li>
+        <li>JavaScript</li>
+        <li>Svelte</li>
+        <li>Node.Js, Deno</li>
+        <li>Docker</li>
+        <li>Html, Css</li>
+
         <li class="otsikko">Kielitaidot</li>
+
+        <li>venäjä , äidinkieli</li>
+        <li>englanti, sujuva</li>
+        <li>suomi, B 2.1, 02.10.2024</li>
+      </ul>
+      <div class="harrastus">
+        <p class="otsikko">Harrastukset</p>
         <ul>
-          <li>venäjä , äidinkieli</li>
-          <li>englanti, sujuva</li>
-          <li>suomi, B 2.1, 02.10.2024</li>
+          <li>pianonsoitto</li>
+          <li>hiihtö</li>
+          <li>jooga</li>
+          <li>valokuvaus</li>
+          <li>laulainen</li>
         </ul>
-        <div class="harrastus">
-          <p class="otsikko">Harrastukset</p>
-          <ul>
-            <li>pianonsoitto</li>
-            <li>hiihtö</li>
-            <li>jooga</li>
-            <li>valokuvaus</li>
-            <li>laulainen</li>
-          </ul>
-        </div>
-      
+      </div>
     </main>
     <footer>
-      <a class="oma_class" href="about.html">About</a>
-      <a class="oma_class" href="contact.html">Contact</a>
-      <a class="oma_class" href="kolmas">Kolmas</a>
+      <form class="formSubmit">
+        <h3>Contact me</h3>
+        <label for="formName">Your name</label>
+        <input type="text" id="formName" placeholder="Your name" />
+        <label for="formEmail">Your email</label>
+        <input type="email" id="formEmail" placeholder="Your email" />
+        <label for="formMessage">Your message</label>
+        <textarea
+          cols="20"
+          rows="5"
+          id="formMessage"
+          placeholder="Write your message"
+        ></textarea>
+        <button type="submit">Send message</button>
+      </form>
+      <div class="linkit">
+        <a class="oma_class" href="about.html">About</a>
+        <a class="oma_class" href="contact.html">Contact</a>
+        <a class="oma_class" href="kolmas">Kolmas</a>
+      </div>
     </footer>
   </body>
 </html>
