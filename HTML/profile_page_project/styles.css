@@ -1,14 +1,16 @@
 * {
   box-sizing: border-box;
-}
-body {
   margin: 0;
   padding: 0;
+}
+body {
+  margin: 0px;
+  padding: 0px;
   font-family: Arial, sans-serif;
   background-color: aliceblue;
 }
 header {
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
   background-color: #cbcbdb;
   border-bottom: solid 2px;
@@ -19,28 +21,37 @@ header {
     #8887c8
   ); /* Gradient colors */
 }
+.kuva {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  margin: 20px;
+  width: 90%;
+  background-color: #9090b7;
+}
 main {
   margin: 20px;
   padding: 20px;
 }
 #esi {
-  width: 75%;
+  width: 90%;
   background-color: #ebebf6;
+  margin: 20px;
 }
 .harrastus {
   margin: 10px;
   padding: 0;
-  width: 500px;
+  width: 90%;
   background-color: #aaaac5;
 }
-/*.my_span {
-  width: 25%;
-  background-color: #ebebf6;
-}*/
+
 footer {
-  margin: 20px;
+  margin: 12px;
   padding: 10px;
+  display: flex;
+  justify-content: space-around;
   background-color: #cbcbdb;
+  width: 90%;
 }
 .oma_class:hover {
   color: hotpink;
@@ -49,21 +60,16 @@ img {
   margin: 10px;
   width: 100px;
 }
-
-.container {
-  display: flex;
-  /*justify-content: space-between;*/
-  align-items: center;
-  width: 100%;
-  background-color: #9090b7;
-  border: 2px solid;
+ul li {
+  margin-left: 30px;
+  padding: 3px;
 }
-
 .text {
   font-size: 18px;
 }
 .otsikko {
   font-weight: bold;
+  margin-left: 20px;
 }
 
 .image img {
@@ -71,12 +77,17 @@ img {
   height: auto;
 }
 ol {
-  list-style: none; /* Removes numbers */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 ul {
-  list-style: none; /* Removes numbers */
-  padding: 0;
+  list-style: none;
   margin: 0;
+}
+.oma_class {
+  text-decoration: none;
+}
+.oma_class:hover {
+  color: aqua;
 }
