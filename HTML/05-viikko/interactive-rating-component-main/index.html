@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="stateRating">
+        <img src="./images/icon-star.svg" alt="star" />
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form class="myForm">
+          <div class="radio-group">
+            <label class="circle-radio">
+              <input type="radio" name="option" value="1" />
+              <span>1</span>
+            </label>
+            <label class="circle-radio">
+              <input type="radio" name="option" value="2" />
+              <span>2</span>
+            </label>
+            <label class="circle-radio">
+              <input type="radio" name="option" value="3" />
+              <span>3</span>
+            </label>
+            <label class="circle-radio">
+              <input type="radio" name="option" value="4" />
+              <span>4</span>
+            </label>
+            <label class="circle-radio">
+              <input type="radio" name="option" value="5" />
+              <span>5</span>
+            </label>
+          </div>
+
+          <button type="submit">submit</button>
+        </form>
+      </div>
+      <!-- </div>
+    <div class="container"> -->
+      <div class="stateThank">
+        <form>
+          <div>
+            <img src="./images/illustration-thank-you.svg" alt="thank you" />
+          </div>
+          <div class="forSelect">You selected out of 5</div>
+
+          <h1>Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
