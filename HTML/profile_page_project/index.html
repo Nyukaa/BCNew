@@ -8,14 +8,23 @@
   </head>
   <body>
     <header>
-      <h1>Anna Shitikova</h1>
+      <div class="linkit">
+        <a class="oma_class" href="about.html">About</a>
+        <a class="oma_class" href="contact.html">Contact</a>
+        <a class="oma_class" href="kolmas">Kolmas</a>
+      </div>
     </header>
     <div class="kuva">
-      <div>
-        <img src="./img/20240120_201235.jpg" alt="my photo" />
+      <div class="image">
+        <button class="btn" id="themeToggle">Vaihda teema</button>
+        <img src="./img/Serene Meditation by the Lake.png" alt="my photo" />
       </div>
-
-      <div class="text">
+      <div class="rectangle">
+        <h1>Anna Shitikova</h1>
+      </div>
+    </div>
+    <main>
+      <div class="info">
         <ol>
           <li>Katuosoite Jousenkaari, 5, 30</li>
           <li>Postinumero ja toimipaikka – 02120 Espoo</li>
@@ -23,43 +32,43 @@
           <li>Sähköpostiosoite annashitikova@gmail.com</li>
         </ol>
       </div>
-    </div>
-    <main>
-      <p id="esi">
-        Minulla on kokemusta SEO-asiantuntijana, Internet-markkinoijana ja
-        musiikkikoulun apulaisjohtajana. Olen kiinnostunut alan vaihdosta ja
-        IT-taitojeni päivittämisestä. Opiskelen Business Collegessa
-        verkkokehittäjäksi. Olen tehokas, joustava ja tuloshakuinen.
-      </p>
-      <p class="otsikko">Taidot</p>
-      <ul>
-        <li class="otsikko">Tietotekniset taidot</li>
-        <li>Ms-office, excel, C++, SQL, Python</li>
-        <li class="otsikko">Web-development (Aalto-yliopiston kurssi)</li>
-        <li>JavaScript</li>
-        <li>Svelte</li>
-        <li>Node.Js, Deno</li>
-        <li>Docker</li>
-        <li>Html, Css</li>
-
-        <li class="otsikko">Kielitaidot</li>
-
-        <li>venäjä , äidinkieli</li>
-        <li>englanti, sujuva</li>
-        <li>suomi, B 2.1, 02.10.2024</li>
-      </ul>
-      <div class="harrastus">
-        <p class="otsikko">Harrastukset</p>
-        <ul>
-          <li>pianonsoitto</li>
-          <li>hiihtö</li>
-          <li>jooga</li>
-          <li>valokuvaus</li>
-          <li>laulaminen</li>
-        </ul>
+      <div class="esi">
+        <h3>About Me</h3>
+        <p>
+          Hi, I’m Anna — a full-stack developer with a curious mind, creative
+          drive, and a love for clean, meaningful code. Ever since I was a
+          child, I dreamed of becoming a programmer. That dream shaped my
+          education: I studied mathematics and computer science, building a
+          solid foundation in logic and problem-solving. But life had its own
+          twists — my first professional chapter led me into SEO and digital
+          marketing. Over the years, I gained deep insight into how people
+          interact with digital spaces.
+        </p>
+        <p>
+          Still, something inside kept calling me back to development. And
+          eventually, I listened. Because you can’t cheat destiny — and it
+          turned out my childhood instinct was right all along. Today, I combine
+          my technical background with a creative approach to building
+          user-friendly, fast, and responsive websites and apps. I enjoy working
+          on high-load projects, intuitive interfaces, and anything that demands
+          both structure and imagination.
+        </p>
+        <p>
+          When I’m not coding, I’m probably playing piano, skiing through snowy
+          trails, diving into photography, or sipping a warm drink while
+          sketching new ideas. I believe in lifelong learning and enjoy working
+          with people who value clarity, creativity, and collaboration. Let’s
+          build something great together.
+        </p>
       </div>
     </main>
     <footer>
+      <div class="footer_img">
+        <img
+          src="./img/Lilac-Toned Portrait with Wavy Hair.png"
+          alt="my photo"
+        />
+      </div>
       <form class="formSubmit">
         <h3>Contact me</h3>
         <label for="formName">Your name</label>
@@ -74,14 +83,8 @@
           placeholder="Write your message"
         ></textarea>
         <button class="btn" type="submit">Send message</button>
+        <p class="copyright">© AnnaShi</p>
       </form>
-      <div class="linkit">
-        <a class="oma_class" href="about.html">About</a>
-        <a class="oma_class" href="contact.html">Contact</a>
-        <a class="oma_class" href="kolmas">Kolmas</a>
-      </div>
-      <button class="btn" id="themeToggle">Vaihda teema</button>
-      <p class="copyright">© AnnaShi</p>
     </footer>
     <button id="scrollTopBtn" title="Takaisin ylös">Up↑</button>
 

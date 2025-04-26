@@ -1,21 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  margin: 0px;
-  padding: 0px;
-  font: sans-serif;
-  color: rgb(48, 43, 43);
+  max-width: 1280px;
 
-  background-color: aliceblue;
+  margin: auto;
+  padding: 0px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(48, 43, 43);
+  background-color: hsl(44, 27%, 84%);
+}
+p {
+  color: hsl(217, 12%, 53%);
 }
 header {
-  margin: 10px;
-  padding: 10px;
-  background-color: #cbcbdb;
-  border-bottom: solid 2px;
+  /* margin: 10px; 
+  padding: 10px;*
+  border-bottom: solid 2px;/
+
+  /* background-color: hsl(176, 40%, 65%); */
 
   /*background: linear-gradient(
     to bottom,
@@ -23,56 +29,101 @@ header {
     #8887c8
   ); /* Gradient colors */
 }
+h1,
 h3 {
   text-align: center;
+  color: hsl(217, 12%, 43%);
+  margin-bottom: 10px;
+}
+.image .btn {
+  background-color: hsl(44, 27%, 84%);
+  cursor: pointer;
+  width: 80px; /* Width of the button */
+  height: 80px; /* Height of the button (same as width to make it round) */
+  border-radius: 50%; /* Make it round */
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Center the content (text) */
+  align-items: center;
+  font-family: inherit;
+  position: absolute;
+  top: 60px; /* насколько сверху */
+  left: 130px; /* насколько слева */
+  z-index: 10; /* чтобы была поверх картинки */
+  /* padding: 10px 20px; */
+
+  display: block;
+
+  /* margin: 10px auto;<-- Центрирование по горизонтали */
 }
 .kuva {
   display: flex;
-  justify-content: stretch;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  /* height: 400px; or whatever height you want */
+  /* background-color: #9090b7; */
+}
+
+.image {
+  width: 67%;
+  overflow-x: hidden;
+  position: relative; /* Родитель для абсолютной позиции */
+  /* filter: blur(5px); */
+  height: auto;
+}
+.rectangle {
+  /* background-color: hsl(45, 92%, 79%); */
+  background-color: hsl(44, 27%, 84%);
+  height: 1030px;
+  width: 33%;
+  display: flex;
   align-items: center;
-  margin: 20px;
-  width: 90%;
-  background-color: #9090b7;
+  justify-content: center;
 }
 main {
   margin: 20px;
   padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-#esi {
-  width: 90%;
-  background-color: #ebebf6;
+.esi {
+  padding: 20px;
+  width: 67%;
+  font-size: 1.2rem;
+  background-color: hsl(144, 51%, 93%);
   margin: 20px;
 }
-.harrastus {
+.esi p {
   margin: 10px;
-  padding: 0;
-  width: 90%;
-  background-color: #aaaac5;
 }
-/* .scroll-line {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 16px;
-  height: 0;
-  background: rgb(94, 89, 136); Цвет в твоём стиле 
-  z-index: 9999;
-  transition: height 0.2s ease-out;
-  border-radius: 3px;
-} */
+.info ol li {
+  font-size: 18px;
+  list-style: none;
+  margin: 0;
+}
 footer {
   margin: 12px;
   padding: 10px;
-  justify-content: center;
-
-  background-color: #cbcbdb;
-  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(44, 27%, 84%);
+  width: 100%;
+  border-top: #2e88a3 solid 2px;
+}
+.footer_img img {
+  margin: 20px;
+  width: 300px;
+  background: transparent;
+  /* background-color: #cbcbdb; */
 }
 .formSubmit {
   max-width: 400px;
   margin: auto;
-  font-size: 0.7rem;
-  justify-content: center;
+  font-size: 0.8rem;
+  justify-content: space-around;
 }
 
 .formSubmit label {
@@ -87,44 +138,23 @@ textarea {
   padding: 15px;
 }
 
-ul li {
-  margin-left: 30px;
-  padding: 3px;
-}
-.text {
-  font-size: 18px;
-}
-.otsikko {
-  font-weight: bold;
-  margin-left: 20px;
-}
-
-img {
-  width: 100px;
-  height: auto;
-  margin: 20px;
-}
-ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-ul {
-  list-style: none;
-  margin: 0;
-}
 .linkit {
   display: flex;
   justify-content: space-around;
-  text-decoration: none;
-  color: rgb(94, 89, 136);
+  width: 67%;
+  background-color: #2e88a3;
 }
-
+.linkit a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+}
 .oma_class:hover {
   color: aqua;
 }
 .btn {
-  background-color: rgb(94, 89, 136);
+  color: hsl(44, 27%, 84%);
+  background-color: #2e88a3;
   cursor: pointer;
   border-radius: 20px;
   font-family: inherit;
@@ -137,10 +167,10 @@ ul {
 #scrollTopBtn {
   width: 50px;
   position: fixed;
-  bottom: 40px;
+  bottom: 30px;
   right: 30px;
   z-index: 99;
-  background-color: #5e5988;
+  background-color: #2e88a3;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -175,14 +205,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(94, 89, 136); /* Цвет "ползунка" */
+  background-color: rgb(#2e88a3); /* Цвет "ползунка" */
   border-radius: 20px;
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgb(94, 89, 136) #cbcbdb;
+  scrollbar-color: #2e88a3 #cbcbdb;
 }
 
 /*for dark theme*/

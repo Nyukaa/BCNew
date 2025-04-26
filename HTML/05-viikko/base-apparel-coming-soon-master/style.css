@@ -112,3 +112,7 @@ h1 {
   border-radius: 999px; /* делает кнопку овальной */
   height: 30px; /* можно подстроить по размеру */
 }
+.imgError {
+  display: none;
+  height: 100%;
+}
