@@ -14,13 +14,13 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("dark-theme");
   }
 });
-const scrollLine = document.querySelector(".scroll-line");
+// const scrollLine = document.querySelector(".scroll-line");
 
-window.addEventListener("scroll", () => {
-  const height = document.documentElement.scrollHeight - window.innerHeight;
-  const scrolled = (window.scrollY / height) * 100;
-  scrollLine.style.height = `${scrolled}%`;
-});
+// window.addEventListener("scroll", () => {
+//   const height = document.documentElement.scrollHeight - window.innerHeight;
+//   const scrolled = (window.scrollY / height) * 100;
+//   scrollLine.style.height = `${scrolled}%`;
+// });
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 scrollBtn.addEventListener("click", () => {

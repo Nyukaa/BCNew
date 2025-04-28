@@ -37,22 +37,25 @@ h3 {
 }
 .image .btn {
   background-color: hsl(44, 27%, 84%);
+  color: #2e88a3;
+  font: bold;
   cursor: pointer;
-  width: 80px; /* Width of the button */
-  height: 80px; /* Height of the button (same as width to make it round) */
-  border-radius: 50%; /* Make it round */
-  text-align: center;
+  width: 70px; /* Width of the button */
+  height: 70px; /* Height of the button (same as width to make it round) */
+  border-radius: 60px 10px; /* Make it round */
+  border: none;
+
   display: flex;
   justify-content: center; /* Center the content (text) */
   align-items: center;
   font-family: inherit;
   position: absolute;
-  top: 60px; /* насколько сверху */
-  left: 130px; /* насколько слева */
+  top: 0px; /* насколько сверху */
+  left: 300px; /* насколько слева */
   z-index: 10; /* чтобы была поверх картинки */
-  /* padding: 10px 20px; */
-
+  /* padding: 10px 20px; 
   display: block;
+   text-align: center;*/
 
   /* margin: 10px auto;<-- Центрирование по горизонтали */
 }
@@ -61,6 +64,7 @@ h3 {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+
   /* height: 400px; or whatever height you want */
   /* background-color: #9090b7; */
 }
@@ -72,6 +76,15 @@ h3 {
   /* filter: blur(5px); */
   height: auto;
 }
+
+#toggle-pic {
+  width: 50px;
+  height: auto;
+  position: "absolute";
+  top: "42px";
+  left: "230px";
+  zindex: "10";
+}
 .rectangle {
   /* background-color: hsl(45, 92%, 79%); */
   background-color: hsl(44, 27%, 84%);
@@ -80,6 +93,11 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  #gradient {
+    padding: 0px;
+    margin: 0px;
+  }
 }
 main {
   margin: 20px;
@@ -87,6 +105,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-top: #2e88a3 solid 2px;
 }
 .esi {
   padding: 20px;
@@ -102,6 +121,7 @@ main {
   font-size: 18px;
   list-style: none;
   margin: 0;
+  padding: 10px 0;
 }
 footer {
   margin: 12px;
@@ -214,8 +234,87 @@ html {
   scrollbar-width: thin;
   scrollbar-color: #2e88a3 #cbcbdb;
 }
+/* for dark theme */
+body.dark-theme {
+  background-color: #222;
+  color: #f1f1f1;
+}
 
-/*for dark theme*/
+body.dark-theme header {
+  background-color: #333;
+}
+
+body.dark-theme .kuva {
+  background-color: #444;
+}
+
+body.dark-theme .rectangle {
+  background-color: #333;
+}
+
+body.dark-theme .esi {
+  background-color: #555;
+}
+
+body.dark-theme .esi p,
+body.dark-theme .info ol li,
+body.dark-theme .formSubmit label,
+body.dark-theme footer .copyright {
+  color: #ddd;
+}
+
+body.dark-theme a,
+body.dark-theme .oma_class {
+  color: #ddd;
+}
+
+body.dark-theme footer {
+  background-color: #444;
+}
+
+body.dark-theme .footer_img img {
+  filter: brightness(0.7);
+}
+
+body.dark-theme .linkit {
+  background-color: #2e88a3;
+}
+
+body.dark-theme .btn {
+  color: hsl(44, 27%, 84%);
+  background-color: #2e88a3;
+}
+
+body.dark-theme #scrollTopBtn {
+  background-color: #2e88a3;
+  color: white;
+}
+
+body.dark-theme #scrollTopBtn:hover {
+  background-color: #3c3960;
+}
+
+body.dark-theme ::-webkit-scrollbar-track {
+  background: #333;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background-color: #2e88a3;
+}
+
+body.dark-theme * {
+  scrollbar-color: #2e88a3 #333;
+}
+
+.dark-theme #anna {
+  display: none;
+}
+
+body:not(.dark-theme) #moon {
+  display: none;
+}
+
+/*for dark theme
 body.dark-theme {
   background-color: #222;
   color: #f1f1f1;
@@ -237,4 +336,4 @@ body.dark-theme .oma_class {
 }
 body.dark-theme footer .copyright {
   color: #bbb;
-}
+}*/
