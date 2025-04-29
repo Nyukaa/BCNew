@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="./img/favicon (1)/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="common.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -9,14 +15,14 @@
   <body>
     <header>
       <div class="linkit">
-        <a class="oma_class" href="about.html">About</a>
-        <a class="oma_class" href="contact.html">Contact</a>
-        <a class="oma_class" href="kolmas">Kolmas</a>
+        <a class="oma_class" href="about.html">About /</a>
+        <a class="oma_class" href="index.html">/ To main</a>
+        <a class="oma_class" href="works.html">/ Portfolio</a>
       </div>
+      <button class="btn" id="themeToggle">switch to</button>
     </header>
     <div class="kuva">
       <div class="image">
-        <button class="btn" id="themeToggle">switch to ...</button>
         <img src="./img/anna.png" id="anna" alt="day photo" />
         <img
           id="moon"
@@ -25,7 +31,14 @@
         />
       </div>
       <div class="rectangle" id="gradient">
-        <h1>Anna Shitikova</h1>
+        <h1>Hi, i am Anna.</h1>
+        <h1><i class="fa-solid fa-cat"></i></h1>
+
+        <h1>I like coding.</h1>
+        <h1><i class="fa-solid fa-heart"></i></h1>
+        <h1>Nature inspires and relaxes me.</h1>
+        <h1><i class="fa-solid fa-leaf"></i></h1>
+        <h1>Plus, I’m an easy-going person.</h1>
       </div>
     </div>
     <main>
@@ -87,7 +100,7 @@
           placeholder="Write your message"
         ></textarea>
         <button class="btn" type="submit">Send message</button>
-        <p class="copyright">© AnnaShi</p>
+        <p class="copyright">© AnnaShi 2025</p>
       </form>
     </footer>
     <button id="scrollTopBtn" title="Takaisin ylös">Up↑</button>

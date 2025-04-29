@@ -1,64 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  max-width: 1280px;
-
-  margin: auto;
-  padding: 0px;
-  font-family: "Josefin Sans", sans-serif;
-  color: rgb(48, 43, 43);
-  background-color: hsl(44, 27%, 84%);
-}
-p {
-  color: hsl(217, 12%, 53%);
-}
-header {
-  /* margin: 10px; 
-  padding: 10px;*
-  border-bottom: solid 2px;/
-
-  /* background-color: hsl(176, 40%, 65%); */
-
-  /*background: linear-gradient(
-    to bottom,
-    #bcc0c5,
-    #8887c8
-  ); /* Gradient colors */
-}
-h1,
-h3 {
-  text-align: center;
-  color: hsl(217, 12%, 43%);
-  margin-bottom: 10px;
-}
-.image .btn {
-  background-color: hsl(44, 27%, 84%);
-  color: #2e88a3;
-  font: bold;
-  cursor: pointer;
-  width: 70px; /* Width of the button */
-  height: 70px; /* Height of the button (same as width to make it round) */
-  border-radius: 60px 10px; /* Make it round */
-  border: none;
-
-  display: flex;
-  justify-content: center; /* Center the content (text) */
-  align-items: center;
-  font-family: inherit;
-  position: absolute;
-  top: 0px; /* насколько сверху */
-  left: 300px; /* насколько слева */
-  z-index: 10; /* чтобы была поверх картинки */
-  /* padding: 10px 20px; 
-  display: block;
-   text-align: center;*/
-
-  /* margin: 10px auto;<-- Центрирование по горизонтали */
-}
 .kuva {
   display: flex;
   align-items: flex-start;
@@ -77,20 +16,13 @@ h3 {
   height: auto;
 }
 
-#toggle-pic {
-  width: 50px;
-  height: auto;
-  position: "absolute";
-  top: "42px";
-  left: "230px";
-  zindex: "10";
-}
 .rectangle {
   /* background-color: hsl(45, 92%, 79%); */
   background-color: hsl(44, 27%, 84%);
   height: 1030px;
   width: 33%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -98,6 +30,9 @@ h3 {
     padding: 0px;
     margin: 0px;
   }
+}
+.rectangle h1 {
+  font-size: 2rem;
 }
 main {
   margin: 20px;
@@ -117,136 +52,8 @@ main {
 .esi p {
   margin: 10px;
 }
-.info ol li {
-  font-size: 18px;
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-}
-footer {
-  margin: 12px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: hsl(44, 27%, 84%);
-  width: 100%;
-  border-top: #2e88a3 solid 2px;
-}
-.footer_img img {
-  margin: 20px;
-  width: 300px;
-  background: transparent;
-  /* background-color: #cbcbdb; */
-}
-.formSubmit {
-  max-width: 400px;
-  margin: auto;
-  font-size: 0.8rem;
-  justify-content: space-around;
-}
 
-.formSubmit label {
-  margin: 10px;
-  width: 100px;
-}
-input,
-textarea {
-  width: 90%;
-  box-sizing: border-box;
-  margin: 10px;
-  padding: 15px;
-}
-
-.linkit {
-  display: flex;
-  justify-content: space-around;
-  width: 67%;
-  background-color: #2e88a3;
-}
-.linkit a {
-  color: black;
-  text-decoration: none;
-  margin: 10px;
-}
-.oma_class:hover {
-  color: aqua;
-}
-.btn {
-  color: hsl(44, 27%, 84%);
-  background-color: #2e88a3;
-  cursor: pointer;
-  border-radius: 20px;
-  font-family: inherit;
-  /* text-align: center; */
-  padding: 10px 20px;
-  display: block;
-  width: 70%;
-  margin: 10px auto; /* <-- Центрирование по горизонтали */
-}
-#scrollTopBtn {
-  width: 50px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 99;
-  background-color: #2e88a3;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 16px;
-
-  padding: 10px 0;
-
-  transition: background-color 0.3s ease;
-}
-
-#scrollTopBtn:hover {
-  background-color: #3c3960;
-}
-footer .copyright {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #444;
-  margin-top: 20px;
-}
-html {
-  scroll-behavior: smooth;
-}
-/* Chrome, Edge, Safari */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #cbcbdb; /* Цвет фона полосы */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(#2e88a3); /* Цвет "ползунка" */
-  border-radius: 20px;
-}
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #2e88a3 #cbcbdb;
-}
 /* for dark theme */
-body.dark-theme {
-  background-color: #222;
-  color: #f1f1f1;
-}
-
-body.dark-theme header {
-  background-color: #333;
-}
-
-body.dark-theme .kuva {
-  background-color: #444;
-}
 
 body.dark-theme .rectangle {
   background-color: #333;
@@ -257,54 +64,18 @@ body.dark-theme .esi {
 }
 
 body.dark-theme .esi p,
-body.dark-theme .info ol li,
-body.dark-theme .formSubmit label,
-body.dark-theme footer .copyright {
+body.dark-theme .info ol li {
   color: #ddd;
 }
 
-body.dark-theme a,
-body.dark-theme .oma_class {
-  color: #ddd;
-}
-
-body.dark-theme footer {
-  background-color: #444;
-}
-
-body.dark-theme .footer_img img {
-  filter: brightness(0.7);
-}
-
-body.dark-theme .linkit {
+/* body.dark-theme .linkit {
   background-color: #2e88a3;
-}
+} */
 
-body.dark-theme .btn {
+/* body.dark-theme .btn {
   color: hsl(44, 27%, 84%);
   background-color: #2e88a3;
-}
-
-body.dark-theme #scrollTopBtn {
-  background-color: #2e88a3;
-  color: white;
-}
-
-body.dark-theme #scrollTopBtn:hover {
-  background-color: #3c3960;
-}
-
-body.dark-theme ::-webkit-scrollbar-track {
-  background: #333;
-}
-
-body.dark-theme ::-webkit-scrollbar-thumb {
-  background-color: #2e88a3;
-}
-
-body.dark-theme * {
-  scrollbar-color: #2e88a3 #333;
-}
+} */
 
 .dark-theme #anna {
   display: none;

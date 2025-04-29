@@ -35,3 +35,42 @@ window.addEventListener("scroll", () => {
     scrollBtn.style.display = "none";
   }
 });
+
+// Получаем элементы
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".close");
+let focusedElement;
+
+const closeModal = () => {
+  modal.style.display = "none";
+  focusedElement.focus();
+};
+// Добавляем обработчики на все hover-image
+document.querySelectorAll(".photo-item").forEach((link) => {
+  link.addEventListener("click", () => {
+    modal.style.display = "block";
+    const img = link.querySelector(".hover-image");
+    modalImg.src = img.src;
+    focusedElement = link;
+    closeBtn.focus();
+  });
+});
+
+// Закрытие по нажатию на X
+closeBtn.addEventListener("click", () => {
+  closeModal();
+});
+
+// Закрытие по клику вне изображения
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+// Закрытие по клику вне изображения
+window.addEventListener("keyup", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});

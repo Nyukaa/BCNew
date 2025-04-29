@@ -1,33 +1,124 @@
-<p class="otsikko">Taidot</p>
-<ul>
-  <li class="otsikko">Tietotekniset taidot</li>
-  <li>Ms-office, excel, C++, SQL, Python</li>
-  <li class="otsikko">Web-development (Aalto-yliopiston kurssi)</li>
-  <li>JavaScript</li>
-  <li>Svelte</li>
-  <li>Node.Js, Deno</li>
-  <li>Docker</li>
-  <li>Html, Css</li>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="./img/favicon (1)/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="linkit">
+        <a class="oma_class" href="about.html">About </a>
+        <a class="oma_class" href="index.html">/ To main</a>
+        <a class="oma_class" href="works.html">/ Portfolio</a>
+      </div>
+      <button class="btn" id="themeToggle">switch to</button>
+    </header>
 
-  <li class="otsikko">Kielitaidot</li>
+    <main class="cv-grid">
+      <!-- Левая колонка -->
+      <section class="left-column">
+        <div class="kuva">
+          <img src="./img/20240120_201235.jpg" alt="my photo" />
+          <div class="text">
+            <h1>Anna Shitikova</h1>
+            <h2>Web-development</h2>
+            <h3><i class="fa-solid fa-phone"></i> Yhteystiedot</h3>
+            <ol>
+              <li>02120 Espoo Finland</li>
+              <li>+358 465 542 732</li>
+              <li>annashitikova@gmail.com</li>
+            </ol>
+          </div>
+        </div>
+        <h3><i class="fa-regular fa-handshake"></i> About me</h3>
+        <p id="esi">
+          Minulla on kokemusta SEO-asiantuntijana, Internet-markkinoijana ja
+          musiikkikoulun apulaisjohtajana. Olen opiskelemassa verkkokehitäjäksi.
+        </p>
 
-  <li>venäjä , äidinkieli</li>
-  <li>englanti, sujuva</li>
-  <li>suomi, B 2.1, 02.10.2024</li>
-</ul>
-<div class="harrastus">
-  <p class="otsikko">Harrastukset</p>
-  <ul>
-    <li>pianonsoitto</li>
-    <li>hiihtö</li>
-    <li>jooga</li>
-    <li>valokuvaus</li>
-    <li>laulaminen</li>
-  </ul>
-  <ol>
-    <li>Katuosoite Jousenkaari, 5, 30</li>
-    <li>Postinumero ja toimipaikka – 02120 Espoo</li>
-    <li>Puhelinnumero +358 465 542 732</li>
-    <li>Sähköpostiosoite annashitikova@gmail.com</li>
-  </ol>
-</div>
+        <div class="harrastus">
+          <h3><i class="fa-solid fa-headphones"></i> Harrastukset</h3>
+          <ul>
+            <li>pianonsoitto</li>
+            <li>hiihtö</li>
+            <li>jooga</li>
+            <li>valokuvaus</li>
+            <li>laulaminen</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Правая колонка -->
+      <section class="right-column">
+        <h3><i class="fa-solid fa-user-graduate"></i> Koulutus</h3>
+        <h4>Business College Helsinki (2025-)</h4>
+        <p>Verkkokehitys</p>
+        <h4>Aalto-yliopiston kurssi, (2024)</h4>
+        <p>Web-development, Full stack</p>
+
+        <h4>Galimatias (2023-2024)</h4>
+        <p>Korkeakoulutettujen suomen kotoutumiskurssi</p>
+        <h4>
+          A. M. Gorkii Uralin valtionyliopisto ( Ural State University), (2010)
+        </h4>
+        <p>Matematiikan ja tietotekniikan maisteri</p>
+
+        <h3><i class="fa-solid fa-briefcase"></i> Työkokemus</h3>
+        <h4>Musiikin yksityiskoulu "Pupitre", Venäjä (2017-2019)</h4>
+        <p>Musiikin yksityiskoulun apulaisjohtaja ja internet-markkinoija</p>
+
+        <h4>Business key, Venäjä (2011–2015)</h4>
+        <p>
+          Internet-markkinointi, SEO-asiatuntija (searching engine optimization)
+        </p>
+
+        <h3><i class="fa-solid fa-face-smile-beam"></i> Taidot</h3>
+
+        <ol>
+          <li class="otsikko">Tietotekniset taidot</li>
+          <li>Ms-office, excel, C++, SQL, Python</li>
+          <li class="otsikko">Web-development</li>
+          <li>JavaScript, Svelte, Node.js, Docker, HTML, CSS</li>
+          <li class="otsikko">Kielitaidot</li>
+          <li>venäjä (äidinkieli), englanti (sujuva), suomi (B2.1)</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer_img">
+        <img
+          src="./img/Lilac-Toned Portrait with Wavy Hair.png"
+          alt="my photo"
+        />
+      </div>
+      <form class="formSubmit">
+        <h3>Contact me</h3>
+        <label for="formName">Your name</label>
+        <input type="text" id="formName" placeholder="Your name" />
+        <label for="formEmail">Your email</label>
+        <input type="email" id="formEmail" placeholder="Your email" />
+        <label for="formMessage">Your message</label>
+        <textarea
+          cols="20"
+          rows="5"
+          id="formMessage"
+          placeholder="Write your message"
+        ></textarea>
+        <button class="btn" type="submit">Send message</button>
+        <p class="copyright">© AnnaShi 2025</p>
+      </form>
+    </footer>
+    <button id="scrollTopBtn" title="Takaisin ylös">Up↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
