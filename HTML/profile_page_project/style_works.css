@@ -54,7 +54,12 @@ a {
   left: 0;
   opacity: 0;
 }
-
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #444;
+  margin-top: 20px;
+}
 .image-hover-wrapper:hover .hover-image,
 .photo-item:focus .hover-image {
   opacity: 1;
