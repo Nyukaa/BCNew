@@ -19,7 +19,7 @@
 .rectangle {
   /* background-color: hsl(45, 92%, 79%); */
   background-color: hsl(44, 27%, 84%);
-  height: 1030px;
+  height: 1025px;
   width: 33%;
   display: flex;
   flex-direction: column;
@@ -108,3 +108,48 @@ body.dark-theme .oma_class {
 body.dark-theme footer .copyright {
   color: #bbb;
 }*/
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    /* line-height: 1.5; */
+  }
+
+  .kuva {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .image {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative; /* Родитель для абсолютной позиции */
+    /* filter: blur(5px); */
+    height: auto;
+  }
+  .rectangle {
+    /* background-color: hsl(45, 92%, 79%); */
+    background-color: hsl(44, 27%, 84%);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: #2e88a3 solid 2px;
+  }
+  .esi {
+    padding: 20px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: hsl(144, 51%, 93%);
+    margin: 20px;
+  }
+}

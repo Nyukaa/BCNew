@@ -220,3 +220,12 @@ body.dark-theme h1,
 body.dark-theme h2 {
   color: #ddd;
 }
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  .footer_img img {
+    margin: 20px;
+    width: 100px;
+  }
+}

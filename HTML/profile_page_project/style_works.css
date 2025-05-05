@@ -4,14 +4,12 @@
   gap: 10px; /* Space between the grid items */
   padding: 20px;
 }
-/* последний элемент в сетке выровнять по центру
- */
+
 /* Style for each photo item */
 .photo-item img {
   width: 100%; /* Ensure the image fills its container */
   height: auto; /* Maintain the aspect ratio */
   border-radius: 20px; /* Optional: round the corners of images */
-  border: #2e88a3 solid 2px;
 
   object-fit: cover; /* Убедитесь, что изображение заполняет пространство без растягивания */
   transition: all 0.8s ease; /* Добавьте плавный переход для эффекта при наведении */
@@ -52,7 +50,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
+  opacity: 1;
 }
 .copyright {
   text-align: center;
@@ -98,4 +96,15 @@ a {
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+}
+@media (hover) {
+  .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .photo-item img {
+    border: #2e88a3 solid 2px;
+  }
 }
