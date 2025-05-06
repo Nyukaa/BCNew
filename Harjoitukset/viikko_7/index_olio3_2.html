@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>11 Postaukset</h1>
+    <div>
+      <h2>Ensimmäinen postaus</h2>
+      <p>Tämä on ensimmäisen postauksen sisältö.</p>
+      <p>Tykkäyksiä: <span id="likes0">12</span></p>
+      <button id="likeBtn0">Tykkää ❤️</button>
+    </div>
+
+    <div>
+      <h2>Toinen postaus</h2>
+      <p>Tässä postauksessa puhutaan JavaScriptistä.</p>
+      <p>Tykkäyksiä: <span id="likes1">30</span></p>
+      <button id="likeBtn1">Tykkää ❤️</button>
+    </div>
+
+    <div>
+      <h2>Kolmas postaus</h2>
+      <p>Tässä jaetaan vinkkejä koodaukseen.</p>
+      <p>Tykkäyksiä: <span id="likes2">25</span></p>
+      <button id="likeBtn2">Tykkää ❤️</button>
+    </div>
+    <hr />
+    <h3>12 Työntekijä ja nosta hänen palkkaansa</h3>
+    <p id="info"></p>
+    <label for="procent">Nosta prosenttia:</label>
+    <input type="number" id="procent" />
+    <button id="raise">Nosta palkkaa</button>
+    <hr />
+    <h3>13 Ajastin</h3>
+    <p id="timerDisplay">Aika: 0 sekuntia</p>
+    <button onclick="timer.start()">Alka ajastin</button>
+    <button onclick="timer.stop()">Pysäytä ajastin</button>
+
+    <hr />
+    <h3>14 Books</h3>
+    <ul id="bookList">
+      <li>Harry Potter</li>
+      <li>Narnia</li>
+    </ul>
+    <h4>Lisää uusi kirja</h4>
+    <form id="bookForm">
+      <label for="title">Kirjan nimi:</label>
+      <input type="text" id="title" required />
+      <button type="submit">Lisää</button>
+    </form>
+    <hr />
+    <h2>15 🦊 Kettujen seuranta</h2>
+
+    <form id="foxForm">
+      <label for="name">Kettunimi:</label>
+      <input type="text" id="name" required />
+
+      <label for="location">Sijainti:</label>
+      <input type="text" id="location" required />
+
+      <button type="submit">Lisää kettu</button>
+    </form>
+
+    <h3>Ketut:</h3>
+    <ul id="foxList"></ul>
+    <script src="script_olio_3_2.js"></script>
+  </body>
+</html>

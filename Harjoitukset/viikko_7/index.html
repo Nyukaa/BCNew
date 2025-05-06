@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teema Vaihto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="btn_toggle">Task 3: Vaihda teema</button>
+    <div>
+      <button id="btnValue">0</button>
+      <button id="btnPlus">+</button>
+      <button id="btnMinus">-</button>
+    </div>
+    <div>
+      <h3>6 product</h3>
+      <p id="product.name"></p>
+      <p id="product.price"></p>
+      <label for="product">quantity</label>
+      <input type="number" id="product.quantity" />
+      <p id="product.total"></p>
+    </div>
+    <div>
+      <h1>7 Task Manager</h1>
+
+      <input type="text" id="title" placeholder="Title" />
+      <input type="text" id="description" placeholder="Description" />
+      <label for="product">done</label>
+      <input type="checkbox" id="completed" />
+      <button id="new_task">Add Task</button>
+
+      <div id="show_task"></div>
+      <div>
+        <h1>8 New car</h1>
+        <div id="show_car"></div>
+      </div>
+    </div>
+
+    <button id="sort">To sort</button>
+    <div id="sortedList"></div>
+    <h2>10 🛒 Ostoslista</h2>
+    <form id="itemForm">
+      <input type="text" id="itemInput" placeholder="Lisää tuote" required />
+      <button type="submit">Lisää</button>
+    </form>
+    <input type="text" id="itemDelete" placeholder="Delete tuote" />
+    <button id="delete" type="button">Delete</button>
+    <ul id="itemList"></ul>
+
+    <script src="script_olio_3.js"></script>
+  </body>
+</html>

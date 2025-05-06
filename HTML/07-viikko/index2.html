@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Два правдивых и одна ложь</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f0f0f0;
+        padding: 20px;
+      }
+      .hidden {
+        display: none;
+      }
+      input[type="text"] {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pelaaja 1:</h1>
+    <div id="inputPhase">
+      <form id="inputForm">
+        <p>
+          <input type="text" id="q1" placeholder="Väite 1:" required />
+          <label
+            ><input type="radio" name="lie" value="0" required /> Tämä ei ole
+            totta</label
+          >
+        </p>
+        <p>
+          <input type="text" id="q2" placeholder="Väite 2" required />
+          <label
+            ><input type="radio" name="lie" value="1" /> Tämä ei ole
+            totta</label
+          >
+        </p>
+        <p>
+          <input type="text" id="q3" placeholder="Väite 3" required />
+          <label
+            ><input type="radio" name="lie" value="2" /> Tämä ei ole
+            totta</label
+          >
+        </p>
+        <button type="submit">Kysy pelaaja 2</button>
+      </form>
+    </div>
+
+    <div id="guessPhase" class="hidden">
+      <h1>Pelaaja 2: Arvaa epätotta</h1>
+      <form id="guessForm">
+        <div id="guessStatements"></div>
+        <button type="submit">Check</button>
+      </form>
+      <p id="result"></p>
+    </div>
+
+    <script src="script2.js"></script>
+  </body>
+</html>

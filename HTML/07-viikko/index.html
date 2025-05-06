@@ -1,0 +1,139 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: lightblue; /* Vaihda haluamaksesi väriksi */
+      }
+    </style>
+    <h1>Kaksi totuutta ja yhden valheen omastaelämästään</h1>
+    <p>Lapsena asuin kaupungissa, jossa on vuoria</p>
+    <p>Mä en pidä sienistä.</p>
+    <p>Herään arkisin kello 7.45</p>
+    <form>
+      <label for="fname">Väite 1:</label>
+      <input type="text" name="" id="fname" />
+      <label for="fnameCh">Tämä on totta</label>
+      <input type="checkbox" id="fnameCh" name="fname" />
+      <br />
+      <label for="lname">Väite 2:</label>
+      <input type="text" name="" id="lname" />
+      <label for="fnameCh">Tämä on totta</label>
+      <input type="checkbox" id="lnameCh" name="lname" />
+      <br />
+      <label for="bname">Väite 3:</label>
+      <input type="text" name="" id="bname" />
+      <label for="bnameCh">Tämä on totta</label>
+      <input type="checkbox" id="bnameCh" name="bname" />
+      <br />
+      <input type="submit" value="Salaa totuustieto" />
+      <br />
+      <button>Reveal the Truth!</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kaksi totuutta ja yksi valhe – 3 kierrosta</title>
+  </head>
+  <body>
+    <h1>Kaksi totuutta ja yksi valhe</h1>
+    <div id="quizContainer"></div>
+    <p id="resultText"></p>
+    <button id="nextButton" style="display: none">Seuraava kierros</button>
+    <script>
+      const rounds = [
+        {
+          statements: [
+            "Pidän suklaasta.",
+            "En osaa uida.",
+            "Olen käynyt Japanissa.",
+          ],
+          lieIndex: 1,
+        },
+        {
+          statements: [
+            "Puhun viittä kieltä.",
+            "Minulla on ollut kolme kissaa.",
+            "En ole koskaan syönyt sushia.",
+          ],
+          lieIndex: 0,
+        },
+        {
+          statements: [
+            "Rakastan talvea.",
+            "Olen pelannut shakkia turnauksessa.",
+            "En ole koskaan katsonut elokuvia Marvelilta.",
+          ],
+          lieIndex: 2,
+        },
+      ];
+
+      let currentRound = 0;
+      let score = 0;
+
+      const quizContainer = document.getElementById("quizContainer");
+      const resultText = document.getElementById("resultText");
+      const nextButton = document.getElementById("nextButton");
+
+      function showRound(roundIndex) {
+        const round = rounds[roundIndex];
+        quizContainer.innerHTML = "<h2>Kierros " + (roundIndex + 1) + "</h2>";
+        round.statements.forEach((stmt, index) => {
+          quizContainer.innerHTML += `
+          <p>
+            <label>
+              <input type="radio" name="guess" value="${index}" required />
+              ${stmt}
+            </label>
+          </p>`;
+        });
+        quizContainer.innerHTML += `<button onclick="submitGuess()">Vahvista valinta</button>`;
+        resultText.textContent = "";
+      }
+
+      function submitGuess() {
+        const selected = document.querySelector('input[name="guess"]:checked');
+        if (!selected) {
+          alert("Valitse yksi vaihtoehto!");
+          return;
+        }
+
+        const selectedIndex = parseInt(selected.value);
+        const correctIndex = rounds[currentRound].lieIndex;
+
+        if (selectedIndex === correctIndex) {
+          resultText.textContent = "✅ Oikein! Tunnistit valheen.";
+          score++;
+        } else {
+          resultText.textContent = `❌ Väärin. Valhe oli: "${rounds[currentRound].statements[correctIndex]}"`;
+        }
+
+        nextButton.style.display = "inline-block";
+      }
+
+      nextButton.addEventListener("click", () => {
+        currentRound++;
+        if (currentRound < rounds.length) {
+          showRound(currentRound);
+          nextButton.style.display = "none";
+        } else {
+          quizContainer.innerHTML = `<h2>Peli ohi!</h2><p>Sait ${score} / 3 oikein.</p>`;
+          resultText.textContent = "";
+          nextButton.style.display = "none";
+        }
+      });
+
+      // Start first round
+      showRound(currentRound);
+    </script>
+  </body>
+</html>
