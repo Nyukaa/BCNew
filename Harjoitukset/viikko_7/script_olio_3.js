@@ -168,22 +168,48 @@ Luo olio `weatherApp`, jossa on metodi `fetchWeather(city)`.
 Käytä `fetch`-funktiota hakeaksesi säätietoja API:sta ja näytä ne HTML-elementissä.
 (API: OpenWeather tai jokin muu ilmainen sää-API)
 */
+// const weatherApp = {
+//   fetchWeather() {
+//     fetch(
+//       "https://api.open-meteo.com/v1/forecast?latitude=60.1695&longitude=24.9354&current=temperature_2m&current=rain"
+//     ).then((response) => {
+//       response.json().then((json) => {
+//         console.log(
+//           "The weather in Helsinki:",
+//           json.current.temperature_2m,
+//           "Rain is:",
+//           json.current.rain
+//         );
+//       });
+//     });
+//   },
+// };
+// weatherApp.fetchWeather();
+
 const weatherApp = {
   fetchWeather() {
     fetch(
-      "https://api.open-meteo.com/v1/forecast?latitude=60.1695&longitude=24.9354&current=temperature_2m&current=rain"
-    ).then((response) => {
-      response.json().then((json) => {
-        console.log(
-          "The weather in Helsinki:",
-          json.current.temperature_2m,
-          "Rain is:",
-          json.current.rain
-        );
+      "https://api.open-meteo.com/v1/forecast?latitude=60.1695&longitude=24.9354&current=temperature_2m,rain"
+    )
+      .then((response) => response.json())
+      .then((json) => {
+        const weatherDiv = document.getElementById("weatherDisplay");
+        const temp = json.current.temperature_2m;
+        const rain = json.current.rain;
+
+        weatherDiv.innerHTML = `
+          <p>Lämpötila: ${temp} °C</p>
+          <p>Sade: ${rain} mm</p>
+        `;
+      })
+      .catch((error) => {
+        document.getElementById("weatherDisplay").textContent =
+          "Virhe säätietojen haussa.";
+        console.error("Virhe:", error);
       });
-    });
   },
 };
+
 weatherApp.fetchWeather();
 
 /* Tehtävä 8
@@ -218,13 +244,16 @@ const users = [
   { name: "Liisa", score: 78 },
   { name: "Jari", score: 66 },
 ];
-
-const sortList = () => {
-  users.sort((a, b) => a.score - b.score); // Сортировка по убыванию
+const showList = () => {
   const listHTML = users
     .map((user) => `<p>${user.name}: ${user.score}</p>`)
     .join("");
   document.getElementById("sortedList").innerHTML = listHTML;
+};
+showList();
+const sortList = () => {
+  users.sort((a, b) => a.score - b.score); // Сортировка по убыванию
+  showList();
 };
 
 document.getElementById("sort").addEventListener("click", sortList);

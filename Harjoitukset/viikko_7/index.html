@@ -14,16 +14,16 @@
       <button id="btnMinus">-</button>
     </div>
     <div>
-      <h3>6 product</h3>
+      <h3>5 product</h3>
       <p id="product.name"></p>
       <p id="product.price"></p>
       <label for="product">quantity</label>
       <input type="number" id="product.quantity" />
       <p id="product.total"></p>
     </div>
-    <div>
-      <h1>7 Task Manager</h1>
 
+    <div>
+      <h3>6 Task Manager</h3>
       <input type="text" id="title" placeholder="Title" />
       <input type="text" id="description" placeholder="Description" />
       <label for="product">done</label>
@@ -31,21 +31,27 @@
       <button id="new_task">Add Task</button>
 
       <div id="show_task"></div>
+      <h2>7 Sää Helsingissä</h2>
+      <div id="weatherDisplay"></div>
       <div>
-        <h1>8 New car</h1>
+        <h3>8 New car</h3>
         <div id="show_car"></div>
       </div>
     </div>
 
-    <button id="sort">To sort</button>
+    <button id="sort">Task 9: To sort</button>
     <div id="sortedList"></div>
-    <h2>10 🛒 Ostoslista</h2>
-    <form id="itemForm">
-      <input type="text" id="itemInput" placeholder="Lisää tuote" required />
-      <button type="submit">Lisää</button>
-    </form>
-    <input type="text" id="itemDelete" placeholder="Delete tuote" />
-    <button id="delete" type="button">Delete</button>
+    <h3>10 🛒 Ostoslista</h3>
+    <div style="display: flex; justify-content: space-between">
+      <form id="itemForm">
+        <input type="text" id="itemInput" placeholder="Lisää tuote" required />
+        <button type="submit">Lisää</button>
+      </form>
+      <div>
+        <input type="text" id="itemDelete" placeholder="Delete tuote" />
+        <button id="delete" type="button">Delete</button>
+      </div>
+    </div>
     <ul id="itemList"></ul>
 
     <script src="script_olio_3.js"></script>

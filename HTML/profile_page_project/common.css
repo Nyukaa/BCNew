@@ -30,7 +30,7 @@ p {
   padding: 10px 0;
 }
 header {
-  padding: 0px;
+  padding: 10px;
   background-color: hsl(44, 27%, 84%);
   margin-bottom: 10px;
   display: flex;
@@ -119,6 +119,20 @@ textarea {
   display: block;
   width: 70%;
   margin: 10px auto; /* <-- Центрирование по горизонтали */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+/* Hover animation */
+.btn:hover {
+  background-color: #1f6380;
+  transform: scale(1.1); /* Slightly grow the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+}
+
+/* Focus animation for accessibility */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #1f6380;
 }
 
 #scrollTopBtn {
