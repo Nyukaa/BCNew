@@ -3,7 +3,7 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
   /* height: 400px; or whatever height you want */
   /* background-color: #9090b7; */
 }

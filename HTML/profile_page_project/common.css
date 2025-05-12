@@ -36,6 +36,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid #2e88a3;
 }
 
 header .btn {
@@ -44,7 +45,8 @@ header .btn {
   font-size: 1.2rem;
   font-family: inherit;
   cursor: pointer;
-  margin: 0;
+  margin: 12px;
+  padding: 10px;
   border-radius: 20px 0;
   border: none;
   width: 120px; /* Width of the button */
@@ -108,7 +110,7 @@ textarea {
   margin: 10px;
   padding: 15px;
 }
-.btn {
+footer .btn {
   color: hsl(44, 27%, 84%);
   background-color: #2e88a3;
   cursor: pointer;
@@ -123,14 +125,14 @@ textarea {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 /* Hover animation */
-.btn:hover {
+footer .btn:hover {
   background-color: #1f6380;
   transform: scale(1.1); /* Slightly grow the button */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Stronger shadow */
 }
 
 /* Focus animation for accessibility */
-.btn:focus {
+footer .btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px #1f6380;
 }
@@ -233,6 +235,10 @@ body.dark-theme footer .copyright,
 body.dark-theme h1,
 body.dark-theme h2 {
   color: #ddd;
+}
+body.dark-theme header .btn {
+  background-color: #222; /* тёмный фон кнопки */
+  color: #f1f1f1; /* светлый текст */
 }
 @media (max-width: 768px) {
   footer {

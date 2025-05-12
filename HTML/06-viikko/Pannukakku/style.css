@@ -54,7 +54,8 @@ h3,
 
 .form-container {
   flex: 1;
-  padding: 50px;
+  margin-left: 40px;
+  padding: 20px;
   min-height: 100vh;
   overflow-y: auto;
 }
@@ -63,7 +64,7 @@ h3,
   position: fixed;
   top: 40px;
   right: 50%; /* Устанавливаем баннер на 50% от правого края окна */
-  transform: translateX(-40px); /* ;  Сдвигаем баннер на 40px влево */
+  margin-right: 40px;
 
   background-color: #ab590a;
   color: white;

@@ -1,0 +1,226 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  border: #333 solid 1px;
+  gap: 2px;
+  background-color: rgb(190, 198, 169);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation: bounce 3s ease infinite;
+  margin: 30px;
+}
+@keyframes colorChange {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+.box1 {
+  animation: colorChange 3s ease infinite;
+}
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation: colorChange 3s ease infinite;
+  margin: 30px;
+}
+.box2 {
+  animation: colorChange 3s ease infinite;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation: rotate 3s ease infinite;
+  margin: 30px;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle {
+  animation: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: orange;
+
+  margin: 30px;
+}
+
+.circle:hover {
+  animation: rotate 1s linear;
+}
+/*Кнопка плавно меняет цвет с синего на красный при наведении.*/
+.button1 {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button1:hover {
+  background-color: red;
+}
+
+/*эффект: Блок увеличивается при наведении.*/
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.box3:hover {
+  width: 200px;
+  height: 200px;
+}
+
+/*Карточка увеличивается и меняет цвет при наведении.*/
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 30px;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background-color: lightblue;
+}
+
+/* Меню плавно открывается и закрывается.*/
+.menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.menu.open {
+  max-height: 300px;
+}
+/* Кнопка немного «вдавливается» при нажатии.*/
+.button2 {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+
+.button2:active {
+  transform: scale(2);
+}
+/* Изображение немного приближается при наведении.*/
+
+.image-container {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+  transform: scale(1.9);
+}
+/*Подчеркивание появляется плавно при наведении.*/
+.link {
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#openModal {
+  color: #007bff;
+
+  width: 150px;
+}
+/*modal window*/
+.modal {
+  display: none;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
