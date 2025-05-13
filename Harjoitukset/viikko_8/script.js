@@ -193,7 +193,7 @@ const markTaskComplete = (taskId) => {
   let parsedTasks = JSON.parse(localStorage.getItem("tasksKey"));
 
   for (let i = 0; i < parsedTasks.length; i++) {
-    console.log("for");
+    // console.log("for");
     if (parsedTasks[i].id === taskId) {
       parsedTasks[i].completed = true;
       break;
