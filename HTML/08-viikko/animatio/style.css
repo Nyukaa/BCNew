@@ -1,3 +1,20 @@
+body {
+  animation: example 10s ease infinite;
+}
+@keyframes example {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: blue;
+  }
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7,6 +24,20 @@
   background-color: rgb(190, 198, 169);
 }
 
+.grid div,
+.grid a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation: bounce 3s ease infinite;
+  margin: 30px;
+  box-shadow: 0 4px 10px black, 0 0 10px black;
+}
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -19,11 +50,14 @@
   }
 }
 
-.box {
+/* .box1 {
+  animation: colorChange 3s ease infinite;
+} */
+.box1 {
   width: 100px;
   height: 100px;
   background-color: orange;
-  animation: bounce 3s ease infinite;
+  animation: colorChange 3s ease infinite;
   margin: 30px;
 }
 @keyframes colorChange {
@@ -37,20 +71,9 @@
     background-color: green;
   }
 }
-
-.box1 {
+/* .box2 {
   animation: colorChange 3s ease infinite;
-}
-.box1 {
-  width: 100px;
-  height: 100px;
-  background-color: orange;
-  animation: colorChange 3s ease infinite;
-  margin: 30px;
-}
-.box2 {
-  animation: colorChange 3s ease infinite;
-}
+} */
 .box2 {
   width: 100px;
   height: 100px;
@@ -63,7 +86,7 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -83,7 +106,7 @@
 /*Кнопка плавно меняет цвет с синего на красный при наведении.*/
 .button1 {
   background-color: blue;
-  width: 50px;
+  width: 90px;
   height: 50px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
@@ -98,7 +121,8 @@
   width: 100px;
   height: 100px;
   background-color: green;
-  transition: width 0.5s ease, height 0.5s ease;
+  transition: width 0.5s 1s ease-in, height 0.5s ease-out;
+  /* transition: all 1s 1s ease-in; */
 }
 
 .box3:hover {
@@ -134,7 +158,7 @@
 /* Кнопка немного «вдавливается» при нажатии.*/
 .button2 {
   background-color: blue;
-  width: 50px;
+  width: 90px;
   height: 50px;
   transition: transform 0.2s ease;
 }
@@ -142,6 +166,9 @@
 .button2:active {
   transform: scale(2);
 }
+/* .TextBut {
+  align-self: center;
+} */
 /* Изображение немного приближается при наведении.*/
 
 .image-container {
