@@ -25,7 +25,7 @@ Käytä turvallisesti `email`-ominaisuutta objektin `user.details` sisältä.
 const userData = { details: { contact: { email: "jane@example.com" } } };
 
 // Korjaa tämä
-console.log(userData.details.contact.email); // Odotettu: "jane@example.com"
+console.log(userData.details?.contact?.email); // Odotettu: "jane@example.com"
 
 /* Tehtävä 3: Korjaa valinnainen ketjutus taulukoiden kanssa  
 Käytä turvallisesti taulukon `orders` toista alkiota, jos se on olemassa.
