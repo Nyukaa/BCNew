@@ -49,7 +49,7 @@ searchInput.addEventListener("input", () => {
   } else {
     list.innerHTML = "<li>Eläimiä ei löytynyt.</li>";
   }
-  searchInput.value = "";
+  // searchInput.value = "";
 });
 
 const sortList = () => {

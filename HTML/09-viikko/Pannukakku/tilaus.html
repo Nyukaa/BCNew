@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tilaus</title>
+    <link rel="stylesheet" href="st_tilaus.css " />
+  </head>
+  <body>
+    <div id="loginSection">
+      <h2>Syötä salasana</h2>
+      <input type="password" id="pinInput" placeholder="Salasana on 1234 🦊" />
+      <button id="loginBtn">Kirjaudu sisään</button>
+      <p id="loginError" style="color: red; display: none">Väärä salasana!</p>
+    </div>
+    <div id="mainContent" class="hidden">
+      <h1>Kaikki tilaukset</h1>
+      <div class="find">
+        <input
+          type="text"
+          id="orderFilter"
+          placeholder="Suodata asiakkaan nimellä..."
+        />
+        <button id="sortTilaukset">sort tilaukset</button>
+      </div>
+      <div id="ordersContainer"></div>
+    </div>
+    <script src="tilaus.js"></script>
+  </body>
+</html>

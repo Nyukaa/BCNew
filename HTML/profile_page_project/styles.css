@@ -155,9 +155,9 @@ body.dark-theme footer .copyright {
 }
 /*  animations */
 h1:hover {
-  color: #110823; /* Change color  */
-  transform: translateY(-10px); /* Move up slightly */
-  letter-spacing: 1.5px; /* Add space between letters */
+  color: #110823;
+  transform: translateY(-10px);
+  letter-spacing: 1.5px;
 }
 
 /* Individual hover animations */
