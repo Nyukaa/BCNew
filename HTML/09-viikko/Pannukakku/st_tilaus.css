@@ -64,6 +64,6 @@ button {
   display: none;
 }
 #loginError {
-  color: red;
+  color: rgb(86, 42, 42);
   display: none;
 }

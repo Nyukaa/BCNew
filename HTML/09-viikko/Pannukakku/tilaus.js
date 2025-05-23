@@ -76,7 +76,7 @@ function renderOrders() {
           order.status === "delivered" ? "selected" : ""
         }>Toimitettu</option>
       </select>
-      <br /><br />
+      <br />
     `;
 
     if (order.status === "delivered") {
