@@ -13,16 +13,12 @@ function checkPin() {
   const loginSection = document.getElementById("loginSection");
 
   if (inputField.value === "1234") {
-    // Oikea salasana → näytetään tilaukset
     loginSection.classList.add("hidden");
     mainContent.classList.remove("hidden");
     renderOrders();
   } else {
-    // Väärä salasana → virheviesti
     loginError.style.display = "block";
   }
-
-  // inputField.value = ""; // Tyhjennä kenttä
 }
 const ordersContainer = document.getElementById("ordersContainer");
 let orders = JSON.parse(localStorage.getItem("orders")) || [];
@@ -122,5 +118,3 @@ window.addEventListener("storage", (event) => {
     renderOrders();
   }
 });
-
-// renderOrders();

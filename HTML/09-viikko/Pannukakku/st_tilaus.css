@@ -63,3 +63,7 @@ button {
 .hidden {
   display: none;
 }
+#loginError {
+  color: red;
+  display: none;
+}
