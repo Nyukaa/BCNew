@@ -38,17 +38,17 @@ h3,
   position: relative;
   flex: 1;
   min-height: 100vh;
-  height: 100vh; /* Убедитесь, что контейнер занимает всю высоту окна */
+  height: 100vh;
 }
 
 .image-container img {
-  position: fixed; /* Фиксируем изображение относительно окна */
-  top: 0; /* Размещаем изображение в верхней части окна */
-  left: 0; /* Размещаем изображение слева от окна */
-  width: 50%; /* Изображение занимает всю ширину окна */
-  height: 100vh; /* Изображение занимает всю высоту окна */
-  object-fit: cover; /* Изображение покрывает весь экран, не искажаясь */
-  z-index: -1; /* Убедитесь, что изображение находится позади контента */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .form-container {
@@ -123,7 +123,7 @@ select {
   /* background-color: hsl(3, 52%, 80%); */
   display: inline-block;
   border-radius: 10px;
-  border: 0;
+  border: 2px solid #ab590a;
   margin: 20px;
   padding: 10px 20px;
 }

@@ -4,17 +4,7 @@
   width: 90%;
   background-color: #aaaac5;
 }
-/* .scroll-line {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 16px;
-  height: 0;
-  background: rgb(94, 89, 136); Цвет в твоём стиле 
-  z-index: 9999;
-  transition: height 0.2s ease-out;
-  border-radius: 3px;
-} */
+
 .otsikko {
   font-weight: bold;
   margin-left: 20px;

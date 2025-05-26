@@ -3,16 +3,14 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  /* height: 400px; or whatever height you want */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* background-color: #9090b7; */
 }
 
 .image {
   width: 67%;
   overflow-x: hidden;
-  position: relative; /* Родитель для абсолютной позиции */
-  /* filter: blur(5px); */
+  position: relative;
   height: auto;
 }
 
@@ -68,15 +66,6 @@ body.dark-theme .info ol li {
   color: #ddd;
 }
 
-/* body.dark-theme .linkit {
-  background-color: #2e88a3;
-} */
-
-/* body.dark-theme .btn {
-  color: hsl(44, 27%, 84%);
-  background-color: #2e88a3;
-} */
-
 .dark-theme #anna {
   display: none;
 }
@@ -85,33 +74,9 @@ body:not(.dark-theme) #moon {
   display: none;
 }
 
-/*for dark theme
-body.dark-theme {
-  background-color: #222;
-  color: #f1f1f1;
-}
-body.dark-theme header {
-  background-color: #333;
-}
-body.dark-theme .kuva {
-  background-color: #444;
-}
-body.dark-theme #esi,
-body.dark-theme .harrastus,
-body.dark-theme footer {
-  background-color: #555;
-}
-body.dark-theme a,
-body.dark-theme .oma_class {
-  color: #ddd;
-}
-body.dark-theme footer .copyright {
-  color: #bbb;
-}*/
 @media (max-width: 768px) {
   body {
     font-size: 16px;
-    /* line-height: 1.5; */
   }
 
   .kuva {
@@ -122,12 +87,11 @@ body.dark-theme footer .copyright {
   .image {
     width: 100%;
     overflow-x: hidden;
-    position: relative; /* Родитель для абсолютной позиции */
-    /* filter: blur(5px); */
+    position: relative;
+
     height: auto;
   }
   .rectangle {
-    /* background-color: hsl(45, 92%, 79%); */
     background-color: hsl(44, 27%, 84%);
     height: auto;
     width: 100%;
@@ -160,7 +124,6 @@ h1:hover {
   letter-spacing: 1.5px;
 }
 
-/* Individual hover animations */
 h1:nth-child(1):hover {
   animation: scaleUp 0.5s forwards;
 }
@@ -177,7 +140,6 @@ h1:nth-child(7):hover {
   animation: scaleUp 0.5s forwards;
 }
 
-/* Animation keyframes */
 @keyframes scaleUp {
   0% {
     transform: scale(1);

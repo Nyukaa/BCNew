@@ -1,12 +1,12 @@
 const answers = [
-  "Epäilemättä",
-  "Totta kai",
-  "Kysy myöhemmin",
-  "Älä laske sen",
-  "Ei",
-  "Kyllä",
-  "Ehkä",
-  "on epämääräinen",
+  "Kyllä varmasti",
+  "Ehkä myöhemmin",
+  "Ei nyt",
+  "Kysy uudelleen",
+  "Todennäköisesti",
+  "Mahdotonta sanoa",
+  "Näyttää hyvältä",
+  "En usko siihen",
 ];
 
 const input = document.getElementById("questionInput");
@@ -35,6 +35,7 @@ function shakeBall() {
     windowText.classList.add("show-answer");
     ball.removeEventListener("animationend", handleAnimation);
   });
+  input.value = "";
 }
 
 button.addEventListener("click", shakeBall);

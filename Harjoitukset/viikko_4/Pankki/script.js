@@ -26,9 +26,12 @@ function changeTall(event) {
   let nykyinenSaldo = Number(saldo.textContent);
   let tallennus = Number(inputTall.value);
 
-  if (!isNaN(tallennus)) {
+  if (!isNaN(tallennus) && tallennus > 0) {
     saldo.textContent = nykyinenSaldo + tallennus;
     inputTall.value = "";
+  } else {
+    viesti.textContent = "Anna positivinen numero";
+    viesti.style.color = "red";
   }
 }
 
@@ -40,7 +43,7 @@ function changeNost(event) {
   let nykyinenSaldo = Number(saldo.textContent);
   let nosta = Number(inputNost.value);
 
-  if (!isNaN(nosta) && nosta < nykyinenSaldo) {
+  if (!isNaN(nosta) && nosta <= nykyinenSaldo && nosta > 0) {
     saldo.textContent = nykyinenSaldo - nosta;
     inputNost.value = "";
     viesti.textContent = "";

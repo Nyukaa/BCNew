@@ -1,43 +1,58 @@
-# Isoin otsikko
-## Programming
-I like JavaScript
-### Pienempi otsikko 2
-*Tämä teksti tulee kursiivilla*
+# 🚀 JS and Web Projects Portfolio
 
-**Tämä teksti tulee lihavoituna**
+Welcome! This repository contains several JavaScript, HTML, and CSS projects I've developed. You can explore the source code here, and also see live versions and more details on my **[Portfolio website](#)**. 🌐
 
-~~Tämä teksti viivataan yli~~
+---
 
-_On **mahdollista** yhdistää niitä_
+## 🟨 JavaScript Projects
 
-```js
-function fancyAlert(arg) {
-    if(arg) {
-        $.facebox({div:'#foo'})
-    }
-}
- ```
-```py
-    print('Hello')
-``` 
+- **📁 Portfolio**  
+  My personal portfolio website showcasing my skills and projects.
 
+- **🏧 Pankkiautomaattisimulaattori**  
+  A bank ATM simulator demonstrating user input and logic handling.  
+  🔗 [Live Demo](https://pankkiautomaattisimulaattori.web.app)  
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/Harjoitukset/viikko_4/Pankki)
 
-[GitHub](http://github.com)
+- **🐾 Pikku eläintarha**  
+  A small interactive zoo app to practice DOM manipulation.  
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/Harjoitukset/viikko_3/Pikku_zoo)
 
-![Markdown Logo](/Markdown-mark.svg)
+- **🥞 Pannukakku sivut (1–3)**  
+  Pancake project pages, divided into phases 1 to 3 for progressive development.  
+  🔗 [Live Demo – Etusivu](https://pannukakku-87646.web.app)  
+  🔗 [Live Demo – Tilaus](https://pannukakku-87646.web.app/tilaus.html)  
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/09-viikko/Pannukakku)
 
-Format: ![Alt= ](/Users/s2500281/Documents/new1/Markdown-mark.svg)
+---
 
+## 🎨 HTML & CSS Projects
 
-@HelsinkiBusinessCollege What do you think about this template?
+- **🎉 FlexFest**  
+  A responsive festival website layout using Flexbox.  
+  🔗 [Live Demo](https://flex-haroijtus.web.app/)
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/06-viikko/Flex-haroijtus)
 
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
+- **🎱 Kasipallo (Magic 8-ball)**  
+  A fun Magic 8-ball web app with HTML, CSS, and JavaScript.  
+  🔗 [Live Demo](https://magic-ball-1418b.web.app/)  
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/08-viikko/magic_ball)
 
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
+---
+
+## 📍 Where to Find the Projects
+
+- **📂 On GitHub:**  
+  All projects are organized into folders within this repository. Feel free to clone or download to explore the code.
+
+- **🌍 On my Portfolio Website:**  
+  Visit the portfolio page for live demos, screenshots, and additional descriptions of each project.
+
+---
+
+Thank you for checking out my work! 🙏  
+If you have any questions or feedback, feel free to reach out. ✉️
+
+---
+
+_Want me to add instructions on how to run the projects locally? Just ask!_

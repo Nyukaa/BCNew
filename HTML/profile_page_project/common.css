@@ -49,18 +49,18 @@ header .btn {
   padding: 10px;
   border-radius: 20px 0;
   border: none;
-  width: 120px; /* Width of the button */
-  height: 35px; /* Height of the button (same as width to make it round) */
+  width: 120px;
+  height: 35px;
   position: absolute;
-  top: 0px; /* насколько сверху */
+  top: 0px;
   right: 10px;
-  z-index: 10; /* чтобы была поверх картинки */
-  transition: all 0.3s ease; /* Плавность */
+  z-index: 10;
+  transition: all 0.3s ease;
 }
 header .btn:hover {
   background-color: #2e88a3;
   color: white;
-  transform: scale(1.05); /* Небольшое увеличение */
+  transform: scale(1.05);
 }
 .linkit {
   display: flex;
@@ -90,7 +90,6 @@ footer {
   margin: 120px;
   width: 150px;
   background: transparent;
-  /* background-color: #cbcbdb; */
 }
 .formSubmit {
   max-width: 400px;
@@ -116,22 +115,21 @@ footer .btn {
   cursor: pointer;
   border-radius: 20px;
   font-family: inherit;
-  /* text-align: center; */
+
   padding: 10px 20px;
   display: block;
   width: 70%;
-  margin: 10px auto; /* <-- Центрирование по горизонтали */
+  margin: 10px auto;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-}
-/* Hover animation */
-footer .btn:hover {
-  background-color: #1f6380;
-  transform: scale(1.1); /* Slightly grow the button */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Focus animation for accessibility */
+footer .btn:hover {
+  background-color: #1f6380;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
 footer .btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px #1f6380;
@@ -174,11 +172,11 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #cbcbdb; /* Цвет фона полосы */
+  background: #cbcbdb;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(#2e88a3); /* Цвет "ползунка" */
+  background-color: rgb(#2e88a3);
   border-radius: 20px;
 }
 
@@ -237,8 +235,15 @@ body.dark-theme h2 {
   color: #ddd;
 }
 body.dark-theme header .btn {
-  background-color: #222; /* тёмный фон кнопки */
-  color: #f1f1f1; /* светлый текст */
+  background-color: #222;
+  color: #f1f1f1;
+}
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
 }
 @media (max-width: 768px) {
   footer {
@@ -247,5 +252,36 @@ body.dark-theme header .btn {
   .footer_img img {
     margin: 20px;
     width: 100px;
+  }
+  header {
+    padding: 30px;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .mobile-nav .linkit {
+    display: none;
+    flex-direction: column;
+    background-color: hsl(44, 27%, 84%);
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 9999;
+    /* color: black; */
+  }
+  body.dark-theme .mobile-nav .linkit {
+    background-color: #333; /* или другой тёмный */
+    color: #f1f1f1; /* светлый текст */
+  }
+  .mobile-nav.active .linkit {
+    display: flex;
   }
 }
