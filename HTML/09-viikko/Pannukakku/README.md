@@ -17,24 +17,27 @@ Interaktiivinen verkkosovellus, jossa käyttäjä voi räätälöidä ja tilata 
 
 ## ⚙️ 2. Sovelluksen toiminnallisuus
 
+Pannukakun sivu:
+
 - 🥞 Pannukakun valinta: useita tyyppejä ja hintoja
 - ➕ Täytteet ja lisukkeet valittavissa
 - 💶 Dynaaminen hinnan laskenta ja näyttö (animatio-price-banner)
 - 📝 Tilausyhteenveto ja asiakastiedot (checking and confirmation in modal window)
 - 💾 Tilausten tallennus localStorageen
+
+Tilausten hallintasivu:
+
 - 👨‍🍳 Kokkinäkymä tilausten hallintaan (tilaus.html)
-- 🔐 PIN-koodilla suojattu "Kaikki tilaukset" -sivu
+- 🔐 PIN-koodilla (1234) suojattu "Kaikki tilaukset" -sivu
 - 🔍 Haku ja lajittelu
 - 🗑️ Tilausten poisto "toimitettu"-tilassa
 
 ---
 
-## 🔗 3. GitHub-linkit
+## 🔗 3. Linkit
 
-- **Pannukakun rakentaja (index.html):**  
-  [GitHub Repository – Tilausten lomakke](https://github.com/yourusername/pannukakkusovellus-vaihe1)
+- **[Pannukakun rakentaja](https://pannukakku-87646.web.app):**
 
-- **Tilausten hallintasivu (orders.html):**  
-  [GitHub Repository – Tilausten hallintaan](https://github.com/yourusername/pannukakkusovellus-vaihe3)
+- **[Tilausten hallintasivu ](https://pannukakku-87646.web.app/tilaus.html)**
 
----
+- [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/09-viikko/Pannukakku)

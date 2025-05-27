@@ -2,8 +2,8 @@
 
 Tämä on interaktiivinen JavaScript-projekti, jossa yhdistyvät taulukot, oliot, silmukat, ehtolauseet, funktiot ja DOM-manipulaatio. Käyttäjä voi tarkastella, lisätä, suodattaa, hakea ja poistaa eläimiä – sekä lajitella listan aakkosjärjestykseen. Sivuston ulkoasu on viimeistelty käyttäjäystävälliseksi ja selkeäksi.
 
-🌐 **[Live demo täällä](https://pikku-elaintarha-88c4c.web.app7)**  
-💻 **[GitHub Repository](https://github.com/kayttaja/elainprojekti)**
+🌐 **[Live demo täällä](https://pikku-elaintarha-88c4c.web.app)**  
+💻 **[GitHub Repository](https://github.com/Nyukaa/BCNew/blob/main/Harjoitukset/viikko_7/el%C3%A4ntarha/index.html)**
 
 ---
 
@@ -41,8 +41,4 @@ Tämä on interaktiivinen JavaScript-projekti, jossa yhdistyvät taulukot, oliot
 
 ## 👤 Tekijä
 
-Toteuttanut 💻 [Anna](https://portfolio-linksi.com)
-
----
-
-📝 Tämä README kattaa koko projektin toteutuksen ja on valmis julkaistavaksi GitHubiin!
+Toteuttanut 💻 [Anna](https://portfolio-a8654.web.app/index.html)

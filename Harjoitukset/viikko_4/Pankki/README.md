@@ -23,14 +23,6 @@ Tässä projektissa käyttäjät voivat:
 
 ---
 
-## 📁 Projektin rakenne
-
-- `index.html` – Sivun rakenne (saldo, syötteet, painikkeet)
-- `styles.css` – Tyylitiedosto, sisältää responsiivisen ulkoasun
-- `script.js` – JavaScript-toiminnallisuudet: tapahtumakuuntelijat, saldon hallinta, PIN-kirjautuminen
-
----
-
 ## 🔓 Testaa itse
 
 1. Avaa sovellus selaimessa
@@ -42,7 +34,7 @@ Tässä projektissa käyttäjät voivat:
 
 ## 🌐 Katso myös
 
-Sovellus on nähtävissä myös [Portfolio-sivullani](#), jossa on mukana live-esikatselu ja lisätietoja projektista.
+Sovellus on nähtävissä myös [Portfolio-sivullani](https://portfolio-a8654.web.app/index.html).
 
 ---
 

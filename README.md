@@ -25,7 +25,7 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
   💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/Harjoitukset/viikko_3/Pikku_zoo)
 
 - **🥞 Pannukakku sivut (1–3)**  
-  Pancake project pages, divided into phases 1 to 3 for progressive development.
+  Pancake project pages, divided into the order page and the administrator page..
 
   🔗 [Live Demo – Etusivu](https://pannukakku-87646.web.app)  
   🔗 [Live Demo – Tilaus](https://pannukakku-87646.web.app/tilaus.html)  
