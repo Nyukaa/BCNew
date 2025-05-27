@@ -47,7 +47,7 @@ const closeModal = () => {
   focusedElement.focus();
 };
 
-document.querySelectorAll(".photo-item").forEach((link) => {
+document.querySelectorAll(".photo-item > a").forEach((link) => {
   link.addEventListener("click", () => {
     modal.style.display = "block";
     const img = link.querySelector(".hover-image");

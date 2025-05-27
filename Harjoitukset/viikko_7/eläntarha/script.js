@@ -12,7 +12,6 @@ render = (animals) => {
   animals.forEach((animal, index) => {
     const item = document.createElement("li");
     item.textContent = `${animal.name} – ${animal.type}`;
-    // Если животное новое, добавляем класс "new-animal"
     if (animal.isNew) {
       item.classList.add("new-animal");
     }
@@ -29,48 +28,57 @@ render = (animals) => {
 };
 render(animals);
 
-document.getElementById("filterType").addEventListener("change", function () {
-  const selectedType = this.value;
-  if (selectedType === "Kaikki") {
-    render(animals);
-  } else {
-    const filtered = animals.filter((animal) => animal.type === selectedType);
-    render(filtered);
+const filterAnimals = () => {
+  const selectedType = document.getElementById("filterType").value;
+  const query = document
+    .getElementById("searchAnimal")
+    .value.trim()
+    .toLowerCase();
+
+  let filtered = animals;
+
+  if (selectedType !== "Kaikki") {
+    filtered = filtered.filter((animal) => animal.type === selectedType);
   }
-});
-const searchInput = document.getElementById("searchAnimal");
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.trim().toLowerCase();
-  const filtered = animals.filter((animal) =>
-    animal.name.toLowerCase().includes(query)
-  );
+
+  if (query !== "") {
+    filtered = filtered.filter((animal) =>
+      animal.name.toLowerCase().includes(query)
+    );
+  }
+
   if (filtered.length > 0) {
     render(filtered);
   } else {
-    list.innerHTML = "<li>Eläimiä ei löytynyt.</li>";
+    list.innerHTML = "<li>Elämiä ei löytynyt.</li>";
   }
-  // searchInput.value = "";
-});
+};
+
+document.getElementById("filterType").addEventListener("change", filterAnimals);
+document
+  .getElementById("searchAnimal")
+  .addEventListener("input", filterAnimals);
 
 const sortList = () => {
-  animals.sort((a, b) => a.name.localeCompare(b.name)); //корректно сравнивает строки с учётом локали (в том числе финского алфавита).
+  animals.sort((a, b) => a.name.localeCompare(b.name));
   render(animals);
 };
 
 document.getElementById("sortAnimals").addEventListener("click", sortList);
-//add new animal
+
 document.getElementById("addAnimal").addEventListener("click", () => {
   const nameInput = document.getElementById("newAnimalName");
   const typeSelect = document.getElementById("newAnimalType");
   const name = nameInput.value.trim();
   const type = typeSelect.value;
+  document.getElementById("searchAnimal").value = "";
+  document.getElementById("filterType").selectedIndex = 0;
+
   if (name !== "") {
-    // Добавляем нового животного с флагом isNew: true
     animals.push({ name, type, isNew: true });
     nameInput.value = "";
     typeSelect.selectedIndex = 0;
     render(animals);
-    // Добавляем класс для нового животного
     const newAnimalItem = document.querySelector(`#animalList li:last-child`);
     newAnimalItem.classList.add("new-animal");
   }
@@ -92,7 +100,7 @@ const updateTypeDropdowns = () => {
     if (![...filterSelect.options].some((opt) => opt.value === type)) {
       const filterOption = document.createElement("option");
       filterOption.value = type;
-      filterOption.textContent = type; // + "t" Например: Nisäkäs → Nisäkkäät
+      filterOption.textContent = type;
       filterSelect.appendChild(filterOption);
     }
 
@@ -106,7 +114,6 @@ const updateTypeDropdowns = () => {
   }
 };
 
-// Initial setup
 updateTypeDropdowns();
 
 document.getElementById("addAnimalGroup").addEventListener("click", () => {
@@ -119,12 +126,4 @@ document.getElementById("addAnimalGroup").addEventListener("click", () => {
   }
 });
 
-// Сохранить данные в localStorage
 localStorage.setItem("animals", JSON.stringify(animals));
-
-// Загрузить данные из localStorage при перезагрузке страницы
-// const savedAnimals = JSON.parse(localStorage.getItem("animals"));
-// if (savedAnimals) {
-//   animals = savedAnimals;
-//   render(animals);
-// }
