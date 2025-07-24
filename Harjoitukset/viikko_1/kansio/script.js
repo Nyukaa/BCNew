@@ -143,6 +143,6 @@ console.log(s, r, u, d, o);
 /**Tehtävä: Merkkijonojen yhdistäminen
  * Luo kaksi muuttujaa, etunimi ja sukunimi, ja aseta niihin omat etu- ja sukunimesi.
  * Yhdistä nämä kaksi merkkijonoa ja tulosta tulos konsoliin.*/
-str1 = "Anna ";
+str1 = "Anna  ";
 str2 = "Shitikova";
 console.log(str1 + str2);
