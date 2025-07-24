@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <form action="/form" method="post" id="myForm">
+        <div class="labelInput">
+          <h1>Sign Up</h1>
+          <p>It's free and only takes a minute</p>
+          <label for="name">First name</label>
+          <input type="text" id="name" name="name" />
+          <div id="nameError" class="error"></div>
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" name="name" required />
+          <div id="lnameError" class="error"></div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="off" />
+          <div id="emailError" class="error"></div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <div id="passError" class="error"></div>
+          <label for="confPassword">Confirm password</label>
+
+          <input type="password" id="confPassword" name="password" required />
+          <div id="confPassError" class="error"></div>
+          <div id="wrongPass" class="error"></div>
+        </div>
+        <button type="submit">SUGN UP</button>
+        <div class="text">
+          <p>
+            My clicking the Sigh Up button, you agree to our
+            <a href="/">Terms and Conditions</a> and
+            <a href="">Privacy Policy</a>
+          </p>
+        </div>
+      </form>
+      <div class="textAfter">
+        <p>Already have an accout? <a href="/login">Login here</a></p>
+        <p id="output">Will be</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

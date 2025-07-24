@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Libre Franklin", sans-serif;
+  /* background-color: #ffffff; */
+  background-color: hsl(195, 17%, 90%);
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+h2 {
+  margin-bottom: 40px;
+}
+h2,
+h3,
+#valitse,
+#customer,
+#seeOrder {
+  color: #ab590a;
+}
+#valitse,
+#customer,
+#seeOrder {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+}
+
+.image-container {
+  position: relative;
+  flex: 1;
+  min-height: 100vh;
+  height: 100vh; /* Убедитесь, что контейнер занимает всю высоту окна */
+}
+
+.image-container img {
+  position: fixed; /* Фиксируем изображение относительно окна */
+  top: 0; /* Размещаем изображение в верхней части окна */
+  left: 0; /* Размещаем изображение слева от окна */
+  width: 50%; /* Изображение занимает всю ширину окна */
+  height: 100vh; /* Изображение занимает всю высоту окна */
+  object-fit: cover; /* Изображение покрывает весь экран, не искажаясь */
+  z-index: -1; /* Убедитесь, что изображение находится позади контента */
+}
+
+.form-container {
+  flex: 1;
+  margin-left: 40px;
+  padding: 20px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.price-banner {
+  position: fixed;
+  top: 40px;
+  right: 50%; /* Устанавливаем баннер на 50% от правого края окна */
+  margin-right: 40px;
+
+  background-color: #ab590a;
+  color: white;
+  border-radius: 50%;
+  border: 5px solid white; /* Белая обводка */
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  /* animation: pulse 1.5s ease-in-out infinite; Применяем анимацию пульсации */
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+  margin-left: 40px;
+  color: hsl(190, 16%, 29%);
+  cursor: pointer;
+  accent-color: #ab590a;
+  width: 18px;
+  height: 18px;
+}
+
+select,
+label {
+  display: block;
+  margin-top: 10px;
+}
+select {
+  padding: 10px;
+  margin-left: 40px;
+  border-radius: 8px;
+  border: 2px solid #ab590a;
+  background-color: #fff;
+  font-size: 16px;
+  outline-color: #ab590a;
+  color: #3d5054;
+  cursor: pointer;
+}
+#customerName {
+  padding: 10px;
+  margin-left: 40px;
+  border-radius: 8px;
+  border: 2px solid #ab590a;
+  background-color: #fff;
+  font-size: 16px;
+  outline-color: #ab590a;
+  color: #3d5054;
+}
+#totalPriceDisplay,
+#seeOrder {
+  background-color: hsl(3, 52%, 80%);
+  display: inline-block;
+  border-radius: 10px;
+  border: 0;
+  margin: 20px;
+  padding: 10px 20px;
+}
+option {
+  background-color: #fef6f0;
+  color: #3d5054;
+  font-weight: bold;
+}
+
+i {
+  margin-right: 8px;
+  color: #ab590a;
+  font-size: 1.2em;
+  /* vertical-align: middle; */
+}
+input[type="radio"] {
+  margin-right: 5px;
+  margin-left: 40px;
+  color: hsl(190, 16%, 29%);
+  cursor: pointer;
+  accent-color: #ab590a;
+  width: 18px;
+  height: 18px;
+}
+/* @keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(171, 89, 10, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 10px rgba(171, 89, 10, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(171, 89, 10, 0);
+  }
+}
+
+.price-banner {
+  transition: background-color 0.3s ease;
+}
+
+.price-banner.updated {
+  animation: pulse 0.4s ease;
+}
+@media screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .image-container,
+  .form-container {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .image-container img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .price-banner {
+    width: 80px;
+    height: 80px;
+    font-size: 18px;
+    top: 20px;
+    right: 20px;
+  }
+
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  label,
+  h3 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .PriceDisplay h3 {
+    font-size: 18px;
+  }
+}

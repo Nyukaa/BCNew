@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+
+  background-color: black;
+  color: white;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% высоты экрана */
+  position: relative;
+}
+p {
+  color: hsl(217, 12%, 63%);
+  padding: 0 20px;
+}
+h1 {
+  padding: 20px;
+}
+.stateRating {
+  /* display: none; */
+  background-color: #191d23;
+  border-radius: 20px;
+  width: 450px;
+  padding: 20px;
+}
+.stateRating,
+.stateThank {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.stateRating img {
+  margin: 20px;
+}
+
+.radio-group {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* gap: 10px; */
+  margin-bottom: 20px;
+}
+
+.circle-radio {
+  position: relative;
+  cursor: pointer;
+}
+
+.circle-radio input[type="radio"] {
+  display: none;
+}
+
+.circle-radio span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: #3a404d;
+  text-align: center;
+  font-weight: bold;
+  color: hsl(217, 12%, 63%);
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.circle-radio input[type="radio"]:checked + span {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+.circle-radio input[type="radio"]:hover + span {
+  background-color: hsl(25, 97%, 53%);
+  color: black;
+  border-color: black;
+}
+
+button {
+  background-color: hsl(25, 97%, 53%);
+  color: black;
+  cursor: pointer;
+  border-radius: 50px;
+  font-family: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  /* text-align: center; */
+  border: none;
+  padding: 10px 20px;
+  display: block;
+  width: 80%;
+  margin: 30px auto;
+}
+button:hover {
+  background-color: white;
+}
+
+.stateThank {
+  display: none;
+  background-color: #191d23;
+  border-radius: 20px;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.forSelect {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  background-color: #3a404d;
+  border-radius: 20px;
+  color: hsl(25, 97%, 53%);
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .stateRating,
+  .stateThank {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 15px;
+    position: static;
+    transform: none;
+  }
+
+  .radio-group {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .circle-radio span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .forSelect {
+    font-size: 0.9rem;
+    margin: 15px 0;
+  }
+
+  img {
+    max-width: 100px;
+    display: block;
+    margin: 10px auto;
+  }
+}

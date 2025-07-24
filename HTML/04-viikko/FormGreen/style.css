@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: sans-serif;
+  color: rgb(48, 43, 43);
+  background-color: #1b6956;
+  /* height: 100vh; /* нужно для вертикального центрирования 
+  display: flex;
+  justify-content: center;  по горизонтали 
+  align-items: center; по вертикали 
+   For center for all devices */
+  margin: auto;
+  max-width: 400px;
+}
+.form-wrapper {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* For center for all devices */
+  margin: auto;
+  max-width: 400px;
+}
+form {
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px;
+}
+form h1 {
+  text-align: center;
+  margin: 10px;
+  /* font-size: 0.75rem; */
+  /* margin-bottom: 15px; */
+}
+form p {
+  text-align: center;
+  padding: 15px;
+  /* font-size: 0.75rem; */
+  /* margin-bottom: 15px; */
+}
+
+.textAfter {
+  margin: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: orange;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: inherit;
+  /* text-align: center; */
+
+  padding: 10px 20px;
+  display: block;
+  width: 70%;
+  margin: 30px auto;
+}
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+input {
+  width: 90%;
+  box-sizing: border-box;
+  margin: 15px;
+  padding: 15px;
+}
+label {
+  margin: 10px;
+}
+@media (max-width: 800px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* input:has(+ .error) {
+  border-color: red;
+} */
+.error {
+  font: bold;
+  color: blue;
+}

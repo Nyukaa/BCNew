@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pankki</title>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <div class="pincode">
+        <label for="pincode">Kirjaudu sisään</label>
+        <input
+          type="number"
+          min="0000"
+          placeholder="- - - -"
+          max="9999"
+          id="pincode"
+          name="name"
+        />
+      </div>
+      <form id="myForm" class="hidden">
+        <h1>saldo</h1>
+
+        <div id="saldo" class=""></div>
+
+        <label for="tall">rahan tallettaminen</label>
+        <input type="text" id="tall" name="tall" />
+        <button id="btnTall">tallettamista varten</button>
+
+        <label for="nost">rahan nostaminen</label>
+        <input type="text" id="nost" name="nost" />
+        <button id="btnNosta">nostamista varten</button>
+        <div id="viesti" class=""></div>
+      </form>
+    </div>
+    <div id="error"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
