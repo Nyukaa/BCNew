@@ -21,7 +21,7 @@ main {
   display: flex;
   border-radius: 10px;
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 .textBox {
@@ -105,48 +105,39 @@ main > div:first-child {
 .popup-menu > * {
   position: relative;
   z-index: 99;
+  font-size: 0.7rem;
 }
-/* .popup-menu {
+.popup-menu::after {
+  content: "";
   position: absolute;
-  top: -170%;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  padding: 20px 30px;
-  background:
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" d="M0 352L0 128C0 75 43 32 96 32l320 0c53 0 96 43 96 96l0 224c0 53-43 96-96 96l-120 0c-5.2 0-10.2 1.7-14.4 4.8L166.4 539.2c-4.2 3.1-9.2 4.8-14.4 4.8-13.3 0-24-10.7-24-24l0-72-32 0c-53 0-96-43-96-96z"/></svg>')
-    no-repeat center center / cover;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  display: none;
-} */
+  top: 100%;
+  right: 80px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #48556a transparent transparent transparent;
+}
 
 .popup-menu {
-  font-family: inherit;
   position: absolute;
   top: -170%;
   left: -150%;
   background: #48556a;
   border-radius: 8px;
-  padding: 10px;
+  padding: 10px 20px;
   display: none;
   gap: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 10;
   flex-direction: row;
 }
-
+.popup-menu p {
+  font-family: inherit;
+}
 .popup-link {
   transform: scale(0.8);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* color: aliceblue;
-  background: #6e8098; */
-
   text-decoration: none;
 }
 
@@ -180,5 +171,32 @@ main > div:first-child {
   }
   .first {
     flex: 3;
+  }
+}
+@media (min-width: 375px) and (max-width: 600px) {
+  .popup-menu {
+    top: -170%;
+    left: -400%;
+    /* flex-wrap: wrap; padding: 12px 16px; если иконки не помещаются */
+
+    gap: 12px;
+    transform: scale(0.95); /* чуть меньше, если нужно */
+  }
+
+  .popup-link {
+    transform: scale(0.9); /* иконки меньше на мобилках */
+  }
+
+  .popup-menu p {
+    font-size: 0.75rem;
+    color: white;
+    margin-right: 8px;
+  }
+
+  .first {
+    flex: 2;
+  }
+  .popup-menu::after {
+    right: 10px;
   }
 }
