@@ -28,7 +28,7 @@ form {
 }
 form h1,
 form p {
-  text-align: center;
+  text-align: left;
   margin: 10px;
 }
 button {
@@ -45,13 +45,18 @@ button {
 }
 input,
 textarea {
-  width: 90%;
+  width: 95%;
   box-sizing: border-box;
   margin: 15px;
   padding: 15px;
 }
 label {
   margin: 10px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
 }
 .name-fields {
   display: flex;
@@ -78,8 +83,7 @@ label {
   margin: 15px;
 }
 
-.radio-option,
-.checkbox {
+.radio-option {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -87,9 +91,44 @@ label {
   border: solid 1px;
   width: 100%;
 }
-.radio-option input {
-  width: 16px;
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+
+  width: 100%;
 }
+.radio-option input,
 .checkbox input {
   width: 16px;
+}
+.error {
+  font-weight: bold;
+  color: hsl(0, 66%, 54%);
+  margin: 5px 15px;
+}
+
+.input-error {
+  border: 1px solid hsl(0, 66%, 54%) !important;
+  outline: none;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.success {
+  display: none; /* скрыто по умолчанию */
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  padding: 15px 25px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 20px; /* чуть ниже верхнего края */
+  left: 50%; /* середина экрана */
+  transform: translateX(-50%); /* смещение влево на половину ширины */
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 90%; /* чтобы не выходило за экран */
 }
