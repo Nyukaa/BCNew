@@ -84,8 +84,8 @@ myForm.addEventListener("submit", function (event) {
         el.classList.remove("input-error");
       }
     );
-    // setTimeout(() => {
-    //   successBox.style.display = "none";
-    // }, 10000);
+    setTimeout(() => {
+      successBox.style.display = "none";
+    }, 10000);
   }
 });

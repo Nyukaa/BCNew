@@ -9,18 +9,12 @@
 body {
   font-family: "Karla", sans-serif;
   font-weight: 400;
-
   color: hsl(187, 24%, 22%);
   background-color: hsl(148, 38%, 91%);
-
   margin: auto;
-  max-width: 1440px;
+  max-width: 700px;
 }
 
-.form-wrapper {
-  margin: auto;
-  max-width: 600px;
-}
 form {
   background-color: white;
   padding: 20px;
@@ -42,7 +36,6 @@ button {
   color: white;
   border-radius: 10px;
   font-family: inherit;
-  /* text-align: center; */
   border: none;
   padding: 20px;
   display: block;
@@ -90,11 +83,6 @@ label {
   flex-direction: column;
 }
 
-/* .name-fields input {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 0 0;
-} */
 .radio-group {
   display: flex;
   justify-content: space-between;
@@ -108,7 +96,6 @@ label {
   font-size: 0.9rem;
   border: solid 1px hsl(186, 15%, 59%);
   border-radius: 5px;
-
   width: 100%;
 }
 .checkbox {
@@ -124,6 +111,35 @@ label {
   width: 16px;
   padding: 0;
 }
+.checkbox label {
+  margin: 5px;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+  cursor: pointer;
+  outline: none;
+}
+
+.radio-option:hover,
+.checkbox:hover {
+  border-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+.radio-option:has(input:checked) {
+  background-color: hsl(148, 38%, 91%);
+  border-color: hsl(169, 82%, 27%);
+}
+.radio-option input[type="radio"]:checked {
+  accent-color: hsl(169, 82%, 27%);
+}
+.checkbox input:checked {
+  accent-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+}
 .error {
   font-weight: bold;
   color: hsl(0, 66%, 54%);
@@ -138,21 +154,25 @@ label {
 }
 
 .success {
-  display: none; /* скрыто по умолчанию */
-  background-color: hsl(169, 82%, 27%);
+  display: none;
+  background-color: hsl(187, 24%, 22%);
   color: white;
   padding: 15px 25px;
   margin: 20px auto;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: fixed;
-  top: 20px; /* чуть ниже верхнего края */
+  top: 20px;
   left: 50%; /* середина экрана */
-  transform: translateX(-50%); /* смещение влево на половину ширины */
+  transform: translateX(-50%);
   border-radius: 10px;
   z-index: 1000;
-  max-width: 90%; /* чтобы не выходило за экран */
+  max-width: 90%;
 }
+.success p {
+  margin: 20px 0;
+}
+
 @media (max-width: 600px) {
   body {
     max-width: 100%;
@@ -163,16 +183,17 @@ label {
     margin: 10px;
     padding: 15px;
   }
-
+  .field {
+    margin: 0 15px;
+  }
   .name-fields {
-    flex-direction: column; /* имена и фамилия в столбик */
+    flex-direction: column;
     gap: 0;
-
     margin-right: 0px;
   }
 
   .radio-group {
-    flex-direction: column; /* радио кнопки в столбик */
+    flex-direction: column;
   }
 
   .radio-option {
@@ -197,9 +218,7 @@ label {
   }
 
   .checkbox {
-    margin: 10px 0;
     font-size: 1rem;
-
     gap: 8px;
   }
 
