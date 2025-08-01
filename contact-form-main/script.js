@@ -17,7 +17,6 @@ myForm.addEventListener("submit", function (event) {
   event.preventDefault();
   let valid = true;
 
-  // Очистка сообщений и стилей
   [inputName, inputlName, inputEmail, messageBox, consentBox].forEach((el) => {
     el.classList.remove("input-error");
   });
@@ -54,7 +53,9 @@ myForm.addEventListener("submit", function (event) {
   });
   if (!radioChecked) {
     radioError.textContent = "Please select a query type";
-    radioGroup.classList.add("input-error");
+    radioButtons.forEach((radio) => {
+      radio.classList.add("input-error");
+    });
     valid = false;
   }
 
@@ -71,12 +72,8 @@ myForm.addEventListener("submit", function (event) {
   }
 
   if (valid) {
-    // Показываем сообщение об успешной отправке
     const successBox = document.getElementById("successMessage");
-
     successBox.style.display = "block";
-
-    // Сбрасываем форму
     myForm.reset();
 
     [inputName, inputlName, inputEmail, messageBox, consentBox].forEach(
