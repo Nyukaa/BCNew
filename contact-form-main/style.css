@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  color: hsl(187, 24%, 22%);
+  background-color: hsl(148, 38%, 91%);
+  margin: auto;
+  max-width: 700px;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+form h1 {
+  font-weight: 700;
+}
+form h1,
+form p {
+  text-align: left;
+  margin-left: 25px;
+  color: hsl(187, 24%, 22%);
+}
+button {
+  background-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  font-family: inherit;
+  border: none;
+  padding: 20px;
+  display: block;
+  width: 90%;
+  margin: 30px auto;
+}
+input,
+textarea {
+  width: 95%;
+  box-sizing: border-box;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+}
+label {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 15px 5px 15px;
+  text-align: left;
+}
+.field label::after,
+.field_mes label::after,
+.field_ra::after {
+  content: " *";
+  color: hsl(169, 82%, 27%);
+  font-weight: bold;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-right: 15px;
+}
+
+.name-fields .field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 15px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  border: solid 1px hsl(186, 15%, 59%);
+  border-radius: 5px;
+  width: 100%;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  font-size: 0.9rem;
+  margin: 0 15px 5px 15px;
+  width: 100%;
+}
+.radio-option input,
+.checkbox input {
+  width: 16px;
+  padding: 0;
+}
+.checkbox label {
+  margin: 5px;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+  cursor: pointer;
+  outline: none;
+}
+
+.radio-option:hover,
+.checkbox:hover {
+  border-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+.radio-option:has(input:checked) {
+  background-color: hsl(148, 38%, 91%);
+  border-color: hsl(169, 82%, 27%);
+}
+.radio-option input[type="radio"]:checked {
+  accent-color: hsl(169, 82%, 27%);
+}
+.checkbox input:checked {
+  accent-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+.error {
+  font-weight: bold;
+  color: hsl(0, 66%, 54%);
+  margin: 0px 15px;
+}
+
+.input-error {
+  border: 1px solid hsl(0, 66%, 54%) !important;
+  outline: none;
+  border-radius: 6px;
+}
+.error2 {
+  margin: 0 30px;
+}
+.success {
+  display: none;
+  background-color: hsl(187, 24%, 22%);
+  color: white;
+  padding: 15px 25px;
+  margin: 20px auto;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 20px;
+  left: 50%; /* середина экрана */
+  transform: translateX(-50%);
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 90%;
+}
+.success p {
+  margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  form {
+    margin: 10px;
+    padding: 15px;
+  }
+  .field {
+    margin: 0 15px;
+  }
+  .name-fields {
+    flex-direction: column;
+    gap: 0;
+    margin-right: 0px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+
+  .radio-option {
+    width: 100%;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  button {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  label {
+    margin: 10px 0 5px 0;
+  }
+
+  .checkbox {
+    font-size: 1rem;
+    gap: 8px;
+  }
+
+  .success {
+    max-width: 95%;
+    font-size: 0.9rem;
+  }
+}
