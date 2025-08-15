@@ -68,7 +68,7 @@ Sivustolla käytetty pääkuva (hero image) on luotu **ChatGPT:n** avulla pohjau
 
 ## 🔗 Linkit
 
-- 🌐 [Live Demo – Portfolio](https://portfolio-a8654.web.app/index.html)
+- 🌐 [Live Demo – Portfolio]()
 - 💻 [GitHub – Lähdekoodi](https://github.com/Nyukaa/BCNew/tree/main/HTML/profile_page_project)
 
 ---
