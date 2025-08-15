@@ -1,0 +1,27 @@
+[
+  {
+    "etunimi": "Leila",
+    "sukunimi": "Hökki",
+    "ika": 20
+  },
+  {
+    "etunimi": "Pirkko",
+    "sukunimi": "Puro",
+    "ika": 30
+  },
+  {
+    "etunimi": "Matti",
+    "sukunimi": "Puro",
+    "ika": 35
+  },
+  {
+    "etunimi": "Maija",
+    "sukunimi": "Virta",
+    "ika": 18
+  },
+  {
+    "etunimi": "Aapeli",
+    "sukunimi": "Aakkonen",
+    "ika": 5
+  }
+]
