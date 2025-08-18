@@ -16,13 +16,13 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
   A bank ATM simulator demonstrating user input and logic handling.
 
   🔗 [Live Demo](https://pankkiautomaattisimulaattori.web.app)  
-  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/Harjoitukset/viikko_4/Pankki)
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/JSHarjoitukset/viikko_4/Pankki)
 
 - **🐾 Pikku eläintarha**  
   A small interactive zoo app to practice DOM manipulation.
 
   🔗 [Live Demo](https://pikku-elaintarha-88c4c.web.app)  
-  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/Harjoitukset/viikko_3/Pikku_zoo)
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/JSHarjoitukset/viikko_3/Pikku_zoo)
 
 - **🥞 Pannukakku sivut (1–3)**  
   Pancake project pages, divided to order page and admin page.
