@@ -42,6 +42,6 @@ Frontend Mentor challenges help developers practice real-world front-end project
 🙌 Thanks for checking out my project!
 If you have any questions or suggestions, feel free to reach out ✉️
 
-📁 Portfolio
+📁 My Portfolio page
 🔗 [Live Demo](https://portfolio-a8654.web.app/index.html)  
  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/profile_page_project)
