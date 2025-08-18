@@ -1,34 +1,46 @@
-📰 Article Preview Component
-✅ Built as part of a Frontend Mentor coding challenge using HTML, CSS, and a little JavaScript.
+📩 Contact Form
+✅ Implemented: Fully functional contact form with HTML, CSS, and JavaScript, following accessibility best practices.
 
 In this project, users can:
 
-📱 View the optimal layout for their device’s screen size (responsive design)
-🔗 Reveal social media share links by clicking the share icon
-🎨 Experience a clean, modern UI closely following the provided design
+📱 View the optimal layout on any device (responsive design)
+✅ Fill out the form and see validation messages for missing or incorrectly formatted fields
+📧 Get real-time email validation to ensure proper formatting
+🖥️ Submit the form and receive a success toast message
+⌨️ Navigate and complete the form using only their keyboard
+🔊 Have inputs, errors, and success messages announced to screen readers
+🎨 Experience polished hover and focus states for all interactive elements
 
 🛠️ Main Features
-Responsive design → Works seamlessly on both desktop and mobile
+Accessible form design → Screen reader-friendly labels, error states, and success messages
 
-Interactive share button → Expands to show share options on click
+Client-side validation → Required fields and email format checks
 
-Lightweight solution → Minimal JavaScript, mostly styled with HTML & CSS
+Responsive layout → Adjusts seamlessly between mobile and desktop
 
-Design fidelity → Colors, fonts, and spacing implemented from the style guide
+Interactive feedback → Error messages and success toast notifications
+
+Keyboard support → Full functionality without a mouse
 
 🔓 How to test
 Open the app in your browser
 
-Resize the window or open on a mobile device to see responsive behavior
+Try submitting the form without filling it out → see error messages
 
-Click the share icon to open/close the social media links
+Enter an invalid email address → get an email format warning
 
-🌐 About the challenge
-This project is part of a Frontend Mentor challenge.
-Frontend Mentor challenges help developers practice real-world frontend skills by recreating professional UI components.
+Fill out all fields correctly and submit → success toast appears
 
-🙌 Thanks for checking out my solution!
-If you have feedback or ideas for improvement, feel free to reach out ✉️
+Test navigation using only the Tab key → form remains fully functional
+
+Resize the window or use mobile → confirm responsive design
+
+🌐 More info
+This project is based on a Frontend Mentor challenge.
+Frontend Mentor challenges help developers practice real-world front-end projects with a focus on accessibility and responsive design.
+
+🙌 Thanks for checking out my project!
+If you have any questions or suggestions, feel free to reach out ✉️
 
 📁 Portfolio
 🔗 [Live Demo](https://portfolio-a8654.web.app/index.html)  
