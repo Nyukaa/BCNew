@@ -49,6 +49,18 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
 
 ---
 
+## 🎨 Frontend Mentor
+
+- **📰 Article Preview Component**  
+  Fully functional article preview component using HTML, CSS, and a little JavaScript.
+
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/FrontendMentor/article-preview-component-master)
+
+- **📩 Contact Form**  
+  Fully functional contact form with HTML, CSS, and JavaScript, following accessibility best practices.
+
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/blob/main/FrontendMentor/contact-form-main/)
+
 ## 📍 Where to Find the Projects
 
 - **📂 On GitHub:**  
