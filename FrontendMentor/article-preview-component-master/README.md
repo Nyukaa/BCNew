@@ -20,10 +20,6 @@ In this project, users can:
 - Resize the window or use a mobile device → check responsive behavior
 - Click the share icon → social media links should appear
 
-🌐 More info  
-You can find more similar projects there to practice and sharpen your frontend skills.  
-If you have any questions or feedback, feel free to reach out ✉️
-
 📁 Project Link  
 💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/FrontendMentor/article-preview-component-master)
 
