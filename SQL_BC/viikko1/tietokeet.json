@@ -1,0 +1,17 @@
+[
+    {
+        "etunimi":"Matti",
+        "sukunimi":"Puro",
+        "tietokone":{"nimi":"Brain I", "hinta":300}
+    },
+    {
+        "etunimi":"Meri",
+        "sukunimi":"Myrskylä",
+        "tietokone":{"nimi":"Brain I", "hinta":300}
+    },
+    {
+        "etunimi":"Leila",
+        "sukunimi":"Hökki",
+        "tietokone":{"nimi":"AI 1", "hinta":400}
+    }
+]

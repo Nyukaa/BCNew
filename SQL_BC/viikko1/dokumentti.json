@@ -1,0 +1,16 @@
+{
+    "tekija": {
+        "etunimi": "Leila",
+        "sukunimi": "Hökki"
+    },
+    "vuosi": 2025,
+    "raportti": {
+        "otsikko": "Raportti",
+        "teksti":[
+            "Tämä vuosi 2025 oli alku GTX-sarjan",
+            "kehitykselle. Uuden tuotesarjan esitteli",
+            "Leila Hökki ja mukana oli myös tekijä",
+            "Pirkko Puro esittelytilaisuudessa...."
+        ]
+    }   
+}
