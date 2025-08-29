@@ -2,10 +2,7 @@ show databases;
 create database ekadb;
 use ekadb;
 
-create table testi(
-    id integer not null primary key,
-    nimi varchar(30) not null
-);
+create table testi(id integer not null primary key, nimi varchar(30) not null);
 show tables; 
 insert into testi (id, nimi) values(1, "Leila");
 insert into testi (id, nimi) values(2, "Matti");
@@ -30,11 +27,11 @@ show create table testi;
 +-------+---------------------------------------------------------
 
 create user 'admin1'@'localhost' identified by 'secret'; 
-grant select,insert on ekadb.testi to 'matti'@'localhost'
-show grants for 'matti'@'localhost'
+grant select,insert on ekadb.testi to 'matti'@'localhost';
+show grants for 'matti'@'localhost';
 grant all privileges on *.* to 'admin1'@'localhost' with grant option;
 
-set password for 'matt'@'localhost'= password('secr')
+set password for 'matti'@'localhost'= password('secr')
 
 grant select, insert on empdb.emp 
 
@@ -44,7 +41,7 @@ select user,host,password from mysql.user where user='admin1';
 
 exit
 
-mysql -u admin1 -p //pass as admin1
+mysql -u admin1 -p ekadb;    //pass as admin1
 ....pasword (we have secret)
 
 drop database ekadb; //delete database
