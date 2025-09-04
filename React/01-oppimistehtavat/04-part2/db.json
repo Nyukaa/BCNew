@@ -18,12 +18,12 @@
     {
       "id": "ef51",
       "content": "hello",
-      "important": true
+      "important": false
     },
     {
       "id": "98f8",
       "content": "ccc",
-      "important": false
+      "important": true
     }
   ]
 }
