@@ -28,10 +28,6 @@ async function testi() {
       END AS alleKeskiarvon
     FROM henkilo;
   `);
-
-  console.table(tulos2); // выводим результат второго запроса
-
-  yhteys.end();
 }
 
 testi();
