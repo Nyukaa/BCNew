@@ -49,6 +49,17 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
 
 ---
 
+## 🟩 WordPress Projects
+
+- **🐾 Discover Mushrooms in Finland — WordPress Theme**
+  A custom WordPress theme for a website about mushrooms in Finland, combining education, blog content, and guided tour booking. Fully responsive, user-friendly, and optimized for multilingual support using Weglot (English & Finnish).
+
+  🌐 [Live Demo](https://discovermushrooms.fwh.is/)
+
+  💻 [GitHub Repository](https://github.com/Nyukaa/BCNew/tree/main/Wordpress/discovermushrooms/app/public/wp-content/themes/nature)
+
+---
+
 ## 🎨 Frontend Mentor
 
 - **📰 Article Preview Component**  
