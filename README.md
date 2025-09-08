@@ -22,7 +22,7 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
   A small interactive zoo app to practice DOM manipulation.
 
   🔗 [Live Demo](https://pikku-elaintarha-88c4c.web.app)  
-  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/JSHarjoitukset/viikko_3/Pikku_zoo)
+  💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/JSHarjoitukset/viikko_7/eläntarha)
 
 - **🥞 Pannukakku sivut (1–3)**  
   Pancake project pages, divided to order page and admin page.
