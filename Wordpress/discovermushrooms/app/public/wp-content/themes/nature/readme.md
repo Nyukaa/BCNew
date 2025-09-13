@@ -28,6 +28,18 @@ A custom WordPress theme for a website about mushrooms in Finland, combining edu
 
 ---
 
+## 🔧 Problem Solving / Challenges
+
+While deploying my site from local to hosting, I faced a few challenges:
+
+- **Media files** were not saving smoothly and had to be re-uploaded manually.
+- **Plugins** needed to be installed and configured again on the hosting server.
+- Ensuring that **all pages and theme features** worked correctly after migration required careful checking.
+
+Despite these challenges, I successfully deployed the site, and it is now fully available online. I am satisfied with the result and learned a lot about **WordPress deployment and troubleshooting**.
+
+---
+
 ### 🛠 Technologies Used
 
 - **PHP** — Core language powering WordPress, used for templates, loops, and dynamic content.
@@ -71,6 +83,7 @@ This flow ensures a simple, educational, and service-oriented experience.
 
 ---
 
+<!--
 ## 🔧 Installation & Setup
 
 1. Clone or download this repository into your WordPress `themes` directory:
@@ -119,6 +132,8 @@ git clone <repository-url> /path/to/wordpress/wp-content/themes/discover-mushroo
 - `single.php` — Single blog post template
 - `index.php` — Blog fallback template
 - `home.php` — Blog page template
+
+-->
 
 ---
 
