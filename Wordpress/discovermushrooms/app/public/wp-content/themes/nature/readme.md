@@ -23,6 +23,8 @@ A custom WordPress theme for a website about mushrooms in Finland, combining edu
 - 🍔 **Mobile Burger Menu**: Collapsible navigation menu for smaller screens.
 - 🌐 **Multilingual Support**: Fully compatible with Weglot for Finnish (FI) and English (EN).
 - ✂️ **Custom Excerpts**: Clean, consistent post excerpts for blog previews.
+- 🗓️ **Next Saturday Tour Shortcode**: Easily display the date of the next Saturday tour anywhere on your site.
+- ⚡ **Dynamic Tour Dates**: Automatically updates each week to show the upcoming tour date.
 
 ---
 
