@@ -46,17 +46,18 @@ header .btn {
   font-family: inherit;
   cursor: pointer;
   margin: 12px;
-  padding: 10px;
+  padding: 10px 20px; /* wider padding */
   border-radius: 20px 0;
   border: none;
-  width: 120px;
-  height: 35px;
+  min-width: 150px; /* ensures enough space */
+  height: 40px; /* slightly taller */
   position: absolute;
-  top: 0px;
+  top: 1px; /* moves button down from very top */
   right: 10px;
   z-index: 10;
   transition: all 0.3s ease;
 }
+
 header .btn:hover {
   background-color: #2e88a3;
   color: white;
@@ -75,6 +76,46 @@ header .btn:hover {
 }
 .oma_class:hover {
   color: aqua;
+}
+
+.tech-stack h3,
+.esi h3,
+.projects h3 {
+  margin: 20px;
+  color: #255f85;
+  font-size: 1.2rem;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-icons li {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.tech-icons i {
+  font-size: 2.5rem;
+  color: hsl(217, 12%, 43%);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-icons i:hover {
+  transform: scale(1.2);
+  color: #98c9a3; /* accent color */
+}
+
+.tech-icons span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
 }
 footer {
   margin: 12px;
@@ -215,7 +256,9 @@ body.dark-theme header {
   background-color: #222;
 }
 body.dark-theme a,
-body.dark-theme .oma_class {
+body.dark-theme .oma_class,
+body.dark-theme .tech-icons i,
+body.dark-theme .tech-icons span {
   color: #ddd;
 }
 body.dark-theme .kuva {

@@ -67,46 +67,8 @@ main {
   color: hsl(144, 51%, 93%);
 }
 
-.tech-stack h3,
-.esi h3 {
-  margin: 20px;
-  color: #255f85;
-}
-
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-}
-
-.tech-icons li {
-  text-align: center;
-  font-size: 1rem;
-}
-
-.tech-icons i {
-  font-size: 2.5rem;
-  color: hsl(217, 12%, 43%);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.tech-icons i:hover {
-  transform: scale(1.2);
-  color: #98c9a3; /* accent color */
-}
-
-.tech-icons span {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.9rem;
-  color: #333;
-}
-
 .projects {
-  padding: 50px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -120,33 +82,45 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 0 20px 40px 0;
 }
 
 .project-item img {
   width: 100%;
   height: 220px; /* adjust to the height you want */
-  object-fit: cover; /* keeps proportions, crops minimally */
-  object-position: left; /* crops evenly */
+  object-fit: cover;
+  object-position: left;
   border-radius: 15px;
   margin-bottom: 10px;
 }
-.project-item h3 {
-  margin: 10px 0;
-  color: #255f85;
-}
 
 .projects a {
-  display: inline-block;
+  /*display: inline-block;
   background-color: #e7eaea;
   color: #2e88a3;
   padding: 10px 20px;
   border: 1px solid #2e88a3;
   border-radius: 20px;
+ 
+  */
   text-decoration: none;
+  background-color: #2e88a3;
+  color: white;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 30px;
+  padding: 10px 20px;
+  border-radius: 20px 0;
+  border: none;
+  min-width: 150px;
   transition: all 0.3s ease;
 }
-
+.projects a:hover {
+  background-color: hsl(44, 27%, 84%);
+  color: #2e88a3;
+  transform: scale(1.05);
+}
 /* for dark theme */
 
 body.dark-theme .rectangle {
@@ -158,6 +132,7 @@ body.dark-theme .esi {
 }
 
 body.dark-theme .esi p,
+body.dark-theme h3,
 body.dark-theme .info ol li {
   color: #ddd;
 }
