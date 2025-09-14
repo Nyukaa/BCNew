@@ -33,6 +33,44 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
 
 ---
 
+## ⚛️ React Projects (Full Stack Open) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+### 📊 Unicafe – Feedback App
+
+A feedback collection app where users can give **positive, neutral, or negative feedback**, and view statistics such as average score and positive feedback percentage.
+
+💻 [GitHub](https://github.com/Nyukaa/BCNew/blob/main/React/02-soveltavat-tehtavat/ex11/README.md)
+
+---
+
+### 🎭 Anecdotes – Voting App
+
+An interactive app where users can view random programming anecdotes, **vote for their favorites**, and see which anecdote has the most votes.
+
+💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex14)
+
+---
+
+### 📞 Phonebook – CRUD App
+
+A simple phonebook app where users can **add, update, delete, and filter contacts**.  
+Includes server communication using **JSON-server** and REST API requests.
+
+💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex2_17)
+
+---
+
+### 🌍 Countries App
+
+A country search tool that integrates with an **external API** to show details such as capital, population, and **live weather data**.  
+Demonstrates environment variables and third-party API integration.
+
+💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex2_20)
+
+---
+
+---
+
 ## 🎨 HTML & CSS Projects
 
 - **🎉 FlexFest**  
@@ -78,7 +116,7 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
   All projects are organized into folders within this repository. Feel free to clone or download to explore the code.
 
 - **🌍 On my Portfolio Website:**  
-  Visit the portfolio page for live demos, screenshots, and additional descriptions of each project.
+  Visit the [portfolio page ](https://portfolio-a8654.web.app/index.html) for live demos, screenshots, and additional descriptions of each project.
 
 ---
 
