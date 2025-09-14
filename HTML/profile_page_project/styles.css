@@ -41,7 +41,7 @@ main {
   border-top: #2e88a3 solid 2px;
 }
 .esi {
-  padding: 20px;
+  padding: 30px;
   width: 67%;
   font-size: 1.2rem;
   background-color: hsl(144, 51%, 93%);
@@ -49,6 +49,102 @@ main {
 }
 .esi p {
   margin: 10px;
+}
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-links a {
+  color: #255f85;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: hsl(144, 51%, 93%);
+}
+
+.tech-stack h3,
+.esi h3 {
+  margin: 20px;
+  color: #255f85;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-icons li {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.tech-icons i {
+  font-size: 2.5rem;
+  color: hsl(217, 12%, 43%);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-icons i:hover {
+  transform: scale(1.2);
+  color: #98c9a3; /* accent color */
+}
+
+.tech-icons span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #255f85;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-item img {
+  width: 100%;
+  height: 220px; /* adjust to the height you want */
+  object-fit: cover; /* keeps proportions, crops minimally */
+  object-position: left; /* crops evenly */
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.project-item h3 {
+  margin: 10px 0;
+  color: #255f85;
+}
+
+.projects a {
+  display: inline-block;
+  background-color: #e7eaea;
+  color: #2e88a3;
+  padding: 10px 20px;
+  border: 1px solid #2e88a3;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 /* for dark theme */

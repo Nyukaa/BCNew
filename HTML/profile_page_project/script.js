@@ -36,9 +36,9 @@ window.addEventListener("scroll", () => {
     scrollBtn.style.display = "none";
   }
 });
-
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modalImg");
+const modalText = document.getElementById("modalText"); // new
 const closeBtn = document.querySelector(".close");
 let focusedElement;
 
@@ -47,25 +47,66 @@ const closeModal = () => {
   focusedElement.focus();
 };
 
+// Loop through each project link
 document.querySelectorAll(".photo-item > a").forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
     modal.style.display = "block";
-    const img = link.querySelector(".hover-image");
+
+    const img = link.querySelector(".hover-image") || link.querySelector("img");
     modalImg.src = img.src;
+
     focusedElement = link;
     closeBtn.focus();
+
+    // Find the parent .photo-item
+    const photoItem = link.closest(".photo-item");
+
+    // Get the description paragraph (the second <p> in your structure)
+    const description = photoItem.querySelectorAll("p")[1];
+    modalText.innerHTML = description ? description.innerHTML : "";
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  closeModal();
-});
+// Close modal
+closeBtn.addEventListener("click", closeModal);
 
+// Optional: click outside modal to close
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
     closeModal();
   }
 });
+
+// const modal = document.getElementById("modal");
+// const modalImg = document.getElementById("modalImg");
+// const closeBtn = document.querySelector(".close");
+// let focusedElement;
+
+// const closeModal = () => {
+//   modal.style.display = "none";
+//   focusedElement.focus();
+// };
+
+// document.querySelectorAll(".photo-item > a").forEach((link) => {
+//   link.addEventListener("click", () => {
+//     modal.style.display = "block";
+//     const img = link.querySelector(".hover-image");
+//     modalImg.src = img.src;
+//     focusedElement = link;
+//     closeBtn.focus();
+//   });
+// });
+
+// closeBtn.addEventListener("click", () => {
+//   closeModal();
+// });
+
+// window.addEventListener("click", (e) => {
+//   if (e.target === modal) {
+//     closeModal();
+//   }
+// });
 
 window.addEventListener("keyup", (e) => {
   if (e.key === "Escape") {
