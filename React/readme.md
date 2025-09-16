@@ -41,7 +41,7 @@ Includes server communication using **JSON-server** and REST API requests.
 ![CRUD](https://img.shields.io/badge/CRUD-Operations-blueviolet?style=for-the-badge)
 ![JSON Server](https://img.shields.io/badge/JSON-Server-black?style=for-the-badge)
 
-💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex2_17)
+💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/Phonebook)
 
 ---
 
