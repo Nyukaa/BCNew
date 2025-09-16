@@ -34,7 +34,7 @@ Tässä projektissa käyttäjät voivat:
 
 ## 🌐 Katso myös
 
-Sovellus on nähtävissä myös [Portfolio-sivullani](https://portfolio-a8654.web.app/index.html).
+Sovellus on nähtävissä myös [Portfolio-sivullani](https://nyukaa.github.io/BCNew/Portfolio/index.html).
 
 ---
 
