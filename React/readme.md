@@ -3,6 +3,16 @@
 Welcome!  
 This repository contains my React projects completed as part of the **University of Helsinki’s Full Stack Open course**.  
 They focus on modern React development, state management, event handling, REST APIs, and component-based design. ⚛️
+ ⚛️ **React Projects** [(GitHub)](https://github.com/Nyukaa/React)  
+  
+  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+  ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  
+  - 📊 Unicafe – Feedback App [GitHub](https://github.com/Nyukaa/BCNew/blob/main/React/02-soveltavat-tehtavat/ex11/README.md)  | [Demo](https://nyukaa.github.io/BCNew/Unicafe/)
+  - 🎭 Anecdotes – Voting App [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex14) | [Demo]( https://nyukaa.github.io/BCNew/Anecdotes/)
+  - 📞 Phonebook – CRUD App [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex2_17)  
+  - 🌍 Countries App [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex2_20) | [Demo]( https://nyukaa.github.io/BCNew/Countries/)
 
 ---
 
