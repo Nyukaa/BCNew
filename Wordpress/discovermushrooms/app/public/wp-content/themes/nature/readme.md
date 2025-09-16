@@ -139,7 +139,7 @@ git clone <repository-url> /path/to/wordpress/wp-content/themes/discover-mushroo
 
 ## 👤 Author
 
-- Portfolio: [Anna](https://portfolio-a8654.web.app/index.html)
+- Portfolio: [Anna](https://nyukaa.github.io/BCNew/Portfolio/index.html)
 
 ---
 
