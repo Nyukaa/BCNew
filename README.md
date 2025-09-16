@@ -1,6 +1,6 @@
 # 🚀 JS and Web Projects Portfolio
 
-Welcome! This repository contains several JavaScript, HTML, and CSS projects I've developed. You can explore the source code here, and also see live versions and more details on my **[Portfolio website](https://portfolio-a8654.web.app/index.html)**. 🌐
+Welcome! This repository contains several JavaScript, HTML, and CSS projects I've developed. You can explore the source code here, and also see live versions and more details on my **[Portfolio website](https://nyukaa.github.io/BCNew/Portfolio/index.html)**. 🌐
 
 ---
 
@@ -116,7 +116,7 @@ Demonstrates environment variables and third-party API integration.
   All projects are organized into folders within this repository. Feel free to clone or download to explore the code.
 
 - **🌍 On my Portfolio Website:**  
-  Visit the [portfolio page ](https://portfolio-a8654.web.app/index.html) for live demos, screenshots, and additional descriptions of each project.
+  Visit the [portfolio page ](https://nyukaa.github.io/BCNew/Portfolio/index.html) for live demos, screenshots, and additional descriptions of each project.
 
 ---
 
