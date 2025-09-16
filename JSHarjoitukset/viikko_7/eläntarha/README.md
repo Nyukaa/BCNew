@@ -41,4 +41,4 @@ Tämä on interaktiivinen JavaScript-projekti, jossa yhdistyvät taulukot, oliot
 
 ## 👤 Tekijä
 
-Toteuttanut 💻 [Anna](https://portfolio-a8654.web.app/index.html)
+Toteuttanut 💻 [Anna](https://nyukaa.github.io/BCNew/Portfolio/index.html)
