@@ -1,0 +1,226 @@
+.kuva {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background-color: #9090b7; */
+}
+
+.image {
+  width: 67%;
+  overflow-x: hidden;
+  position: relative;
+  height: auto;
+}
+
+.rectangle {
+  /* background-color: hsl(45, 92%, 79%); */
+  background-color: hsl(44, 27%, 84%);
+  height: 1025px;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  #gradient {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+.rectangle h1 {
+  font-size: 2rem;
+}
+main {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: #2e88a3 solid 2px;
+}
+.esi {
+  padding: 30px;
+  width: 67%;
+  font-size: 1.2rem;
+  background-color: hsl(144, 51%, 93%);
+  margin: 20px;
+}
+.esi p {
+  margin: 10px;
+}
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-links a {
+  color: #255f85;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: hsl(144, 51%, 93%);
+}
+
+.projects {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #255f85;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px 40px 0;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* object-position: left;  */
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.projects a {
+  text-decoration: none;
+  color: #333;
+}
+.projects .btn_projects {
+  text-decoration: none;
+  background-color: #2e88a3;
+  color: hsl(44, 27%, 84%);
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 30px;
+  padding: 10px 20px;
+  border-radius: 20px 0;
+  border: none;
+  min-width: 150px;
+  transition: all 0.3s ease;
+}
+.projects a:hover {
+  color: #2e88a3;
+  transform: scale(1.05);
+}
+/* for dark theme */
+
+body.dark-theme .rectangle {
+  background-color: #333;
+}
+
+body.dark-theme .esi {
+  background-color: #555;
+}
+
+body.dark-theme .esi p,
+body.dark-theme h3,
+body.dark-theme .info ol li,
+.projects .btn_projects:hover {
+  color: #ddd;
+}
+
+.dark-theme #anna {
+  display: none;
+}
+
+body:not(.dark-theme) #moon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .kuva {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .image {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+
+    height: auto;
+  }
+  .rectangle {
+    background-color: hsl(44, 27%, 84%);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: #2e88a3 solid 2px;
+  }
+  .esi {
+    padding: 20px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: hsl(144, 51%, 93%);
+    margin: 20px;
+  }
+}
+/*  animations */
+h1:hover {
+  color: #110823;
+  transform: translateY(-10px);
+  letter-spacing: 1.5px;
+}
+
+h1:nth-child(1):hover {
+  animation: scaleUp 0.5s forwards;
+}
+
+h1:nth-child(3):hover {
+  animation: scaleUp 0.5s forwards;
+}
+
+h1:nth-child(5):hover {
+  animation: scaleUp 0.5s forwards;
+}
+
+h1:nth-child(7):hover {
+  animation: scaleUp 0.5s forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}

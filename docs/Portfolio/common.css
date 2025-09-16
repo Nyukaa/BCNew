@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(48, 43, 43);
+  background-color: hsl(44, 27%, 84%);
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  padding: 10px;
+  color: hsl(217, 12%, 43%);
+  margin-bottom: 10px;
+}
+p {
+  color: hsl(217, 12%, 53%);
+}
+.info ol li {
+  font-size: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+header {
+  padding: 10px;
+  background-color: hsl(44, 27%, 84%);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #2e88a3;
+}
+
+header .btn {
+  background-color: hsl(44, 27%, 84%);
+  color: #2e88a3;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 12px;
+  padding: 10px 20px; /* wider padding */
+  border-radius: 20px 0;
+  border: none;
+  min-width: 150px; /* ensures enough space */
+  height: 40px; /* slightly taller */
+  position: absolute;
+  top: 1px; /* moves button down from very top */
+  right: 10px;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+header .btn:hover {
+  background-color: #2e88a3;
+  color: hsl(44, 27%, 84%);
+  transform: scale(1.05);
+}
+.linkit {
+  display: flex;
+  justify-content: start;
+  /* width: 67%; */
+  /* background-color: #2e88a3; */
+}
+.linkit a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+}
+.oma_class:hover {
+  color: aqua;
+}
+
+.tech-stack h3,
+.esi h3,
+.projects h3 {
+  margin: 20px;
+  color: #255f85;
+  font-size: 1.2rem;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-icons li {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.tech-icons i {
+  font-size: 2.5rem;
+  color: hsl(217, 12%, 43%);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-icons i:hover {
+  transform: scale(1.2);
+  color: #98c9a3; /* accent color */
+}
+
+.tech-icons span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+footer {
+  margin: 12px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(44, 27%, 84%);
+  width: 100%;
+  border-top: #2e88a3 solid 2px;
+}
+.footer_img img {
+  margin: 120px;
+  width: 150px;
+  background: transparent;
+}
+.formSubmit {
+  max-width: 400px;
+  margin: auto;
+  font-size: 0.8rem;
+  justify-content: space-around;
+}
+
+.formSubmit label {
+  margin: 10px;
+  width: 100px;
+}
+input,
+textarea {
+  width: 90%;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 15px;
+}
+footer .btn {
+  color: hsl(44, 27%, 84%);
+  background-color: #2e88a3;
+  cursor: pointer;
+  border-radius: 20px 0;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  padding: 10px 20px;
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer .btn:hover {
+  background-color: #1f6380;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+footer .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #1f6380;
+}
+
+#scrollTopBtn {
+  width: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: #2e88a3;
+  color: hsl(44, 27%, 84%);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+
+  padding: 10px 0;
+
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #3c3960;
+}
+footer .copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #444;
+  margin-top: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #cbcbdb;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(#2e88a3);
+  border-radius: 20px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2e88a3 #cbcbdb;
+}
+body.dark-theme #scrollTopBtn {
+  background-color: #2e88a3;
+  color: white;
+}
+
+body.dark-theme #scrollTopBtn:hover {
+  background-color: #3c3960;
+}
+
+body.dark-theme ::-webkit-scrollbar-track {
+  background: #333;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background-color: #2e88a3;
+}
+
+body.dark-theme * {
+  scrollbar-color: #2e88a3 #333;
+}
+/* for dark theme */
+body.dark-theme {
+  background-color: #222;
+  color: #f1f1f1;
+}
+
+body.dark-theme header {
+  background-color: #222;
+}
+body.dark-theme a,
+body.dark-theme .oma_class,
+body.dark-theme .tech-icons i,
+body.dark-theme .tech-icons span {
+  color: #ddd;
+}
+body.dark-theme .kuva {
+  background-color: #444;
+}
+body.dark-theme footer {
+  background-color: #444;
+}
+body.dark-theme .footer_img img {
+  filter: brightness(0.7);
+}
+
+body.dark-theme .formSubmit label,
+body.dark-theme footer .copyright,
+body.dark-theme h1,
+body.dark-theme h2 {
+  color: #ddd;
+}
+body.dark-theme header .btn {
+  background-color: #222;
+  color: #f1f1f1;
+}
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  .footer_img img {
+    margin: 20px;
+    width: 100px;
+  }
+  header {
+    padding: 30px;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .mobile-nav .linkit {
+    display: none;
+    flex-direction: column;
+    background-color: hsl(44, 27%, 84%);
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 9999;
+    /* color: black; */
+  }
+  body.dark-theme .mobile-nav .linkit {
+    background-color: #333; /* или другой тёмный */
+    color: #f1f1f1; /* светлый текст */
+  }
+  .mobile-nav.active .linkit {
+    display: flex;
+  }
+}
