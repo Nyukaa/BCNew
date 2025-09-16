@@ -14,9 +14,8 @@ var gradientSpeed = 0.002;
 function updateGradient() {
   var gradient = document.getElementById("gradient");
 
-  // Проверяем, активна ли темная тема
   if (!document.body.classList.contains("dark-theme")) {
-    gradient.style.background = "none"; // убираем фон в светлой теме
+    gradient.style.background = "none";
     return;
   }
   var c0_0 = colors[colorIndices[0]];
@@ -44,7 +43,6 @@ function updateGradient() {
     colorIndices[0] = colorIndices[1];
     colorIndices[2] = colorIndices[3];
 
-    // выбрать новые цвета
     colorIndices[1] =
       (colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) %
       colors.length;

@@ -10,7 +10,18 @@ h4 {
   padding: 20px;
   /* border-top: solid 2px #2e88a3; */
 }
+.cv-grid a {
+  color: #2e88a3;
+  padding: 10px;
+  margin: 10px;
+}
+.cv-grid a:hover {
+  color: #1f6380;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
 .cv-grid h3 {
+  border-top: solid 2px #2e88a3;
   border-bottom: solid 2px #2e88a3;
 }
 .left-column {

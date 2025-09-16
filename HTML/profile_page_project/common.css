@@ -60,7 +60,7 @@ header .btn {
 
 header .btn:hover {
   background-color: #2e88a3;
-  color: white;
+  color: hsl(44, 27%, 84%);
   transform: scale(1.05);
 }
 .linkit {
@@ -154,9 +154,10 @@ footer .btn {
   color: hsl(44, 27%, 84%);
   background-color: #2e88a3;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 20px 0;
   font-family: inherit;
-
+  font-size: 1.2rem;
+  border: none;
   padding: 10px 20px;
   display: block;
   width: 70%;
@@ -183,7 +184,7 @@ footer .btn:focus {
   right: 30px;
   z-index: 99;
   background-color: #2e88a3;
-  color: white;
+  color: hsl(44, 27%, 84%);
   padding: 10px 20px;
   border: none;
   border-radius: 25px;
