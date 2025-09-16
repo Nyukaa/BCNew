@@ -9,7 +9,7 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
 - **📁 Portfolio**  
   My personal portfolio website showcasing my skills and projects.
 
-  🔗 [Live Demo](https://portfolio-a8654.web.app/index.html)  
+  🔗 [Live Demo](https://nyukaa.github.io/BCNew/Portfolio/index.html) 
   💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/profile_page_project)
 
 - **🏧 Pankkiautomaattisimulaattori**  
