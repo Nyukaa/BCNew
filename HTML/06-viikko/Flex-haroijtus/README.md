@@ -33,7 +33,7 @@ Projektin tavoitteena oli toteuttaa sivu mahdollisimman lähelle annetun esimerk
 
 - 🌐 [Live Demo](https://flex-haroijtus.web.app/)
 - 💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/06-viikko/Flex-haroijtus)
-- 👩‍💻 [Portfolio – Anna](https://portfolio-a8654.web.app/index.html)
+- 👩‍💻 [Portfolio – Anna](https://nyukaa.github.io/BCNew/Portfolio/index.html)
 
 ---
 
