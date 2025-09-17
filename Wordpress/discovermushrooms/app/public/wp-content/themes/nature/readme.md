@@ -4,7 +4,7 @@ A custom WordPress theme for a website about mushrooms in Finland, combining edu
 
 🌐 **[Live demo here](https://discovermushrooms.fwh.is/)**
 
-💻 **[GitHub Repository](https://github.com/Nyukaa/BCNew/tree/main/Wordpress/discovermushrooms/app/public/wp-content/themes/nature)**
+💻 **[GitHub Repository](https://github.com/Nyukaa/BCNew/tree/main/Wordpress/discovermushrooms/app/public/wp-content/nature)**
 
 ---
 
