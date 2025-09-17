@@ -4,7 +4,7 @@ A custom WordPress theme for a website about mushrooms in Finland, combining edu
 
 🌐 **[Live demo here](https://discovermushrooms.fwh.is/)**
 
-💻 **[GitHub Repository](https://github.com/Nyukaa/BCNew/tree/main/Wordpress/discovermushrooms/app/public/wp-content/nature)**
+💻 **[GitHub Repository](https://github.com/Nyukaa/BCNew/blob/main/Wordpress/discovermushrooms/app/public/wp-content/plugins/catalog/readme.md)**
 
 ---
 
@@ -24,7 +24,7 @@ A custom WordPress theme for a website about mushrooms in Finland, combining edu
 - 🗓️ **Next Saturday Tour Shortcode**: Easily display the date of the next Saturday tour anywhere on your site.
 - ⚡ **Dynamic Tour Dates**: Automatically updates each week to show the upcoming tour date.
 - 🔗 **Custom Plugin Available**: This theme works seamlessly with the **Tour Catalog plugin** (shortcode & widget).  
-  For details, setup, and installation of the plugin, see the **[Tour Catalog Plugin README](../plugins/catalog/README.md)**.
+  For details, setup, and installation of the plugin, see the **[Tour Catalog Plugin README](https://github.com/Nyukaa/BCNew/blob/main/Wordpress/discovermushrooms/app/public/wp-content/plugins/catalog/readme.md)**.
 
 ---
 
