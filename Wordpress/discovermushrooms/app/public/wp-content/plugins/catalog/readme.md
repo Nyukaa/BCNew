@@ -27,7 +27,7 @@ A custom WordPress plugin to manage and display guided mushroom tours. Provides 
 
 ## 🔹 Plugin File Structure
 
-´´´
+```
 catalog/
 │
 ├─ tour-catalog.php ← Main plugin loader
@@ -37,7 +37,40 @@ catalog/
 │ ├─ tour-catalog-post-type.php ← Registers CPT, meta boxes, taxonomy
 │ ├─ tour-catalog-shortcode.php ← Shortcode logic, outputs grid
 │ └─ tour-catalog-widget.php ← Widget class for nearest upcoming tour
-´´´
+```
+---
+## ✅ Description of Key Files
+
+### `tour-catalog.php`
+- Main plugin loader  
+- Includes all other PHP files (post-type, shortcode, widget)  
+- Enqueues styles (`css/tourcatalog.css`)  
+
+### `includes/tour-catalog-post-type.php`
+- Registers **Custom Post Type** `tourcatalog_tour`  
+- Adds meta boxes: price, duration, date, place  
+- Registers taxonomy for tour categories  
+
+### `includes/tour-catalog-shortcode.php`
+- Defines `[tour-catalog]` shortcode  
+- Outputs a responsive grid of tour cards with metadata and a global **“Book a Tour”** button  
+
+### `includes/tour-catalog-widget.php`
+- Contains the **Tour Catalog Widget** class  
+- Displays the nearest upcoming tour with title, image, price, duration, date, and place  
+- Compatible with theme styles and CSS icons  
+
+### `css/tourcatalog.css`
+- Contains all styling for tour catalog grid, cards, metadata icons, and booking button  
+- Fully responsive for desktop, tablet, and mobile  
+
+---
+
+## ⚡ Notes
+
+- The plugin is **modular**: each feature has its own file for maintainability.  
+- You can override the styles in your theme if needed by enqueueing a custom CSS.  
+- Shortcode and widget share the same CSS classes, ensuring consistent styling.
 
 ---
 
