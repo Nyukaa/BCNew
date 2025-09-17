@@ -39,7 +39,7 @@ Interaktiivinen Magic 8-Ball -sovellus, jossa käyttäjä voi esittää kysymyks
 
 - 🌐 [Live Demo](https://magic-ball-1418b.web.app/)
 - 💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/08-viikko/magic_ball)
-- 👩‍💻 [Portfolio – Anna](https://portfolio-a8654.web.app/index.html)
+- 👩‍💻 [Portfolio – Anna](https://nyukaa.github.io/BCNew/Portfolio/index.html)
 
 ---
 
