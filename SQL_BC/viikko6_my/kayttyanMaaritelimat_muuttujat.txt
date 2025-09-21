@@ -1,0 +1,13 @@
+https://mariadb.com/docs/server/reference/sql-structure/sql-language-structure/user-defined-variables
+-- wikipedia/acid
+-- database transaction
+use kukkakauppav1;
+
+mysql -u admin1 -p < kukkakauppaV1Kayttaja.sql 
+
+mysql -u puutarhuri -p; 
+
+
+
+
+

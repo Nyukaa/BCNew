@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>tehtävät</title>
+  <style>
+    
+ #valikko button {
+   width: 20em;
+ }
+
+ section > h2, main>h1 {
+   background-color: beige;
+ }
+
+ @media print {
+    #valikko,
+    #syote,
+    #haku,
+    #kaikki,
+    #virhe {
+      page-break-inside: avoid;
+      page-break-after: always;
+      padding: 10px;
+      height: 420px;
+      border: solid grey 1px;
+    }
+
+    #kaikki {
+      height: 1000px;
+    }
+
+    body {
+      font-size: 10pt;
+    }
+    section {
+      page-break-after: always;
+    }
+    section > div:last-of-type{
+      page-break-after:avoid;
+    }
+ }
+
+ @media screen {
+   #valikko,
+   #syote,
+   #haku,
+   #kaikki,
+   #virhe {
+     page-break-inside: avoid;
+     border: solid gray 1px;
+     padding: 1em;
+     margin: 10px;
+     height: 600px;
+   }
+
+   body {
+     font-size: 12pt;
+   }
+ }
+
+
+ ul.taulu {
+   font-family: monospace;
+   font-weight: bold;
+ }
+
+ input {
+   display: inline-block;
+   height: 20px;
+   border: black solid 2px;
+ }
+
+ label {
+   display: inline-block;
+   width: 150px;
+ }
+
+ .lihavointi {
+   font-weight: bold;
+ }
+
+ div {
+   padding: 10px;
+ }
+
+ .iso {
+   font-size: 16pt;
+ }
+
+ h2 .iso {
+   font-size: 24pt;
+ }
+
+ th,
+ td {
+   padding: 10px;
+   text-align: left;
+ }
+
+ .huom {
+   padding: 1em;
+   border: dashed 1px red;
+ }
+
+ .konsolivalikko>ol>li {
+   margin-left:1em;
+   font-family: monospace;
+ }
+
+ pre, .konsolivalikko>ol {
+   width: 70%;
+   padding: 1em;
+   background-color: lightgray;
+   font-weight: bold;
+ }
+
+ .avain {
+   color:blue;
+   font-weight: bold;
+ }
+
+ .arvo{
+   color:red;
+ }
+
+ .olioalku, .olioloppu, .taulukko{
+   font-weight: bold;
+ }
+ .olio{
+   padding-left:1em;
+   padding-top:0;
+   padding-bottom: 0;
+ }
+
+ .rivi{
+   padding:0;
+ }
+
+ .arvo.varchar::before{
+    content: '\0022';
+ }
+ .arvo.varchar::after {
+   content: '\0022';
+ }
+
+ .jsondata {
+   font-family: monospace;
+ }
+
+ table.csvdata {
+   border-collapse: collapse;
+   border: solid 1px black;
+ }
+
+ table.csvdata th {
+   background-color: lightgrey;
+   border-bottom: 1px solid black;
+ }
+
+ table.csvdata td,
+ table.csvdata th {
+   border-right: 1px solid black;
+   border-left: 1px solid black;
+ }
+
+  .xmldata .elementti,
+  .xmldata .elementtiloppu {
+    padding-left: 1em;
+  }
+
+  .xmldata .kentta {
+    padding-left: 2em;
+  }
+  </style>
+</head>
+  <body>
+    <header>Anna Shitikova</header>
+    <main>
+      <h1> Tasks</h1>
+      <ol>
+      
+          <li>Create a folder for the project</li> 
+      
+          <li>Write create statements for the database</li> 
+      
+          <li>Create the database</li> 
+      
+          <li>Write Sql statements</li> 
+      
+          <li>Submit the project</li> 
+      
+      </ol>
+      
+      
+        <section class="projektinAlustusEN">
+          <h2>1 Create a folder for the project</h2>
+        
+          <div>
+     Create a folder for the project. Name the folder with
+     <strong>Shitikova_Anna_computer_project</strong>.
+  </div>
+  <div>
+    
+  </div>
+  
+  
+  
+        </section>
+      
+        <section class="luontilauseetSqlEN">
+          <h2>2 Write create statements for the database</h2>
+        
+          <div>
+    Write create statements to create a database called
+    <strong><span class="iso">computerdb</span></strong>.
+  </div>
+  <div>Create a table <strong>computer</strong>, for
+    computer data. Table columns are:
+  </div>
+  <ul class="taulu">
+    
+    <li>
+      id
+      integer
+    </li>
+    
+    <li>
+      name
+      varchar(25)
+    </li>
+    
+    <li>
+      type
+      varchar(18)
+    </li>
+    
+    <li>
+      price
+      integer
+    </li>
+    
+    <li>
+      processor
+      varchar(20)
+    </li>
+    
+  </ul>
+  <div>
+     All columns are mandatory. The primary key is <strong>id</strong>.
+  </div>
+  <div>
+    Add two insert statements into the create statements for testing.
+  </div>
+  <div>
+    Create user <strong> sophie@localhost
+    </strong> with password <strong> SFfliXFN</strong>.
+    Grant all necessary privileges to the user.
+  </div>
+  
+  <div class="huom">
+    
+    <div>
+      Save all necessary create statements
+      
+      
+      
+      into a sql file
+      <strong>Shitikova_Anna_computer_createStatements.sql</strong>
+      
+    </div>
+    
+  </div>
+        </section>
+      
+        <section class="luoTietokantaEN">
+          <h2>3 Create the database</h2>
+        
+            <div>
+      Create the database with the create statements from 
+      .
+    </div> 
+        </section>
+      
+        <section class="sqltehtavatEN">
+          <h2>4 Write Sql statements</h2>
+        
+             <div>
+       After each operation check the content of the database by selecting all data from the table.
+     </div>
+    <div>Write sql statements, with which you can 
+      <strong>insert</strong>, <strong>update</strong>, 
+      <strong>delete</strong> and <strong>select</strong> the computer data.
+    </div>
+    <div class="huom">Save sql statements into project folder as a sql file named <strong>
+        Shitikova_Anna_computer_sqlStatements.sql</strong>.
+    </div>
+    <h3>Insert data to the database</h3>
+    <div>
+      Insert following data to the <strong>computer</strong> database
+    </div>
+    
+      
+
+<div id="haekaikki">
+  <table>
+    <thead>
+      <tr>
+        
+          <th>
+            id
+          </th>
+          
+          <th>
+            name
+          </th>
+          
+          <th>
+            type
+          </th>
+          
+          <th>
+            price
+          </th>
+          
+          <th>
+            processor
+          </th>
+          
+      </tr>
+    </thead>
+    </tbody>
+    
+      <tr>
+        
+          <td>
+            1
+          </td>
+          
+          <td>
+            Cera 2400
+          </td>
+          
+          <td>
+            supercomputer
+          </td>
+          
+          <td>
+            1500
+          </td>
+          
+          <td>
+            X-Force
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            5
+          </td>
+          
+          <td>
+            Xunil 4.7
+          </td>
+          
+          <td>
+            gameover
+          </td>
+          
+          <td>
+            700
+          </td>
+          
+          <td>
+            MinPower
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            4
+          </td>
+          
+          <td>
+            Beast II
+          </td>
+          
+          <td>
+            embedded
+          </td>
+          
+          <td>
+            100
+          </td>
+          
+          <td>
+            PiTron 3
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            7
+          </td>
+          
+          <td>
+            King 3000
+          </td>
+          
+          <td>
+            tabletop
+          </td>
+          
+          <td>
+            499
+          </td>
+          
+          <td>
+            BNE
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            2
+          </td>
+          
+          <td>
+            BigFlop Mark II
+          </td>
+          
+          <td>
+            pocket computer
+          </td>
+          
+          <td>
+            300
+          </td>
+          
+          <td>
+            Brain 456
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            3
+          </td>
+          
+          <td>
+            GameDelux
+          </td>
+          
+          <td>
+            laptop
+          </td>
+          
+          <td>
+            200
+          </td>
+          
+          <td>
+            Selenium II
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            6
+          </td>
+          
+          <td>
+            MaxEffect 2000
+          </td>
+          
+          <td>
+            server
+          </td>
+          
+          <td>
+            2000
+          </td>
+          
+          <td>
+            MotorOlè
+          </td>
+          
+      </tr>
+      
+        </tbody>
+  </table>
+</div>
+
+  
+    <h3>Getting data</h3>
+    <h4>Select all columns</h4>
+    <div>
+      Create select statement with which you get all data of the computers. 
+      All columns should be included in the resultset.
+    </div>
+    <div>
+      Write a select statement, with which you get all data of the computers.
+      Include into the resultset only the columns
+      <strong>processor</strong>, <strong>id</strong>, <strong>type</strong>.
+    </div>
+    <h4>Select</h4>
+    
+    <div>
+      Select all computers, where the 
+      <strong>price</strong> is <strong> 2000</strong>
+    </div>
+    
+    <div>
+      Select all computers, where the 
+      <strong>name</strong> is <strong> Xunil 4.7</strong>
+    </div>
+    
+    <div>
+      Select all computers, where the 
+      <strong>name</strong> is <strong> King 3000</strong>
+    </div>
+    
+    
+   
+      <h3>Update data</h3>
+      <div class="huom">
+        To see the efect of the operations, you might have to add some new data to the table before executing the operation.
+      </div>
+      
+      <div>
+        Update computer
+        (<strong>id</strong> is <strong> 2</strong>).
+        New data is:  
+        <strong>type</strong> is <strong> laptop</strong> and <strong>price</strong> is <strong> 300</strong>
+      </div>
+      
+      <div>
+        Update computer
+        (<strong>id</strong> is <strong> 3</strong>).
+        New data is:  
+        <strong>type</strong> is <strong> embedded</strong> and <strong>price</strong> is <strong> 300</strong>
+      </div>
+      
+      
+      <div>
+        Update computer
+        (<strong>id</strong> on <strong> 6</strong>).
+        New data is:
+        <strong>price</strong> is <strong> 300</strong> and <strong>name</strong> is <strong> MaxEffect 2000</strong> and <strong>type</strong> is <strong> laptop</strong>
+      </div>
+      
+      <div>
+        Update computer
+        (<strong>id</strong> on <strong> 2</strong>).
+        New data is:
+        <strong>price</strong> is <strong> 100</strong> and <strong>type</strong> is <strong> embedded</strong> and <strong>name</strong> is <strong> GameDelux</strong>
+      </div>
+      
+   
+       <h3>Delete data</h3>
+       <div class="huom">
+         To see the efect of the operations, you might have to add some new data to the table before executing the
+         operation.
+        </div>
+       
+       <div>
+         Delete computer, where <strong>id</strong> is <strong>1</strong>
+       </div>
+       
+       <div>
+         Delete computer, where <strong>id</strong> is <strong>2</strong>
+       </div>
+       
+       <div>
+         Delete all computers, where
+         <strong>processor</strong> is <strong> Brain 456</strong>
+       </div>
+       <div>
+         Delete all computers, where
+         <strong>processor</strong> is <strong> Selenium II</strong> and <strong>type</strong> is <strong> tabletop</strong>
+       </div>
+       <div>
+         Delete all computers, where
+         <strong>processor</strong> is <strong> Selenium II</strong> or <strong>processor</strong> is <strong> X-Force</strong> or <strong>price</strong> is <strong> 100</strong>
+       </div>
+        </section>
+      
+        <section class="palautusEN">
+          <h2>5 Submit the project</h2>
+        
+          <div>
+    Submit your project folder
+    <strong>Shitikova_Anna_computer_project</strong>
+    acording to instructions given separately.
+     
+    
+  </div>
+  
+  
+
+  
+
+  
+        </section>
+        
+    </main> 
+  </body>
+</html>
