@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 // import axios from "axios";
 import Note from "./components/Note";
 import Footer from "./components/Footer";
+import Notification from "./components/Notification";
 import "./index.css";
 
 import noteService from "./services/notes";
@@ -81,7 +82,7 @@ const App = () => {
   return (
     <div>
       <h1>Notes</h1>
-      <Notification message={errorMessage} />;
+      <Notification message={errorMessage} />
       <div>
         <button onClick={() => setShowAll(!showAll)}>
           show {showAll ? "important" : "all"}
