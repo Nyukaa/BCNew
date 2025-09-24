@@ -14,6 +14,8 @@
 
 const express = require("express");
 const app = express();
+app.use(express.static("dist"));
+
 // Подключаем middleware express.json(), чтобы сервер мог автоматически парсить
 // JSON в теле POST-запросов и помещать его в request.body
 
@@ -110,7 +112,11 @@ app.delete("/api/notes/:id", (request, response) => {
   response.status(204).end();
 });
 
-const PORT = 3001;
+// const PORT = 3001;
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
