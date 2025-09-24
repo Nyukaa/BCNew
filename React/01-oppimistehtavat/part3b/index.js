@@ -22,16 +22,16 @@ app.use(express.static("dist"));
 app.use(express.json()); // express.json() middleware for json
 //app.use(morgan("tiny")); //logging middleware
 // Создаём собственный токен для morgan, который будет показывать тело POST-запросов
-morgan.token("body", (req) => {
-  if (req.method === "POST") {
-    return JSON.stringify(req.body);
-  }
-  return "";
-});
+// morgan.token("body", (req) => {
+//   if (req.method === "POST") {
+//     return JSON.stringify(req.body);
+//   }
+//   return "";
+// });
 // Подключаем morgan с шаблоном логирования:
-app.use(
-  morgan(":method :url :status :res[content-length] - :response-time ms :body")
-);
+// app.use(
+//   morgan(":method :url :status :res[content-length] - :response-time ms :body")
+// );
 
 // const requestLogger = (request, response, next) => {
 //   console.log("Method:", request.method);
