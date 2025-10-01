@@ -22,4 +22,4 @@ VALUES (200, 'Test Book 2', 'Tester B', 2021, 'nonfiction');
 DROP USER IF EXISTS 'mia'@'localhost';
 CREATE USER 'mia'@'localhost' IDENTIFIED BY '4k7QXgo1';
 GRANT ALL PRIVILEGES ON bookdb.* TO 'mia'@'localhost';
-FLUSH PRIVILEGES;
+

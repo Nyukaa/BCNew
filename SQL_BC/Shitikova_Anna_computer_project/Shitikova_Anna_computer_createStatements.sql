@@ -15,4 +15,3 @@ VALUES (20, 'DemoComp', 'laptop', 499, 'DemoCPU');
 
 CREATE USER 'sophie'@'localhost' IDENTIFIED BY 'SFfliXFN';
 GRANT ALL PRIVILEGES ON computerdb.* TO 'sophie'@'localhost';
-FLUSH PRIVILEGES;
