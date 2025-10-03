@@ -1,0 +1,20 @@
+{
+  "yhteystiedot": {
+    "host": "localhost",
+    "port": 3306,
+    "user": "kaupias",
+    "password": "1234",
+    "database": "kukkakauppaV1"
+  },
+  "sqlLauseet": {
+    "kaikkiKukat": [
+      "select kukkanId, kukanNimi, paikanTyyppi, paikanKuvaus",
+      "from kasvupaikka natural join kukka",
+      "order by kukanId asc"
+    ],
+    "kaikkiPuutarhat": [
+      "select puutarhanId, puutarhanNimi, PuutarhanSijainti",
+      "from puutarha order by puutarhanId asc"
+    ]
+  }
+}

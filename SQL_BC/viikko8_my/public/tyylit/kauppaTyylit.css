@@ -1,0 +1,23 @@
+h1 {
+  color: blue;
+}
+
+main {
+  display: grid;
+  align-items: center;
+}
+table {
+  border-collapse: collapse;
+  border: solid 2px black;
+}
+
+table,
+th,
+td {
+  border: solid 1px black;
+  padding: 1.5em;
+  text-align: center;
+}
+thead {
+  background-color: antiquewhite;
+}
