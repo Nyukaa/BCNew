@@ -1,0 +1,15 @@
+config.json
+files.txt
+kukkakauppaV2Luontilauseet.sql
+kukkakauppaV2Select.sql
+kukkakauppa_full.sql
+lueMinut.md
+node_modules
+package-lock.json
+package.json
+palvelin.js
+public
+selectit.sql
+sqlasetukset.json
+tietokantatesti.js
+varastokirjasto.js

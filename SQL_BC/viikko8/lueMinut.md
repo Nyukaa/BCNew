@@ -1,3 +1,7 @@
+````
+mysql -u admin1 -p < kukkakauppa_full.sql
+```
+
 # Tietokantapalvelindemo
 
 ## luodaan package.json
@@ -19,10 +23,11 @@ npm install cors
 
 ## es6 moduulituki
 
-jos käytetään es6 moduleita, lisätään package.json:iin 
+jos käytetään es6 moduleita, lisätään package.json:iin
 
 ```json
 "type":"module"
 ```
 
 
+````

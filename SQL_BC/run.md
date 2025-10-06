@@ -1,3 +1,10 @@
+```
+mysql -u admin1 -p < kukkakauppaV2Luontilauseet.sql
+
+
+node palvelin
+```
+
 айди в MySQL под админом (root или admin1):
 На самом деле неважно из какой директории ты запускаешь клиент MySQL (mysql), потому что это бинарный файл, который установлен в систему и доступен через PATH.
 
