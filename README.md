@@ -4,12 +4,32 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
 
 ---
 
+## ⚛️ React Projects (Full Stack Open) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+⚛️ **React Projects** [(GitHub)](https://github.com/Nyukaa/React)
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+- 📊 **Unicafe – Feedback App** [GitHub](https://github.com/Nyukaa/BCNew/blob/main/React/02-soveltavat-tehtavat/ex11/README.md) | [Demo](https://nyukaa.github.io/BCNew/Unicafe/)
+- 🎭 **Anecdotes – Voting App** [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex14) | [Demo](https://nyukaa.github.io/BCNew/Anecdotes/)
+- 🌍 **Countries App** [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex2_20) | [Demo](https://nyukaa.github.io/BCNew/Countries/)
+
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Mongo](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+- 📞 **Phonebook – CRUD App** [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/Phonebook_with_mongo) | [Demo](https://phonebook-backend-iagy.onrender.com/)
+
+---
+
 ## 🟨 JavaScript Projects
 
 - **📁 Portfolio**  
   My personal portfolio website showcasing my skills and projects.
 
-  🔗 [Live Demo](https://nyukaa.github.io/BCNew/Portfolio/index.html) 
+  🔗 [Live Demo](https://nyukaa.github.io/BCNew/Portfolio/index.html)
   💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/profile_page_project)
 
 - **🏧 Pankkiautomaattisimulaattori**  
@@ -30,44 +50,6 @@ Welcome! This repository contains several JavaScript, HTML, and CSS projects I'v
   🔗 [Live Demo – Etusivu](https://pannukakku-87646.web.app)  
   🔗 [Live Demo – Tilaus](https://pannukakku-87646.web.app/tilaus.html)  
   💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/HTML/09-viikko/Pannukakku)
-
----
-
-## ⚛️ React Projects (Full Stack Open) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-
-### 📊 Unicafe – Feedback App
-
-A feedback collection app where users can give **positive, neutral, or negative feedback**, and view statistics such as average score and positive feedback percentage.
-
-💻 [GitHub](https://github.com/Nyukaa/BCNew/blob/main/React/02-soveltavat-tehtavat/ex11/README.md)
-
----
-
-### 🎭 Anecdotes – Voting App
-
-An interactive app where users can view random programming anecdotes, **vote for their favorites**, and see which anecdote has the most votes.
-
-💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex14)
-
----
-
-### 📞 Phonebook – CRUD App
-
-A simple phonebook app where users can **add, update, delete, and filter contacts**.  
-Includes server communication using **JSON-server** and REST API requests.
-
-💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex2_17)
-
----
-
-### 🌍 Countries App
-
-A country search tool that integrates with an **external API** to show details such as capital, population, and **live weather data**.  
-Demonstrates environment variables and third-party API integration.
-
-💻 [GitHub](https://github.com/Nyukaa/BCNew/tree/main/React/02-soveltavat-tehtavat/ex2_20)
-
----
 
 ---
 
