@@ -1,0 +1,390 @@
+Quiz
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>React Flashcards</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+
+        background: #f6f6f6;
+
+        padding: 20px;
+      }
+
+      .card {
+        background: white;
+
+        border: 1px solid #ccc;
+
+        border-radius: 10px;
+
+        padding: 15px;
+
+        margin: 10px auto;
+
+        max-width: 700px;
+
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .question {
+        font-weight: bold;
+
+        font-size: 1.1em;
+      }
+
+      .options {
+        margin-top: 10px;
+      }
+
+      .option {
+        margin: 6px 0;
+
+        padding: 8px;
+
+        border-radius: 6px;
+
+        cursor: pointer;
+
+        transition: background 0.3s;
+
+        border: 1px solid #ddd;
+      }
+
+      .correct {
+        background-color: #d4edda !important;
+
+        border-color: #c3e6cb;
+      }
+
+      .wrong {
+        background-color: #f8d7da !important;
+
+        border-color: #f5c6cb;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>React Flashcard Quiz</h1>
+
+    <p>Click on an answer to see if you're correct!</p>
+
+    <div id="quiz"></div>
+
+    <script>
+      const questions = [
+        {
+          question: "What is JSX in React?",
+
+          correct:
+            "JavaScript syntax extension that lets you write HTML-like code in JavaScript",
+
+          options: [
+            "JavaScript syntax extension that lets you write HTML-like code in JavaScript",
+
+            "JavaScript library for routing",
+
+            "A tool for testing React components",
+
+            "A CSS-in-JS framework",
+          ],
+        },
+
+        {
+          question:
+            "In a functional component, how do you create a state variable?",
+
+          correct: "const [value, setValue] = useState(initialValue)",
+
+          options: [
+            "React.createState()",
+
+            "this.state = ...",
+
+            "useEffect(...)",
+
+            "const [value, setValue] = useState(initialValue)",
+          ],
+        },
+
+        {
+          question: "What is a prop in React?",
+
+          correct:
+            "A property passed from a parent component to a child component",
+
+          options: [
+            "A way to write inline CSS in React",
+
+            "A property passed from a parent component to a child component",
+
+            "A built-in React hook",
+
+            "A method for updating the DOM manually",
+          ],
+        },
+
+        {
+          question: "What does lifting state up mean?",
+
+          correct: "Moving shared state into a common ancestor component",
+
+          options: [
+            "Creating a global state object",
+
+            "Sharing state using Redux",
+
+            "Moving shared state into a common ancestor component",
+
+            "Moving state from a hook into local variables",
+          ],
+        },
+
+        {
+          question:
+            "What is the behavior of useEffect(() => { ... }) with no dependency array?",
+
+          correct: "It runs every time the component renders",
+
+          options: [
+            "It runs only on the first render",
+
+            "It runs every time the component renders",
+
+            "It never runs",
+
+            "It runs only when the component unmounts",
+          ],
+        },
+
+        {
+          question: "When does useEffect(() => { ... }, []) run?",
+
+          correct: "Only once after the initial render",
+
+          options: [
+            "On every re-render",
+
+            "Only when a specific prop updates",
+
+            "Only once after the initial render",
+
+            "When the component unmounts",
+          ],
+        },
+
+        {
+          question:
+            "What is the key prop used for in React when rendering a list?",
+
+          correct:
+            "To identify each element uniquely so React can manage updates efficiently",
+
+          options: [
+            "To identify each element uniquely so React can manage updates efficiently",
+
+            "To encrypt user data in forms",
+
+            "To validate props",
+
+            "To reference HTML DOM elements directly",
+          ],
+        },
+
+        {
+          question:
+            "Which of the following is the correct way to conditionally render a component in JSX?",
+
+          correct: "{ condition && <MyComponent /> }",
+
+          options: [
+            "<MyComponent show={condition} />",
+
+            "{ condition && <MyComponent /> }",
+
+            "<If condition={condition}><MyComponent /></If>",
+
+            "{ if (condition) <MyComponent /> }",
+          ],
+        },
+
+        {
+          question:
+            'In React Router, what does this route do? <Route path="/about" element={<About />} />',
+
+          correct: "Maps a URL path to a component to render",
+
+          options: [
+            "Maps a URL path to a component to render",
+
+            "Fetches data from an API",
+
+            "Defines global styles",
+
+            "Stores the visited route in local storage",
+          ],
+        },
+
+        {
+          question: "What is a custom hook in React?",
+
+          correct:
+            "A user-defined function starting with use that allows reuse of stateful logic",
+
+          options: [
+            "A user-defined function starting with use that allows reuse of stateful logic",
+
+            "A special lifecycle method in class components",
+
+            "A browser event listener",
+
+            "A command to create new components",
+          ],
+        },
+
+        {
+          question: "What does the useState hook return?",
+
+          correct: "An array with a getter and setter function",
+
+          options: [
+            "An array with a getter and setter function",
+
+            "A function that triggers re-renders",
+
+            "An object with current and previous state",
+
+            "A reducer function",
+          ],
+        },
+
+        {
+          question: "Why should keys in lists be unique in React?",
+
+          correct: "To help React identify which items changed",
+
+          options: [
+            "To maintain CSS order",
+
+            "To prevent memory leaks",
+
+            "To help React identify which items changed",
+
+            "To speed up API calls",
+          ],
+        },
+
+        {
+          question:
+            "Which hook is used for performing side effects in a component?",
+
+          correct: "useEffect",
+
+          options: ["useMemo", "useEffect", "useState", "useCallback"],
+        },
+
+        {
+          question: "Which of the following is a valid React component?",
+
+          correct: "function MyComponent() { return <h1>Hello</h1>; }",
+
+          options: [
+            "function MyComponent() { return <h1>Hello</h1>; }",
+
+            "component MyComponent { return <h1>Hello</h1>; }",
+
+            "React.component(MyComponent) { return <h1>Hello</h1>; }",
+
+            "MyComponent = () => <div>Hello</div>; export default component;",
+          ],
+        },
+
+        {
+          question: "What is the purpose of useMemo in React?",
+
+          correct: "To memoize expensive calculations between renders",
+
+          options: [
+            "To memoize expensive calculations between renders",
+
+            "To handle side effects",
+
+            "To update state asynchronously",
+
+            "To create refs",
+          ],
+        },
+      ];
+
+      function shuffle(array) {
+        let currentIndex = array.length,
+          randomIndex;
+
+        while (currentIndex !== 0) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+
+          currentIndex--;
+
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex],
+            array[currentIndex],
+          ];
+        }
+
+        return array;
+      }
+
+      function createQuiz() {
+        const container = document.getElementById("quiz");
+
+        questions.forEach((q, index) => {
+          const card = document.createElement("div");
+
+          card.className = "card";
+
+          const qText = document.createElement("div");
+
+          qText.className = "question";
+
+          qText.textContent = `${index + 1}. ${q.question}`;
+
+          card.appendChild(qText);
+
+          const optionsBox = document.createElement("div");
+
+          optionsBox.className = "options";
+
+          shuffle(q.options).forEach((option) => {
+            const opt = document.createElement("div");
+
+            opt.className = "option";
+
+            opt.textContent = option;
+
+            opt.onclick = () => {
+              if (opt.textContent === q.correct) {
+                opt.classList.add("correct");
+              } else {
+                opt.classList.add("wrong");
+              }
+            };
+
+            optionsBox.appendChild(opt);
+          });
+
+          card.appendChild(optionsBox);
+
+          container.appendChild(card);
+        });
+      }
+
+      createQuiz();
+    </script>
+  </body>
+</html>

@@ -1,17 +1,31 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
-if (process.argv.length < 3) {
-  console.log("give password as argument");
+const password = process.argv[2] || process.env.DB_PASSWORD;
+
+if (!password) {
+  console.log("⚠️  Укажи пароль через аргумент или в .env как DB_PASSWORD");
   process.exit(1);
 }
 
-const password = process.argv[2];
-
-const url = `mongodb+srv://annashitikova_db_user:${password}@cluster0.zcy90zd.mongodb.net/noteApp?retryWrites=true&w=majority&appName=Cluster0`;
+// Выбираем базу в зависимости от NODE_ENV
+const MONGODB_URI =
+  process.env.NODE_ENV === "test"
+    ? `mongodb+srv://annashitikova_db_user:${password}@cluster0.zcy90zd.mongodb.net/noteAppTest?retryWrites=true&w=majority&appName=Cluster0`
+    : `mongodb+srv://annashitikova_db_user:${password}@cluster0.zcy90zd.mongodb.net/noteApp?retryWrites=true&w=majority&appName=Cluster0`;
 
 mongoose.set("strictQuery", false);
 
-mongoose.connect(url);
+mongoose
+  .connect(MONGODB_URI)
+  .then(() => {
+    console.log(
+      `✅ Подключено к базе: ${
+        process.env.NODE_ENV === "test" ? "noteAppTest" : "noteApp"
+      }`
+    );
+  })
+  .catch((err) => console.log("Ошибка подключения к MongoDB:", err));
 
 const noteSchema = new mongoose.Schema({
   content: String,
@@ -20,12 +34,25 @@ const noteSchema = new mongoose.Schema({
 
 const Note = mongoose.model("Note", noteSchema);
 
-const note = new Note({
-  content: "HTML is easy",
-  important: true,
-});
+// Массив тестовых заметок
+const initialNotes = [
+  { content: "HTML is easy", important: true },
+  { content: "Browser can execute only JavaScript", important: true },
+  {
+    content: "The most important methods of HTTP are GET and POST",
+    important: false,
+  },
+];
 
-note.save().then((result) => {
-  console.log("note saved!");
+// Функция для сохранения заметок
+const saveNotes = async () => {
+  await Note.deleteMany({}); // очищаем базу перед добавлением
+  for (const note of initialNotes) {
+    const noteObject = new Note(note);
+    await noteObject.save();
+  }
+  console.log(`✅ ${initialNotes.length} заметок сохранено`);
   mongoose.connection.close();
-});
+};
+
+saveNotes();
