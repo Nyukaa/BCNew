@@ -1,9 +1,10 @@
-const config = require("../utils/config");
+const config = require("../utils/config"); // <-- сначала загружаем .env
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
-const url = process.env.MONGODB_URI;
+const url = config.MONGODB_URI; // теперь url есть
+
 mongoose
   .connect(url)
   .then(() => {
