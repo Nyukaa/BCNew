@@ -1,14 +1,14 @@
 import React from "react";
 
 const LoginForm = ({
-  handleLogin,
+  handleSubmit,
   username,
   password,
   handleUsernameChange,
   handlePasswordChange,
 }) => {
   return (
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleSubmit}>
       <div>
         <label>
           username

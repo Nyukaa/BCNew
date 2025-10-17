@@ -5,19 +5,21 @@ import Note from "./components/Note";
 import Notification from "./components/Notification";
 import NoteForm from "./components/NoteForm";
 import LoginForm from "./components/LoginForm";
+import Togglable from "./components/Togglable";
 
 import noteService from "./services/notes";
 import loginService from "./services/login";
 
 const App = () => {
-  const [notes, setNotes] = useState([]);
-  const [newNote, setNewNote] = useState("");
+  // const [newNote, setNewNote] = useState("");
   const [showAll, setShowAll] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-
+  const [notes, setNotes] = useState([]);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState(null);
+
+  const [loginVisible, setLoginVisible] = useState(false);
 
   //fetch notes from server
   useEffect(() => {
@@ -36,77 +38,63 @@ const App = () => {
     }
   }, []);
 
-  const addNote = async (event) => {
-    event.preventDefault();
-    if (!newNote.trim()) {
-      setErrorMessage("Note cannot be empty");
-      return;
-    }
-    const noteObject = { content: newNote, important: false };
-    console.log("Sending note to create:", noteObject);
+  // const addNote = async (event) => {
+  //   event.preventDefault();
+  //   if (!newNote.trim()) {
+  //     setErrorMessage("Note cannot be empty");
+  //     return;
+  //   }
+  //   const noteObject = { content: newNote, important: false };
+  //   console.log("Sending note to create:", noteObject);
+  //   try {
+  //     const returnedNote = await noteService.create(noteObject);
+  //     setNotes(notes.concat(returnedNote));
+  //     setNewNote("");
+  //   } catch (error) {
+  //     setErrorMessage(error.response?.data?.error || "Error adding note");
+  //     setTimeout(() => setErrorMessage(null), 5000);
+  //   }
+  // };
+
+  const addNote = async (noteObject) => {
     try {
       const returnedNote = await noteService.create(noteObject);
       setNotes(notes.concat(returnedNote));
-      setNewNote("");
     } catch (error) {
       setErrorMessage(error.response?.data?.error || "Error adding note");
       setTimeout(() => setErrorMessage(null), 5000);
     }
   };
-  // const addNote = (event) => {
-  //   event.preventDefault();
-  //   const noteObject = {
-  //     content: newNote,
-  //     important: Math.random() > 0.5,
-  //   };
 
-  //   noteService
-  //     .create(noteObject)
-  //     .then((returnedNote) => {
-  //       setNotes(notes.concat(returnedNote));
-  //       setNewNote("");
-  //     })
-  //     .catch((errorMessageFromBackend) => {
-  //       // show mistake in Notification
-  //       setErrorMessage(errorMessageFromBackend);
-  //       setTimeout(() => {
-  //         setErrorMessage(null);
-  //       }, 5000);
-  //     });
-  // };
-
-  const toggleImportanceOf = (id) => {
+  const toggleImportanceOf = async (id) => {
     const note = notes.find((n) => n.id === id);
     const changedNote = { ...note, important: !note.important };
 
-    noteService
-      .update(id, changedNote)
-      .then((returnedNote) => {
-        setNotes(notes.map((note) => (note.id !== id ? note : returnedNote)));
-      })
-      .catch((error) => {
-        setErrorMessage(
-          `Note '${note.content}' was already removed from server`
-        );
-        setTimeout(() => {
-          setErrorMessage(null);
-        }, 5000);
-        setNotes(notes.filter((n) => n.id !== id));
-      });
+    try {
+      const returnedNote = await noteService.update(id, changedNote);
+      setNotes(notes.map((n) => (n.id !== id ? n : returnedNote)));
+    } catch (error) {
+      setErrorMessage(`Note '${note.content}' was already removed from server`);
+      setTimeout(() => {
+        setErrorMessage(null);
+      }, 5000);
+      setNotes(notes.filter((n) => n.id !== id));
+    }
   };
 
-  const handleNoteChange = (event) => {
-    setNewNote(event.target.value);
-  };
+  // const handleNoteChange = (event) => {
+  //   setNewNote(event.target.value);
+  // };
 
   const handleLogin = async (event) => {
     event.preventDefault();
 
     try {
       const user = await loginService.login({ username, password });
+      console.log("Logged in user:", user);
       setUser(user); // set user to state
       window.localStorage.setItem("loggedNoteappUser", JSON.stringify(user)); // save to Local Storagefor refreshing the page
-      //console.log("user ", window.localStorage.getItem("loggedNoteappUser"));
+      console.log("user ", window.localStorage.getItem("loggedNoteappUser"));
       noteService.setToken(user.token); // added token for future requests
 
       setUsername("");
@@ -120,11 +108,33 @@ const App = () => {
   };
   const notesToShow = showAll ? notes : notes.filter((note) => note.important);
 
+  const loginForm = () => (
+    <Togglable buttonLabel="login">
+      <LoginForm
+        username={username}
+        password={password}
+        handleUsernameChange={({ target }) => setUsername(target.value)}
+        handlePasswordChange={({ target }) => setPassword(target.value)}
+        handleSubmit={handleLogin}
+      />
+    </Togglable>
+  );
+  const noteForm = () => (
+    <Togglable buttonLabel="new note">
+      <NoteForm
+        createNote={addNote}
+        // newNote={newNote}
+        // handleChange={handleNoteChange}
+      />
+    </Togglable>
+  );
   return (
     <div>
       <h1>Notes</h1>
       <Notification message={errorMessage} />
-      {!user && (
+
+      {!user && loginForm()}
+      {/* {!user && (
         <LoginForm
           handleLogin={handleLogin}
           username={username}
@@ -132,16 +142,22 @@ const App = () => {
           handleUsernameChange={({ target }) => setUsername(target.value)}
           handlePasswordChange={({ target }) => setPassword(target.value)}
         />
-      )}
+          <Togglable buttonLabel="reveal">
+        "Hello"
+      
+        <p>эта тоже скрыта</p>[<p>1</p>, <p>2</p>]
+      </Togglable>
+      )} */}
 
       {user && (
         <div>
           <p>{user.name} logged in</p>
-          <NoteForm
+          {/* <NoteForm
             onSubmit={addNote}
             newNote={newNote}
             handleNoteChange={handleNoteChange}
-          />
+          /> */}
+          {noteForm()}
         </div>
       )}
       <div>
