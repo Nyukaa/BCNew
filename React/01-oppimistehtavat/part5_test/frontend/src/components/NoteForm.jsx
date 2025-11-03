@@ -1,0 +1,53 @@
+import React from "react";
+import { useState } from "react";
+
+// const NoteForm = ({ onSubmit, newNote, handleNoteChange }) => {
+//   return (
+//     <form onSubmit={onSubmit}>
+//       <input
+//         value={newNote}
+//         onChange={handleNoteChange}
+//         placeholder="Write a new note..."
+//       />
+//       <button type="submit">save</button>
+//     </form>
+//   );
+// };
+
+// export default NoteForm;
+// import { useState } from 'react'
+
+const NoteForm = ({ createNote }) => {
+  const [newNote, setNewNote] = useState("");
+
+  const addNote = (event) => {
+    event.preventDefault();
+    createNote({
+      content: newNote,
+      important: true, // по умолчанию важная заметка
+    });
+    setNewNote("");
+  };
+
+  return (
+    <div>
+      <h2>Create a new note</h2>
+
+      <form onSubmit={addNote}>
+        <label>
+          {/* We need to associate the label with the input for tests and...accessibility */}
+          content
+          <input
+            value={newNote}
+            onChange={(event) => setNewNote(event.target.value)}
+            placeholder="write note here"
+            id="note-input"
+          />
+        </label>
+        <button type="submit">save</button>
+      </form>
+    </div>
+  );
+};
+
+export default NoteForm;
