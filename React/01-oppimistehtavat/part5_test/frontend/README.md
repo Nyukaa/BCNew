@@ -20,6 +20,18 @@ npm install --save-dev @testing-library/react @testing-library/jest-dom
 npm test
 ```
 
+add frontend/testSetup.js
+
+```
+import { afterEach } from "vitest";
+import { cleanup } from "@testing-library/react";
+import "@testing-library/jest-dom/vitest";
+
+afterEach(() => {
+cleanup();
+});
+```
+
 имитации действий пользователя
 
 ```

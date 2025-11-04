@@ -41,6 +41,7 @@ test("clicking the button calls event handler once", async () => {
   //Проверяем, что обработчик был вызван 1 раз
   expect(mockHandler.mock.calls).toHaveLength(1);
 });
+//
 test("renders content", () => {
   const note = {
     content: "Does not work anymore :(",
