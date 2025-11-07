@@ -4,7 +4,7 @@ const { createNote, loginWith } = require("./helper");
 describe("Note app", () => {
   // 🧠 This part runs BEFORE every test inside 'Note app'
   beforeEach(async ({ page }) => {
-    await page.goto("http://localhost:5173"); //  1️⃣ Переходим на главную страницу перед каждым тестом
+    await page.goto("/"); //  1️⃣ Переходим на главную страницу перед каждым тестом
   });
   test("front page can be opened", async ({ page }) => {
     const locator = page.getByText("Notes");
