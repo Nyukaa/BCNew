@@ -1,8 +1,15 @@
+create new dir e2e-tests and inside
+
 ```
 npm init playwright@latest
+Initializing project in '.'
+✔ Do you want to use TypeScript or JavaScript? · JavaScript
+✔ Where to put your end-to-end tests? · tests
+✔ Add a GitHub Actions workflow? (Y/n) · false
+✔ Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
 ```
 
-i added for tests
+i added for tests in backend
 
 "start:test": "cross-env NODE_ENV=test node --watch index.js",
 
@@ -10,8 +17,7 @@ i added for tests
 npm install cross-env --save-dev
 ```
 
-Playwright не запускает сервер сам.
-перед запуском тестов
+Playwright не запускает сервер сам. перед запуском тестов
 
 ```
 
