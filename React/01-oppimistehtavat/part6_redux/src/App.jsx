@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import NoteForm from "./components/NoteForm";
+import Notes from "./components/Notes";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <NoteForm />
+      <Notes />{" "}
+    </div>
+  );
+};
 
-export default App
+export default App;
+
+// import store from "./main.jsx";
+// import { createNote, toggleImportanceOf } from "./actions/noteActions";
+
+// const App = () => {
+//   const addNote = (event) => {
+//     event.preventDefault();
+//     const content = event.target.note.value;
+//     event.target.note.value = "";
+//     console.log("🧮 store before dispatch:", store.getState());
+
+//     store.dispatch(createNote(content));
+
+//     console.log("🧮 store after dispatch:", store.getState());
+//   };
+
+//   const toggleImportance = (id) => {
+//     store.dispatch(toggleImportanceOf(id));
+//   };
+
+//   return (
+//     <div>
+//       <form onSubmit={addNote}>
+//         <input name="note" />
+//         <button type="submit">add</button>
+//       </form>
+//       <ul>
+//         {store.getState().map((note) => (
+//           <li key={note.id} onClick={() => toggleImportance(note.id)}>
+//             {note.content}{" "}
+//             <strong>{note.important ? "important" : "not important"}</strong>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+// export default App;

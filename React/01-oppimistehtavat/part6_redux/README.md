@@ -1,3 +1,7 @@
+```
+npm install react-redux
+```
+
 тестовую библиотеку Vitest для проекта
 
 ```
@@ -19,4 +23,5 @@ with help of vitest extantion
 npx vitest --ui
 npm run test -- --watch
 ```
+
 ````
