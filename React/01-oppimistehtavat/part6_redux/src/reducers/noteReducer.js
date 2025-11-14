@@ -5,14 +5,16 @@ const initialState = [
 const noteReducer = (state = initialState, action) => {
   switch (action.type) {
     case "NEW_NOTE":
-      return [...state, action.payload];
+      return [...state, action.payload]; // добавляем новую заметку
     case "TOGGLE_IMPORTANCE": {
       const id = action.payload.id;
       const noteToChange = state.find((n) => n.id === id);
+      // создаём изменённую версию (immutability!)
       const changedNote = {
         ...noteToChange,
         important: !noteToChange.important,
       };
+      // возвращаем новый массив заметок
       return state.map((note) => (note.id !== id ? note : changedNote));
     }
     default:

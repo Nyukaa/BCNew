@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <NoteForm />
-      <Notes />{" "}
+      <Notes />
     </div>
   );
 };
