@@ -4,11 +4,26 @@ import Note from "./Note.jsx";
 
 const Notes = () => {
   const dispatch = useDispatch(); //даёт доступ к функции dispatch() из Redux store
-  const notes = useSelector((state) => state); //позволяет «достать» данные из Redux-хранилища все заметки
+  //const notes = useSelector((state) => state.notes); //позволяет «достать» данные из Redux-хранилища все заметки
   //but devTools Возвращаешь “весь state” → React-Redux считает это ошибкой.
-
   // Можно фильтровать данные, например — получить только важные заметки:
-  // const importantNotes = useSelector(state => state.filter(note => note.important) )
+
+  //   const notes = useSelector((state) => {
+  //     if (state.filter === "ALL") {
+  //       return state.notes;
+  //     }
+  //     return state.filter === "IMPORTANT"
+  //       ? state.notes.filter((note) => note.important)
+  //       : state.notes.filter((note) => !note.important);
+  //   });
+
+  //=== simplify the selector by destructuring
+  const notes = useSelector(({ filter, notes }) => {
+    if (filter === "ALL") return notes;
+    return filter === "IMPORTANT"
+      ? notes.filter((n) => n.important)
+      : notes.filter((n) => !n.important);
+  });
   return (
     <ul>
       {notes.map((note) => (
