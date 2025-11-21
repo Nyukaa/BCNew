@@ -4,31 +4,33 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const generateId = () => Number((Math.random() * 1000000).toFixed(0));
 
-const initialState = [
-  {
-    content: "reducer defines how redux store works",
-    important: true,
-    id: 1,
-  },
-  {
-    content: "state of store can contain any data",
-    important: false,
-    id: 2,
-  },
-];
+// const initialState = [
+//   {
+//     content: "reducer defines how redux store works",
+//     important: true,
+//     id: 1,
+//   },
+//   {
+//     content: "state of store can contain any data",
+//     important: false,
+//     id: 2,
+//   },
+// ];
 
 const noteSlice = createSlice({
   name: "notes",
-  initialState,
+  initialState: [],
   reducers: {
     createNote(state, action) {
-      const content = action.payload;
-      state.push({
-        content,
-        important: false,
-        id: generateId(),
-      });
+      //const content = action.payload;
+      //Теперь action.payload содержит весь объект заметки,
+      state.push(action.payload);
+      // content,
+      // important: false,
+      // id: generateId(),
+      // });
     },
+
     toggleImportanceOf(state, action) {
       const id = action.payload;
       const noteToChange = state.find((n) => n.id === id);
@@ -40,10 +42,13 @@ const noteSlice = createSlice({
       console.log(current(state)); // useful for debugging immutable state
       return state.map((note) => (note.id !== id ? note : changedNote));
     },
+    setNotes(state, action) {
+      return action.payload;
+    },
   },
 });
 
-export const { createNote, toggleImportanceOf } = noteSlice.actions;
+export const { createNote, toggleImportanceOf, setNotes } = noteSlice.actions;
 export default noteSlice.reducer;
 
 // const noteReducer = (state = initialState, action) => {
