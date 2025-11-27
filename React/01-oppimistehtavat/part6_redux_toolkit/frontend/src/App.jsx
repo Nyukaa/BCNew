@@ -4,14 +4,20 @@ import VisibilityFilter from "./components/VisibilityFilter";
 //for fetching notes from backend
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setNotes } from "./reducers/noteReducer";
-import noteService from "./services/notes";
+//import { setNotes } from "./reducers/noteReducer";
+//import noteService from "./services/notes";
+import { initializeNotes } from "./reducers/noteReducer";
+
 const App = () => {
   const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   noteService.getAll().then((notes) => dispatch(setNotes(notes)));
+  // }, [dispatch]);
   useEffect(() => {
-    noteService.getAll().then((notes) => dispatch(setNotes(notes)));
+    dispatch(initializeNotes());
   }, [dispatch]);
+
   return (
     <div>
       <NoteForm />
