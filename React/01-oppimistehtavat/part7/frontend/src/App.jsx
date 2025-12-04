@@ -1,13 +1,13 @@
 import ReactDOM from "react-dom/client";
 import { useState } from "react";
-import { useMatch } from "react-router-dom";
+import { useMatch } from "react-router-dom"; // we use useMatch to read the :id parameter from the URL in App component
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link,
   Navigate,
-  useParams,
+  useParams, // we use useParams to read the :id parameter from the URL in Note component
   useNavigate,
 } from "react-router-dom";
 
@@ -31,6 +31,8 @@ const Home = () => (
 const Note = ({ notes }) => {
   const id = useParams().id;
   // == const { id } = useParams();
+  //id = useParams().id; внутри App можно удалить when using useMatch in App
+  //
 
   const note = notes.find((n) => n.id === Number(id));
   return (
