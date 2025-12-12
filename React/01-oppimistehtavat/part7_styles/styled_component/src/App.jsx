@@ -4,8 +4,9 @@ import Notes from "./components/Notes";
 import { useState } from "react";
 import Home from "./components/Home";
 import Users from "./components/Users";
-import { Alert, Navbar, Nav } from "react-bootstrap";
-import { Login } from "./components/Login";
+import { Page, Navigation, Footer } from "./styles/Layout";
+import { Alert } from "react-bootstrap";
+import Login from "./components/Login";
 import { useMatch } from "react-router-dom"; // we use useMatch to read the :id parameter from the URL in App component
 import {
   BrowserRouter as Router,
@@ -13,8 +14,6 @@ import {
   Route,
   Link,
   Navigate,
-  useParams, // we use useParams to read the :id parameter from the URL in Note component
-  useNavigate,
 } from "react-router-dom";
 
 const App = () => {
@@ -60,43 +59,8 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      {/* навигация автоматически сжимается на маленьких экранах. меню закрывается
-        при выборе пункта (удобно для мобильных). */}
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        {/* "гамбургер" */}
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#" as="span">
-              <Link style={padding} to="/">
-                home
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#" as="span">
-              <Link style={padding} to="/notes">
-                notes
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#" as="span">
-              <Link style={padding} to="/users">
-                users
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#" as="span">
-              {user ? (
-                <em style={padding}>{user} logged in</em>
-              ) : (
-                <Link style={padding} to="/login">
-                  login
-                </Link>
-              )}
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-
-      {/* <div>
+    <Page>
+      <Navigation>
         <Link style={padding} to="/">
           home
         </Link>
@@ -113,7 +77,7 @@ const App = () => {
             login
           </Link>
         )}
-      </div> */}
+      </Navigation>
       {/* Notification */}
       {message && (
         <Alert variant="success" className="mt-3">
@@ -135,12 +99,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
       </Routes>
       {/* </Router> */}
-      <div>
-        <br />
+      <Footer>
         <em>Note app, Department of Computer Science 2023</em>
-      </div>
-    </div>
+      </Footer>
+    </Page>
   );
 };
 export default App;
-// ReactDOM.createRoot(document.getElementById("root")).render(<App />);
