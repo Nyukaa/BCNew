@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { TextField, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-export const Login = ({ onLogin }) => {
+const Login = ({ login }) => {
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
@@ -10,58 +10,35 @@ export const Login = ({ onLogin }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onLogin(username);
+
+    login(username);
+    setUsername("");
     navigate("/");
   };
 
   return (
-    <div>
-      <h2>login</h2>
-      {/* 
-     Using Bootstrap Form components for styling */}
-      <Form onSubmit={handleSubmit}>
-        <Form.Group>
-          <Form.Label>username:</Form.Label>
-          <Form.Control
-            type="text"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </Form.Group>
+    <form onSubmit={handleSubmit}>
+      <div>
+        <TextField
+          label="username"
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div>
+        <TextField
+          label="password"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
 
-        <Form.Group>
-          <Form.Label>password:</Form.Label>
-          <Form.Control
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
-
-        <Button variant="primary" type="submit" className="mt-3">
+      <div>
+        <Button variant="contained" color="primary" type="submit">
           login
         </Button>
-      </Form>
-    </div>
+      </div>
+    </form>
   );
 };
-// const Login = ({ login }) => {
-//   const [username, setUsername] = useState("");
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     login(username);
-//     setUsername("");
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <input value={username} onChange={(e) => setUsername(e.target.value)} />
-//       <button type="submit">login</button>
-//     </form>
-//   );
-// };
-
-// export default Login;
+export default Login;
