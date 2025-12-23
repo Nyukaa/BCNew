@@ -135,6 +135,31 @@
               <i class="fab fa-js-square"></i>
               <span>JavaScript</span>
             </li>
+
+            <li>
+              <i class="fab fa-react"></i>
+              <span>React</span>
+            </li>
+            <li>
+              <i class="fab fa-react"></i>
+              <span>Material UI (MUI)</span>
+            </li>
+            <li>
+              <i class="fas fa-project-diagram"></i>
+              <span>Redux</span>
+            </li>
+            <li>
+              <i class="fab fa-node-js"></i>
+              <span>Node.js</span>
+            </li>
+            <li>
+              <i class="fab fa-node-js"></i>
+              <span>Express.js</span>
+            </li>
+            <li>
+              <i class="fas fa-database"></i>
+              <span>MongoDB</span>
+            </li>
             <li>
               <i class="fas fa-database"></i>
               <span>SQL</span>
@@ -143,17 +168,10 @@
               <i class="fab fa-wordpress"></i>
               <span>WordPress</span>
             </li>
+
             <li>
               <i class="fab fa-php"></i>
               <span>PHP</span>
-            </li>
-            <li>
-              <i class="fab fa-react"></i>
-              <span>React</span>
-            </li>
-            <li>
-              <i class="fab fa-node-js"></i>
-              <span>Node.js</span>
             </li>
             <li>
               <i class="fab fa-docker"></i>
@@ -165,8 +183,8 @@
         <div>
           <h4>Portfolio Projects (2023–2025)</h4>
           <p>
-            Portfolio website, small apps with JS/HTML/CSS, React apps,
-            WordPress site (Mushroom Guide with custom archive/single pages).
+            Portfolio website, small apps with JS/HTML/CSS, React apps with
+            Express and MongoDB backend, WordPress sites.
           </p>
 
           <h4>Aalto University – Web Software Development (2024)</h4>
@@ -230,18 +248,38 @@
           alt="my photo"
         />
       </div>
-      <form class="formSubmit">
-        <h3>Contact Me</h3>
+      <form
+        class="formSubmit"
+        action="https://formspree.io/f/xwvendpn"
+        method="POST"
+      >
+        <h3>Contact me</h3>
         <label for="formName">Your name</label>
-        <input type="text" id="formName" placeholder="Your name" />
+        <input
+          type="text"
+          id="formName"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+
         <label for="formEmail">Your email</label>
-        <input type="email" id="formEmail" placeholder="Your email" />
+        <input
+          type="email"
+          id="formEmail"
+          name="email"
+          placeholder="Your email"
+          required
+        />
+
         <label for="formMessage">Your message</label>
         <textarea
+          id="formMessage"
+          name="message"
           cols="20"
           rows="5"
-          id="formMessage"
           placeholder="Write your message"
+          required
         ></textarea>
         <button class="btn" type="submit">Send message</button>
         <p class="copyright">© Anna Shitikova 2025</p>
