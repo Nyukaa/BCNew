@@ -1,74 +1,71 @@
-# 👩‍💻 Henkilökohtainen Portfolioverkkosivusto
+# 👩‍💻 Personal Portfolio Website
 
-Tervetuloa portfoliooni! Tämä verkkosivusto on suunniteltu ja rakennettu **HTML:n**, **CSS:n** ja **JavaScriptin** avulla esittelemään työni, taitoni ja persoonallinen tyylini.  
-Sivusto on **responsiivinen**, **visuaalisesti näyttävä** ja tarjoaa **saumattoman käyttökokemuksen** eri laitteilla.
+Welcome to [my portfolio](https://nyukaa.github.io/BCNew/Portfolio/index.html)! 
 
-🖼️ **Portfolio-sivulla** näet kaikki projektini esikatselukuvineen ja linkkeineen.  
-👤 **About-sivulta** löydät CV:ni.
-📸 **Kuva AI-muokkauksella:**  
-Sivustolla käytetty pääkuva (hero image) on luotu **ChatGPT:n** avulla pohjautuen alkuperäiseen kuvaani. Kuvan tyyliä ja sommittelua muokattiin tukemaan paremmin portfolion visuaalista ilmettä.
+This website was designed and built using **HTML**, **CSS**, and **JavaScript** to showcase my projects, skills, and personal style.  
+The site is **fully responsive**, **visually engaging**, and provides a **smooth user experience** across different devices.
+
+📸 **AI-Enhanced Image**  
+The hero image used on the site was generated with **ChatGPT**, based on an original photo of me. The image was stylistically adjusted to better support the visual identity of the portfolio.
 
 ---
 
-## 🔥 Ominaisuudet
+## 🔥 Features
 
-- 🎯 **Hero-osio taustakuvalla**  
-  Aloitussivun visuaalinen heräte, joka luo vahvan ensivaikutelman.
+- 🎯 **Hero section with background image**  
+  A visually impactful landing section that creates a strong first impression.
 
-- 🙋‍♂️ **Tieto-osio (kuva & teksti)**  
-  Lyhyt esittely itsestäni sekä profiilikuva. CV löytyy "About"-sivulta.
+- 🙋‍♀️ **About section (image & text)**  
+  A short personal introduction with a profile image. The full CV is available on the About page.
 
-- 📱 **Täysin responsiivinen suunnittelu**  
-  Sivusto toimii sujuvasti puhelimilla, tableteilla ja tietokoneilla.  
+- 📱 **Fully responsive design**  
+  Optimized for mobile, tablet, and desktop devices.  
   → _(max-width: 768px)_
 
-- 🍔 **Mobiilivalikko (burger menu)**  
-  Käyttäjäystävällinen navigaatio pienille näytöille.  
-  Portfolio-sivulla mobiilissa ei käytetä hover-tehostetta, vaan kaikki esikatselut näkyvät heti.
+- 🍔 **Mobile navigation (burger menu)**  
+  User-friendly navigation for smaller screens.  
+  On mobile, hover effects are disabled on the Portfolio page so all previews are immediately visible.
 
-- 🖼️ **Galleria (CSS Grid)**  
-  Erillisellä sivulla 9-kuvainen ruudukko luovalla asettelulla.
+- 🖼️ **Image gallery (CSS Grid)**  
+  A dedicated gallery page featuring a creative 9-image grid layout.
 
-- 🧭 **Sulava vieritys**  
-  Pehmeä ja mukava scrollauskokemus koko sivustolla.
+- 🧭 **Smooth scrolling**  
+  A pleasant scrolling experience throughout the site.
 
-- 💬 **Modaali-ikkunaesimerkki**  
-  Pop-up-ikkuna toimii esimerkkinä interaktiosta (Portfolio-sivulla).
+- 💬 **Modal window example**  
+  A pop-up modal demonstrating interactive UI behavior (Portfolio page).
 
-- ⬆️ **"Takaisin ylös" -painike**  
-  Vie käyttäjän sujuvasti sivun alkuun.
+- ⬆️ **“Back to top” button**  
+  Smoothly returns the user to the top of the page.
 
-- 🌗 **Vaalea/tumma teemanvaihtaja**  
-  Mahdollisuus vaihtaa väriteemaa lennossa napilla ("switch to").
+- 🌗 **Light / Dark theme switcher**  
+  Toggle between light and dark themes using a button.
 
-- 📬 **Yhteydenottolomake**  
-  Footerissa oleva yksinkertainen lomake yhteydenottoon.
+- 📬 **Contact form**  
+  A simple contact form located in the footer.
 
-- ✨ **Sulavat siirtymät ja animaatiot**  
-  CSS-animaatiot parantavat käyttökokemusta:
+- ✨ **Smooth transitions and animations**  
+  CSS animations enhance the overall experience:
+  - Button animations  
+  - Aurora-style effect in dark mode  
+  - `h1:hover` animations  
 
-  - Painikkeiden animaatiot
-  - Revontuliefekti tummaa teemaa käytettäessä
-  - `h1:hover` -animaatiot
-
-- 📦 **Projektiosio korteilla**  
-  Portfoliotyöt esitelty visuaalisesti houkuttelevissa laatikoissa.
-
----
-
-## 💡 Teknologiat
-
-- **HTML5** – Sivuston rakenne
-- **CSS3** – Ulkoasu, animaatiot ja responsiivisuus
-- **Vanilla JavaScript** – Toiminnallisuus, interaktiot, teemat, modaali jne.
-- **CSS Grid & Flexbox** – Asettelu ja galleria
-- **Media Queries** – Mobiiliystävällinen suunnittelu
+- 📦 **Project cards section**  
+  Portfolio projects presented in visually appealing cards.
 
 ---
 
-## 🔗 Linkit
+## 💡 Technologies
 
-- 🌐 [Live Demo – Portfolio]()
-- 💻 [GitHub – Lähdekoodi](https://github.com/Nyukaa/BCNew/tree/main/HTML/profile_page_project)
+- **HTML5** – Semantic structure
+- **CSS3** – Styling, animations, and responsiveness
+- **Vanilla JavaScript** – Interactivity, themes, modals, and UI logic
+- **CSS Grid & Flexbox** – Layout and gallery structure
+- **Media Queries** – Mobile-friendly design
 
 ---
+
+## 🔗 Links
+
+- 🌐 [Live Demo – Portfolio](https://nyukaa.github.io/BCNew/Portfolio/index.html)
+- 💻 [GitHub – Source Code](https://github.com/Nyukaa/BCNew/tree/main/HTML/profile_page_project)

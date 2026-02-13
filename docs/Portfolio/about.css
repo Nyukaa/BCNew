@@ -40,6 +40,7 @@ h4 {
 .right-column p {
   color: hsl(217, 12%, 43%);
   padding: 5px 40px;
+  line-height: 1.6;
 }
 
 .right-column h3 {
