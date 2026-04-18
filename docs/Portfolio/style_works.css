@@ -1,10 +1,16 @@
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 10px;
   padding: 20px;
 }
-
+.photo-item {
+  background-color: hsl(44, 27%, 80%);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
 .photo-item img {
   width: 100%;
   height: auto;
@@ -120,6 +126,13 @@ a {
   font-weight: bold;
   cursor: pointer;
 }
+body.dark-theme .photo-grid p {
+  color: hsl(44, 27%, 84%);
+}
+body.dark-theme .photo-item {
+  color: hsl(44, 27%, 84%);
+  background-color: #555;
+}
 @media (hover) {
   .hover-image {
     position: absolute;
@@ -129,5 +142,32 @@ a {
   }
   .photo-item img {
     border: #2e88a3 solid 2px;
+  }
+}
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: 1fr; /* single column */
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .photo-item {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .photo-grid p {
+    font-size: 1rem;
+  }
+
+  .modal-content,
+  #modalImg {
+    max-width: 95%;
+    max-height: 60vh;
+  }
+
+  #modalText {
+    max-width: 90%;
+    font-size: 0.9rem;
   }
 }

@@ -36,26 +36,46 @@
 main {
   margin: 20px;
   padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   border-top: #2e88a3 solid 2px;
+
+  /* margin: 0;
+  padding: 60px 40px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: #2e88a3 solid 2px;
+  gap: 40px;
 }
 .esi {
   padding: 30px;
   width: 67%;
   font-size: 1.2rem;
   background-color: hsl(144, 51%, 93%);
-  margin: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 .esi p {
   margin: 10px;
+}
+.info {
+  padding: 30px;
+  background-color: hsl(195, 56%, 94%);
+  border-radius: 10px;
+  width: 30%;
+  min-width: 280px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.info ol li {
+  font-size: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
 }
 .social-links {
   margin-top: 15px;
   display: flex;
   gap: 15px;
-  justify-content: center;
+  justify-content: left;
 }
 
 .social-links a {
@@ -71,10 +91,11 @@ main {
 .projects {
   padding: 30px 20px;
   text-align: center;
+  border-top: #2e88a3 solid 2px;
 }
 
 .projects h2 {
-  margin-bottom: 20px;
+  margin: 30px;
   font-size: 2em;
   color: #255f85;
 }
@@ -86,19 +107,43 @@ main {
   padding: 0 20px 40px 0;
 }
 
-.project-item img {
+.project-item {
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-8px);
+}
+
+.project-img-wrapper {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  /* object-position: left;  */
-  border-radius: 15px;
+  height: 200px;
+  background-color: hsl(44, 27%, 84%);
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 10px;
+}
+
+.project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-item h4 {
+  margin: 0;
+  padding: 6px 0;
+  font-size: 1rem;
 }
 
 .projects a {
   text-decoration: none;
   color: #333;
 }
+
 .projects .btn_projects {
   text-decoration: none;
   background-color: #2e88a3;
@@ -113,6 +158,7 @@ main {
   min-width: 150px;
   transition: all 0.3s ease;
 }
+
 .projects a:hover {
   color: #2e88a3;
   transform: scale(1.05);
@@ -127,11 +173,9 @@ body.dark-theme .esi {
   background-color: #555;
 }
 
-body.dark-theme .esi p,
-body.dark-theme h3,
 body.dark-theme .info ol li,
 .projects .btn_projects:hover {
-  color: #ddd;
+  color: #555;
 }
 
 .dark-theme #anna {

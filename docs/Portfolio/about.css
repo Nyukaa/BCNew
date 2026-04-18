@@ -140,7 +140,9 @@ body.dark-theme .kuva img {
 body.dark-theme .kuva .text h1 {
   color: #eee;
 }
-
+body.dark-theme .right-column p {
+  color: #eee;
+}
 body.dark-theme .left-column #esi {
   /* background-color: #666; */
   color: #f1f1f1;
@@ -165,9 +167,32 @@ body.dark-theme .left-column #esi {
 
     align-items: center; */
   }
+
   .kuva {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .kuva img {
+    max-width: 140px; /* smaller image for mobile */
+    margin-bottom: 10px;
+  }
+
+  .kuva .text {
+    width: 100%;
+  }
+
+  .kuva .text h1 {
+    font-size: 1.3rem;
+  }
+
+  .kuva .text h2 {
+    font-size: 1.1rem;
+  }
+
+  .kuva ol {
+    font-size: 0.9rem;
   }
 }

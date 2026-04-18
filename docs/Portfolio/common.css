@@ -12,23 +12,46 @@ body {
   color: rgb(48, 43, 43);
   background-color: hsl(44, 27%, 84%);
 }
-h1,
-h2,
-h3 {
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin: 1.5rem;
+  line-height: 1.3;
+  transition: all 0.3s ease;
   text-align: center;
   padding: 10px;
   color: hsl(217, 12%, 43%);
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
+
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1.2rem;
+  line-height: 1.4;
+  color: #2e88a3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: #2e88a3;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #255f85;
+}
+
 p {
-  color: hsl(217, 12%, 53%);
+  margin-bottom: 1rem;
+  line-height: 1.8;
 }
-.info ol li {
-  font-size: 18px;
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-}
+
 header {
   padding: 10px;
   background-color: hsl(44, 27%, 84%);
@@ -77,54 +100,90 @@ header .btn:hover {
 .oma_class:hover {
   color: aqua;
 }
-
-.tech-stack h3,
-.esi h3,
-.projects h3 {
-  margin: 20px;
-  color: #255f85;
-  font-size: 1.2rem;
+/* Tech Stack Section */
+.tech-stack {
+  margin: 40px 0;
+  padding: 30px;
+  /* background-color: #f9f9f9; */
+  border-radius: 10px;
 }
 
+.tech-stack h2,
+.tech-stack h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tech-category {
+  margin-bottom: 35px;
+}
+
+.tech-category h3 {
+  color: #2e88a3;
+  border-bottom: 2px solid #2e88a3;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* GRID instead of flex */
 .tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   list-style: none;
   padding: 0;
 }
 
 .tech-icons li {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
   font-size: 1rem;
 }
 
-.tech-icons i {
-  font-size: 2.5rem;
-  color: hsl(217, 12%, 43%);
-  transition: transform 0.3s ease, color 0.3s ease;
+.tech-icons li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.tech-icons i:hover {
-  transform: scale(1.2);
-  color: #98c9a3; /* accent color */
+.tech-icons i {
+  font-size: 1.8rem;
+  color: #2e88a3;
 }
 
 .tech-icons span {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.9rem;
-  color: #333;
+  color: #444;
+  font-weight: 500;
 }
+
 footer {
-  margin: 12px;
-  padding: 10px;
+  margin-top: 60px;
+  padding: 60px 40px 40px;
+
+  flex-wrap: wrap;
+  position: relative;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: hsl(44, 27%, 84%);
   width: 100%;
+  border-top: #2e88a3 solid 2px;
+}
+footer .copyright,
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 30px;
+  font-size: 0.8rem;
+  color: #444;
+
   border-top: #2e88a3 solid 2px;
 }
 .footer_img img {
@@ -149,6 +208,8 @@ textarea {
   box-sizing: border-box;
   margin: 10px;
   padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
 }
 footer .btn {
   color: hsl(44, 27%, 84%);
@@ -176,6 +237,9 @@ footer .btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px #1f6380;
 }
+footer h3 {
+  font-size: 2rem;
+}
 
 #scrollTopBtn {
   width: 50px;
@@ -199,12 +263,7 @@ footer .btn:focus {
 #scrollTopBtn:hover {
   background-color: #3c3960;
 }
-footer .copyright {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #444;
-  margin-top: 20px;
-}
+
 html {
   scroll-behavior: smooth;
 }
@@ -229,7 +288,7 @@ html {
 }
 body.dark-theme #scrollTopBtn {
   background-color: #2e88a3;
-  color: white;
+  color: hsl(44, 27%, 84%);
 }
 
 body.dark-theme #scrollTopBtn:hover {
@@ -253,14 +312,15 @@ body.dark-theme {
   color: #f1f1f1;
 }
 
-body.dark-theme header {
+body.dark-theme header,
+body.dark-theme .project-img-wrapper img {
   background-color: #222;
 }
 body.dark-theme a,
 body.dark-theme .oma_class,
 body.dark-theme .tech-icons i,
 body.dark-theme .tech-icons span {
-  color: #ddd;
+  color: #2e88a3;
 }
 body.dark-theme .kuva {
   background-color: #444;
