@@ -33,6 +33,53 @@
     </h1>
     <div class="photo-grid">
       <div class="photo-item">
+        <a
+          href="https://github.com/Nyukaa/junction-2026-holy-ravioli/"
+          target="_blank"
+        >
+          <div class="image-hover-wrapper">
+            <img
+              class="main-image"
+              src="./img/pexels-brunoscramgnon-596134.png"
+              alt="Money Polku – AI Financial Coach"
+            />
+            <img
+              class="hover-image"
+              src="./img/screenshots/junction.png"
+              alt="Money Polku Hover"
+            />
+          </div>
+          <h2>
+            <i class="fa-solid fa-coins"></i> Money Polku – AI Financial Coach
+          </h2>
+        </a>
+        <p>
+          <strong>Claude API · Tool Use · Next.js · PostgreSQL</strong>
+        </p>
+        <p class="description">
+          AI financial coach that turns bank transactions into a personal
+          savings plan. Built at Junction 2026 for the S-Bank challenge, in a
+          team of three.
+        </p>
+        <p class="description">
+          <strong>My contribution (AI Agent):</strong>
+          Built the coaching agent with Claude API tool use, the chat API and a
+          confirm-before-save flow, so nothing is saved without the user's
+          "yes". Wrote the prompts and tool descriptions. After the hackathon I
+          added prompt evaluation and prompt caching, which cut input tokens by
+          58% in a controlled eval.
+        </p>
+        <p>
+          <a
+            class="linkTo"
+            href="https://github.com/Nyukaa/junction-2026-holy-ravioli/"
+            target="_blank"
+            >GitHub</a
+          >
+        </p>
+      </div>
+
+      <div class="photo-item">
         <a href="#" target="_blank">
           <div class="image-hover-wrapper">
             <img
@@ -59,22 +106,23 @@
           >
         </p>
         <p class="description">
-          Production registration platform for live LARP events (~1000 real
-          users). Features secure token-based single-use invite links, a 5-step
-          registration workflow with strict server-side validation, GDPR
-          compliance, and complex balancing rules for participants. Includes a
-          built-in CRM administrative panel for bulk email invitations,
-          real-time slot occupancy checking, and automated Excel exports.
+          Registration platform for live LARP events, built as a real client
+          project and designed to handle 1000+ participants. Features secure
+          token-based single-use invite links, a 5-step registration workflow
+          with strict server-side validation, GDPR-conscious request logging,
+          and complex balancing rules for participants. Includes an admin panel
+          for bulk email invitations, real-time slot occupancy checking, and
+          Excel exports.
         </p>
         <p class="description">
-          <strong>My contribution (Backend Stack & Architecture):</strong>
-          Architected a production-ready relational database schema using
-          Sequelize and designed secure REST API endpoints with server-side
-          token validation. Includes a decoupled business logic architecture,
-          real-time registration with unique UUID tokens to prevent
-          double-bookings, GDPR-conscious request logging, an administrative CRM
-          dashboard, and a 2x deployment cost reduction achieved by
-          independently migrating from Azure to Render.
+          <strong>My contribution (Backend):</strong>
+          Designed the PostgreSQL schema with Sequelize and built the REST API
+          with JWT authentication and server-side token validation. Separated
+          the business logic from the API and database layers, so the balancing
+          rules can change without touching them. Built the admin API
+          (participant search, bulk invitations, Excel export) and deployed the
+          server on Render, chosen over Azure after a cost comparison (estimated
+          2.4x cheaper).
         </p>
         <p>
           <span class="linkTo">Private company repository</span>
@@ -126,6 +174,52 @@
           <a
             class="linkTo"
             href="https://github.com/Nyukaa/ShopRAG"
+            target="_blank"
+            >GitHub</a
+          >
+        </p>
+      </div>
+
+      <div class="photo-item">
+        <a
+          href="https://github.com/Nyukaa/ShopRAG/tree/main/nordic-shop-agent"
+          target="_blank"
+        >
+          <div class="image-hover-wrapper">
+            <img
+              class="main-image"
+              src="./img/pexels-brunoscramgnon-596134.png"
+              alt="Nordic Shop Agent – AI Shopping Assistant"
+            />
+            <img
+              class="hover-image"
+              src="./img/screenshots/chat1.png"
+              alt="Nordic Shop Agent Hover"
+            />
+          </div>
+          <h2>
+            <i class="fa-solid fa-robot"></i> Nordic Shop Agent – AI Shopping
+            Assistant
+          </h2>
+        </a>
+        <p>
+          <strong
+            >Python · FastAPI · Claude API · MCP · Next.js · React · TypeScript
+            · Tailwind CSS · PostgreSQL · Supabase</strong
+          >
+        </p>
+        <p class="description">
+          AI shopping assistant for my Nordic Shop project, built with Claude
+          API, Python and FastAPI. Agentic workflow with intent routing,
+          multi-turn conversations, and real-time tools for product search,
+          product details, recommendations and live stock availability. An
+          automated prompt evaluation pipeline improved the score from 7.8 to
+          8.7/10, and a separate MCP server/client kept the same score.
+        </p>
+        <p>
+          <a
+            class="linkTo"
+            href="https://github.com/Nyukaa/ShopRAG/tree/main/nordic-shop-agent"
             target="_blank"
             >GitHub</a
           >
@@ -281,8 +375,15 @@
           >
         </p>
         <p class="description">
-          Custom WordPress prototype for discovering communities & events.
-          Includes filtering interface and responsive bilingual design.
+          Custom WordPress prototype for discovering communities & events, built
+          in a team of three. Includes filtering interface and responsive
+          bilingual design.
+        </p>
+        <p class="description">
+          <strong>My contribution (WordPress plugin):</strong>
+          Built the custom plugin logic with custom post types, taxonomies,
+          custom fields and reusable shortcodes for filtered listings, and set
+          up hosting and deployment.
         </p>
         <p>
           <a
@@ -460,8 +561,8 @@
         <p><strong>HTML5 CSS3 JS</strong></p>
         <p class="description">
           Pancake Ordering App An interactive web application where the user can
-          customize and order their own pancake by choosing the type, toppings
-          and toppings. The chef can manage and update orders on their own "All
+          customize and order their own pancake by choosing the type and
+          toppings. The chef can manage and update orders on their own "All
           Orders" page.
         </p>
         <p>
